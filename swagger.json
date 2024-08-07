@@ -1,0 +1,1278 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "MERSTracker Partner API Documentation",
+    "version": "0.2.0"
+  },
+  "schemes": ["https"],
+  "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],
+  "paths": {
+    "/fao/merstracker-primary-estimates": {
+      "get": {
+        "tags": ["FAO Endpoints"],
+        "summary": "Endpoints built to integrate with the FAO's Empres-I dashboard.",
+        "description": "Get all of the primary MERS viral and seroprevalence estimates from our database.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PrimaryMersEstimate"
+                  }
+                }
+              }
+            }
+          },
+          "500": { "description": "Internal server error" }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PrimaryMersEstimate": {
+        "required": [
+          "id",
+          "estimateId",
+          "primaryEstimateInfo",
+          "geographicalAreaSubestimates",
+          "ageGroupSubestimates",
+          "testUsedSubestimates",
+          "animalSpeciesSubestimates",
+          "sexSubestimates",
+          "timeFrameSubestimates",
+          "sampleTypeSubestimates",
+          "occupationSubestimates",
+          "animalSourceLocationSubestimates",
+          "animalSamplingContextSubestimates"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this primary estimate.",
+            "example": "66b2e8b4a9f12d298701c781"
+          },
+          "estimateId": {
+            "type": "string",
+            "description": "A string that is unique to this primary estimate.",
+            "example": "151217_SaudiArabia_KingAbdulazizUniversity_Camels_OverallNasal"
+          },
+          "primaryEstimateInfo": { 
+            "oneOf": [
+              { "$ref": "#/components/schemas/PrimaryAnimalMersSeroprevalenceEstimateInformation" },
+              { "$ref": "#/components/schemas/PrimaryHumanMersSeroprevalenceEstimateInformation" },
+              { "$ref": "#/components/schemas/PrimaryAnimalMersViralEstimateInformation" },
+              { "$ref": "#/components/schemas/PrimaryHumanMersViralEstimateInformation" }
+            ]
+          },
+          "geographicalAreaSubestimates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MersGeographicalAreaSubEstimate"
+            }
+          },
+          "ageGroupSubestimates": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                { "$ref": "#/components/schemas/MersHumanAgeGroupSubEstimate" },
+                { "$ref": "#/components/schemas/MersAnimalAgeGroupSubEstimate" }
+              ]
+            }
+          },
+          "testUsedSubestimates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MersTestUsedSubEstimate"
+            }
+          },
+          "animalSpeciesSubestimates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MersAnimalSpeciesSubEstimate"
+            }
+          },
+          "sexSubestimates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MersSexSubEstimate"
+            }
+          },
+          "timeFrameSubestimates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MersTimeFrameSubEstimate"
+            }
+          },
+          "sampleTypeSubestimates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MersSampleTypeSubEstimate"
+            }
+          },
+          "occupationSubestimates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MersOccupationSubEstimate"
+            }
+          },
+          "animalSourceLocationSubestimates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MersAnimalSourceLocationSubEstimate"
+            }
+          },
+          "animalSamplingContextSubestimates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MersAnimalSamplingContextSubEstimate"
+            }
+          }
+        }
+      },
+      "BasicPrimaryMersEstimateInformation": {
+        "required": [
+          "id",
+          "type",
+          "estimateId",
+          "country",
+          "countryAlphaTwoCode",
+          "countryAlphaThreeCode",
+          "latitude",
+          "longitude",
+          "sourceUrl",
+          "sourceType",
+          "sourceTitle",
+          "assay",
+          "isotypes",
+          "testProducer",
+          "testValidation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this primary estimate information entry.",
+            "example": "66b2e8b4a9f12d298701c782"
+          },
+          "estimateId": {
+            "type": "string",
+            "description": "A string that is unique to this primary estimate.",
+            "example": "151217_SaudiArabia_KingAbdulazizUniversity_Camels_OverallNasal"
+          },
+          "country": {
+            "type": "string",
+            "description": "A string representation of the name of the country where the sampling was conducted. Conforms to the WHO's country name list.",
+            "example": "Saudi Arabia"
+          },
+          "city": {
+            "type": "string",
+            "description": "A string representation of the name of the city where the sampling was conducted.",
+            "example": "Riyadh"
+          },
+          "state": {
+            "type": "string",
+            "description": "A string representation of the name of the state where the sampling was conducted.",
+            "example": "Riyadh Province"
+          },
+          "countryAlphaTwoCode": {
+            "type": "string",
+            "description": "A country code for where the sampling was conducted. Conforms to the ISO 3166-1 alpha-2 spec.",
+            "example": "SA"
+          },
+          "countryAlphaThreeCode": {
+            "type": "string",
+            "description": "A country code for where the sampling was conducted. Conforms to the ISO 3166-1 alpha-3 spec.",
+            "example": "SAU"
+          },
+          "latitude": {
+            "type": "number",
+            "description": "An approximate latitude for the location where sampling was conducted",
+            "example": 23.310373690263443
+          },
+          "longitude": {
+            "type": "number",
+            "description": "An approximate longitude for the location where sampling was conducted",
+            "example": 44.55634163788037
+          },
+          "whoRegion": {
+            "type": "string",
+            "description": "The WHO region where the sampling was conducted.",
+            "enum": [
+              "AFR",
+              "AMR",
+              "SEAR",
+              "EUR",
+              "EMR",
+              "WPR"
+            ],
+            "example": "EMR"
+          },
+          "unRegion": {
+            "type": "string",
+            "description": "The UN region where the sampling was conducted.",
+            "enum": [
+              "NORTHERN_AFRICA",
+              "EASTERN_AFRICA",
+              "MIDDLE_AFRICA",
+              "SOUTHERN_AFRICA",
+              "WESTERN_AFRICA",
+              "CARIBBEAN",
+              "CENTRAL_AMERICA",
+              "SOUTH_AMERICA",
+              "NORTHERN_AMERICA",
+              "CENTRAL_ASIA",
+              "EASTERN_ASIA",
+              "SOUTH_EASTERN_ASIA",
+              "SOUTHERN_ASIA",
+              "WESTERN_ASIA",
+              "EASTERN_EUROPE",
+              "NORTHERN_EUROPE",
+              "SOUTHERN_EUROPE",
+              "WESTERN_EUROPE",
+              "AUSTRALIA_AND_NEW_ZEALAND",
+              "MELANESIA",
+              "MICRONESIA",
+              "POLYNESIA"
+            ],
+            "example": "WESTERN_ASIA"
+          },
+          "firstAuthorFullName": {
+            "type": "string",
+            "description": "The full name of the first author of the study.",
+            "example": "Samy Kasem"
+          },
+          "sourceUrl": {
+            "type": "string",
+            "description": "A url to the source where this estimate was derived from.",
+            "example": "https://doi.org/10.1016/j.jiph.2017.09.022"
+          },
+          "sourceType": {
+            "type": "string",
+            "description": "The type of the source where this estimate was derived from.",
+            "enum": [
+              "Journal Article (Peer-Reviewed)"
+            ],
+            "example": "Journal Article (Peer-Reviewed)"
+          },
+          "sourceTitle": {
+            "type": "string",
+            "description": "The title of the source where this estimate was derived from.",
+            "example": "Cross-sectional study of MERS-CoV-specific RNA and antibodies in animals that have had contact with MERS patients in Saudi Arabia"
+          },
+          "institution": {
+            "type": "string",
+            "description": "The name of the institution which published the source where this estimate was derived from.",
+            "example": "The University of Hong Kong"
+          },
+          "studyInclusionCriteria": {
+            "type": "string",
+            "description": "A description of the study's inclusion criteria.",
+            "example": "This was part of a cooperative epidemiological response to the confirmed human cases of MERS with a history of animal contact. Notifications were issued by the Ministry of Health (MOH) associated with animals with a history of contact with MERS-patients"
+          },
+          "studyExclusionCriteria": {
+            "type": "string",
+            "description": "A description of the study's exclusion criteria.",
+            "example": "Camels who had been outside Saudi Arabia in the past four months were excluded."
+          },
+          "sensitivity": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the sensitivity of the test used as a percentage.",
+            "example": 0.95
+          },
+          "sensitivity95CILower": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for the sensitivity of the test as a percentage.",
+            "example": 0.93
+          },
+          "sensitivity95CIUpper": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for the sensitivity of the test as a percentage.",
+            "example": 0.97
+          },
+          "sensitivityDenominator": {
+            "type": "number",
+            "description": "The sample size used when testing for sensitivity",
+            "example": 80
+          },
+          "specificity": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the specificity of the test used as a percentage.",
+            "example": 0.85
+          },
+          "specificity95CILower": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for the specificity of the test as a percentage.",
+            "example": 0.83
+          },
+          "specificity95CIUpper": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for the specificity of the test as a percentage.",
+            "example": 0.87
+          },
+          "specificityDenominator": {
+            "type": "number",
+            "description": "The sample size used when testing for specificity",
+            "example": 90
+          },
+          "sampleNumerator": {
+            "type": "number",
+            "description": "The number of positive cases within the population sampled.",
+            "example": 422
+          },
+          "sampleDenominator": {
+            "type": "number",
+            "description": "The number of people or animals within the population sampled.",
+            "example": 595
+          },
+          "assay": {
+            "type": "array",
+            "description": "The test(s) used to determine positivity.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "ELISA",
+                "N2 RT-qPCR",
+                "N3 RT-qPCR",
+                "Other",
+                "Virus Neutralization",
+                "RT-PCR"
+              ],
+              "example": "ELISA"
+            }
+          },
+          "specimenType": {
+            "type": "string",
+            "description": "The type of specimen extracted for the test",
+            "enum": [
+              "Dried Blood",
+              "Not reported",
+              "Plasma",
+              "Multiple Types",
+              "Serum",
+              "Whole Blood",
+              "Saliva",
+              "Nasal Swab or NP",
+              "Rectal swab",
+              "Milk",
+              "Urine",
+              "Muscle",
+              "Throat swab or OP"
+            ],
+            "example": "Serum"
+          },
+          "sex": {
+            "type": "string",
+            "description": "The sex of the population sampled.",
+            "enum": [
+              "Male",
+              "Female",
+              "All"
+            ],
+            "example": "All"
+          },
+          "isotypes": {
+            "type": "array",
+            "description": "The isotype(s) tested for.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "IgA",
+                "IgG",
+                "IgM",
+                "Total Antibody",
+                "Neutralizing",
+                "Not reported",
+                "N/A"
+              ],
+              "example": "IgG"
+            }
+          },
+          "samplingStartDate": {
+            "type": "string",
+            "description": "The time when sampling started. Confirms to the ISO 8601 standard.",
+            "example": "2014-07-15T06:00:00.000Z"
+          },
+          "samplingMidDate": {
+            "type": "string",
+            "description": "A time representing the middle of the sampling timeframe. Confirms to the ISO 8601 standard.",
+            "example": "2015-07-15T06:00:00.000Z"
+          },
+          "samplingEndDate": {
+            "type": "string",
+            "description": "The time when sampling ended. Confirms to the ISO 8601 standard.",
+            "example": "2016-07-15T06:00:00.000Z"
+          },
+          "geographicScope": {
+            "type": "string",
+            "description": "Whether this study is a national study, a regional study, or a local study.",
+            "enum": [
+              "National",
+              "Regional",
+              "Local"
+            ],
+            "example": "National"
+          },
+          "testProducer": {
+            "type": "array",
+            "description": "The producers of the test used for determining positivity",
+            "items": {
+              "type": "string",
+              "example": "Euroimmun"
+            }
+          },
+          "testValidation": {
+            "type": "array",
+            "description": "The validation used for the sensitivity and specificty measurements",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Validated by manufacturers",
+                "Validated by developers",
+                "Validated by independent authors",
+                "Not reported"
+              ],
+              "example": "Validated by manufacturers"
+            }
+          }
+        }
+      },
+      "PrimaryHumanMersSeroprevalenceEstimateInformation": {
+        "allOf": [
+          {
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "HUMAN_SEROPREVALENCE",
+                "example": "HUMAN_SEROPREVALENCE",
+                "enum": ["HUMAN_SEROPREVALENCE"]
+              }
+            }
+          },
+          { "$ref": "#/components/schemas/BasicPrimaryMersEstimateInformation" },
+          {
+            "type": "object",
+            "required": [
+              "seroprevalence"
+            ],
+            "properties": {
+              "seroprevalence": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the seroprevalence as a percentage.",
+                "example": 0.44
+              },
+              "seroprevalence95CILower": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for seroprevalence as a percentage.",
+                "example": 0.40
+              },
+              "seroprevalence95CIUpper": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for seroprevalence as a percentage.",
+                "example": 0.48
+              },
+              "ageGroup": {
+                "type": "array",
+                "description": "The age group(s) captured in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Children and youth (0-17 years)",
+                    "Adults (18-45 years)",
+                    "Adults (46-59 years)",
+                    "Seniors (≥60 years)"
+                  ]
+                },
+                "example": ["Children and youth (0-17 years)", "Seniors (≥60 years)"]
+              },
+              "sampleFrame": {
+                "type": "string",
+                "enum": [
+                  "Household and community sample",
+                  "Marketplace vendor",
+                  "Blood donors",
+                  "Residual sera",
+                  "Outpatient population",
+                  "Healthcare workers",
+                  "Close contacts of cases",
+                  "Travellers/tourism",
+                  "Suspected cases",
+                  "Multiple populations",
+                  "Livestock workers",
+                  "Pilgrims",
+                  "Quarantine station workers",
+                  "Slaughterhouse workers",
+                  "Nomadic communities",
+                  "Close contacts of camels"
+                ],
+                "description": "The population sampled in the study.",
+                "example": "Close contacts of camels"
+              }
+            }
+          }
+        ]
+      },
+      "PrimaryAnimalMersSeroprevalenceEstimateInformation": {
+        "allOf": [
+          {
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "ANIMAL_SEROPREVALENCE",
+                "example": "ANIMAL_SEROPREVALENCE",
+                "enum": ["ANIMAL_SEROPREVALENCE"]
+              }
+            }
+          },
+          { "$ref": "#/components/schemas/BasicPrimaryMersEstimateInformation" },
+          {
+            "type": "object",
+            "required": [
+              "seroprevalence",
+              "animalSpecies",
+              "animalType",
+              "animalDetectionSettings"
+            ],
+            "properties": {
+              "seroprevalence": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the seroprevalence as a percentage.",
+                "example": 0.44
+              },
+              "seroprevalence95CILower": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for seroprevalence as a percentage.",
+                "example": 0.40
+              },
+              "seroprevalence95CIUpper": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for seroprevalence as a percentage.",
+                "example": 0.48
+              },
+              "animalSpecies": {
+                "type": "string",
+                "description": "The species of animal that was primarily sampled for this study.",
+                "enum": ["CAMEL", "BAT", "CATTLE", "SHEEP", "GOAT"],
+                "example": "CAMEL"
+              },
+              "animalType": {
+                "type": "array",
+                "description": "Whether the animal is a wild animal or a domestic animal. Includes both values if the population included both.",
+                "items": {
+                  "type": "string",
+                  "enum": ["Domestic", "Wild", "Not reported"],
+                  "example": "Domestic"
+                }
+              },
+              "animalDetectionSettings": {
+                "type": "array",
+                "description": "The population(s) sampled in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Livestock markets",
+                    "Abattoirs",
+                    "Quarantine",
+                    "Farms",
+                    "Free-roaming herds",
+                    "Other",
+                    "Animal contacts of human cases",
+                    "Not reported",
+                    "Multiple populations"
+                  ],
+                  "example": "Farms"
+                }
+              },
+              "animalPurpose": {
+                "type": "string",
+                "description": "A description of the animal's purpose.",
+                "example": "Multiple purposes"
+              },
+              "animalImportedOrLocal": {
+                "type": "string",
+                "description": "Whether the animal is local or imported.",
+                "enum": [
+                  "Imported",
+                  "Local",
+                  "Not reported"
+                ],
+                "example": "Imported"
+              },
+              "animalAgeGroup": {
+                "type": "array",
+                "description": "The age group(s) captured in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Juvenile (6 months-2 years)",
+                    "Adult (>2 years)",
+                    "Neonatal (≤6 months)"
+                  ],
+                  "example": "Juvenile (6 months-2 years)"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "PrimaryHumanMersViralEstimateInformation": {
+        "allOf": [
+          {
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "HUMAN_VIRAL",
+                "example": "HUMAN_VIRAL",
+                "enum": ["HUMAN_VIRAL"]
+              }
+            }
+          },
+          { "$ref": "#/components/schemas/BasicPrimaryMersEstimateInformation" },
+          {
+            "type": "object",
+            "required": [
+              "positivePrevalence"
+            ],
+            "properties": {
+              "positivePrevalence": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the positive viral prevalence as a percentage.",
+                "example": 0.44
+              },
+              "positivePrevalence95CILower": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for the positive viral prevalence as a percentage.",
+                "example": 0.40
+              },
+              "positivePrevalence95CIUpper": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for the positive viral prevalence as a percentage.",
+                "example": 0.48
+              },
+              "ageGroup": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Children and youth (0-17 years)",
+                    "Adults (18-45 years)",
+                    "Adults (46-59 years)",
+                    "Seniors (≥60 years)"
+                  ],
+                  "description": "The age group(s) captured in the study.",
+                  "example": ["Children and youth (0-17 years)", "Seniors (≥60 years)"]
+                }
+              },
+              "sampleFrame": {
+                "type": "string",
+                "enum": [
+                  "Household and community sample",
+                  "Marketplace vendor",
+                  "Blood donors",
+                  "Residual sera",
+                  "Outpatient population",
+                  "Healthcare workers",
+                  "Close contacts of cases",
+                  "Travellers/tourism",
+                  "Suspected cases",
+                  "Multiple populations",
+                  "Livestock workers",
+                  "Pilgrims",
+                  "Quarantine station workers",
+                  "Slaughterhouse workers",
+                  "Nomadic communities",
+                  "Close contacts of camels"
+                ],
+                "description": "The population sampled in the study.",
+                "example": "Close contacts of camels"
+              }
+            }
+          }
+        ]
+      },
+      "PrimaryAnimalMersViralEstimateInformation": {
+        "allOf": [
+          {
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "ANIMAL_VIRAL",
+                "example": "ANIMAL_VIRAL",
+                "enum": ["ANIMAL_VIRAL"]
+              }
+            }
+          },
+          { "$ref": "#/components/schemas/BasicPrimaryMersEstimateInformation" },
+          {
+            "type": "object",
+            "required": [
+              "seroprevalence",
+              "animalSpecies",
+              "animalType",
+              "animalDetectionSettings"
+            ],
+            "properties": {
+              "positivePrevalence": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the positive viral prevalence as a percentage.",
+                "example": 0.44
+              },
+              "positivePrevalence95CILower": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for the positive viral prevalence as a percentage.",
+                "example": 0.40
+              },
+              "positivePrevalence95CIUpper": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for the positive viral prevalence as a percentage.",
+                "example": 0.48
+              },
+              "animalSpecies": {
+                "type": "string",
+                "description": "The species of animal that was primarily sampled for this study.",
+                "enum": ["CAMEL", "BAT", "CATTLE", "SHEEP", "GOAT"],
+                "example": "CAMEL"
+              },
+              "animalType": {
+                "type": "array",
+                "description": "Whether the animal is a wild animal or a domestic animal. Includes both values if the population included both.",
+                "items": {
+                  "type": "string",
+                  "enum": ["Domestic", "Wild", "Not reported"],
+                  "example": "Domestic"
+                }
+              },
+              "animalDetectionSettings": {
+                "type": "array",
+                "description": "The population(s) sampled in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Livestock markets",
+                    "Abattoirs",
+                    "Quarantine",
+                    "Farms",
+                    "Free-roaming herds",
+                    "Other",
+                    "Animal contacts of human cases",
+                    "Not reported",
+                    "Multiple populations"
+                  ],
+                  "example": "Farms"
+                }
+              },
+              "animalPurpose": {
+                "type": "string",
+                "description": "A description of the animal's purpose.",
+                "example": "Multiple purposes"
+              },
+              "animalImportedOrLocal": {
+                "type": "string",
+                "description": "Whether the animal is local or imported.",
+                "enum": [
+                  "Imported",
+                  "Local",
+                  "Not reported"
+                ],
+                "example": "Imported"
+              },
+              "animalAgeGroup": {
+                "type": "string",
+                "description": "The age group captured in the study.",
+                "enum": [
+                  "Juvenile (6 months-2 years)",
+                  "Adult (>2 years)",
+                  "Neonatal (≤6 months)"
+                ],
+                "example": "Juvenile (6 months-2 years)"
+              }
+            }
+          }
+        ]
+      },
+      "SeroprevalenceSubEstimateInformation": {
+        "required": [
+          "seroprevalence"
+        ],
+        "properties": {
+          "sampleNumerator": {
+            "type": "number",
+            "description": "The number of positive cases within the population sampled.",
+            "example": 31
+          },
+          "sampleDenominator": {
+            "type": "number",
+            "description": "The number of people or animals within the population sampled.",
+            "example": 66
+          },
+          "seroprevalence": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the seroprevalence as a percentage.",
+            "example": 0.47
+          },
+          "seroprevalence95CILower": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for seroprevalence as a percentage.",
+            "example": 0.43
+          },
+          "seroprevalence95CIUpper": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for seroprevalence as a percentage.",
+            "example": 0.51
+          }
+        }
+      },
+      "ViralSubEstimateInformation": {
+        "required": [
+          "positivePrevalence"
+        ],
+        "properties": {
+          "sampleNumerator": {
+            "type": "number",
+            "description": "The number of positive cases within the population sampled.",
+            "example": 13
+          },
+          "sampleDenominator": {
+            "type": "number",
+            "description": "The number of people or animals within the population sampled.",
+            "example": 55
+          },
+          "positivePrevalence": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the virual positive prevalence as a percentage.",
+            "example": 0.24
+          },
+          "positivePrevalence95CILower": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for the viral positive prevalence as a percentage.",
+            "example": 0.19
+          },
+          "positivePrevalence95CIUpper": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for the viral positive prevalence as a percentage.",
+            "example": 0.29
+          }
+        }
+      },
+      "BasicMersSubEstimate": {
+        "required": [
+          "id",
+          "estimateId",
+          "estimateInfo"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this subestimate.",
+            "example": "66b2e8b4a9f12d298701c786"
+          },
+          "estimateId": {
+            "type": "string",
+            "description": "A string that is unique to this primary estimate.",
+            "example": "151217_SaudiArabia_KingAbdulazizUniversity_Camels_Farm"
+          },
+          "estimateInfo": {
+            "oneOf": [
+              { "$ref": "#/components/schemas/SeroprevalenceSubEstimateInformation" },
+              { "$ref": "#/components/schemas/ViralSubEstimateInformation" }
+            ] 
+          }
+        }
+      },
+      "MersGeographicalAreaSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "type": "object",
+            "required": [
+              "country",
+              "countryAlphaTwoCode",
+              "countryAlphaThreeCode",
+              "latitude",
+              "longitude"
+            ],
+            "properties": {
+              "country": {
+                "type": "string",
+                "description": "A string representation of the name of the country where the sampling was conducted. Conforms to the WHO's country name list.",
+                "example": "Saudi Arabia"
+              },
+              "city": {
+                "type": "string",
+                "description": "A string representation of the name of the city where the sampling was conducted.",
+                "example": "Riyadh"
+              },
+              "state": {
+                "type": "string",
+                "description": "A string representation of the name of the state where the sampling was conducted.",
+                "example": "Riyadh Province"
+              },
+              "countryAlphaTwoCode": {
+                "type": "string",
+                "description": "A country code for where the sampling was conducted. Conforms to the ISO 3166-1 alpha-2 spec.",
+                "example": "SA"
+              },
+              "countryAlphaThreeCode": {
+                "type": "string",
+                "description": "A country code for where the sampling was conducted. Conforms to the ISO 3166-1 alpha-3 spec.",
+                "example": "SAU"
+              },
+              "latitude": {
+                "type": "number",
+                "description": "An approximate latitude for the location where sampling was conducted",
+                "example": 23.310373690263443
+              },
+              "longitude": {
+                "type": "number",
+                "description": "An approximate longitude for the location where sampling was conducted",
+                "example": 44.55634163788037
+              },
+              "whoRegion": {
+                "type": "string",
+                "description": "The WHO region where the sampling was conducted.",
+                "enum": [
+                  "AFR",
+                  "AMR",
+                  "SEAR",
+                  "EUR",
+                  "EMR",
+                  "WPR"
+                ],
+                "example": "EMR"
+              },
+              "unRegion": {
+                "type": "string",
+                "description": "The UN region where the sampling was conducted.",
+                "enum": [
+                  "NORTHERN_AFRICA",
+                  "EASTERN_AFRICA",
+                  "MIDDLE_AFRICA",
+                  "SOUTHERN_AFRICA",
+                  "WESTERN_AFRICA",
+                  "CARIBBEAN",
+                  "CENTRAL_AMERICA",
+                  "SOUTH_AMERICA",
+                  "NORTHERN_AMERICA",
+                  "CENTRAL_ASIA",
+                  "EASTERN_ASIA",
+                  "SOUTH_EASTERN_ASIA",
+                  "SOUTHERN_ASIA",
+                  "WESTERN_ASIA",
+                  "EASTERN_EUROPE",
+                  "NORTHERN_EUROPE",
+                  "SOUTHERN_EUROPE",
+                  "WESTERN_EUROPE",
+                  "AUSTRALIA_AND_NEW_ZEALAND",
+                  "MELANESIA",
+                  "MICRONESIA",
+                  "POLYNESIA"
+                ],
+                "example": "WESTERN_ASIA"
+              },
+              "geographicScope": {
+                "type": "string",
+                "description": "Whether this study is a national study, a regional study, or a local study.",
+                "enum": [
+                  "National",
+                  "Regional",
+                  "Local"
+                ],
+                "example": "National"
+              }
+            }
+          }
+        ]
+      },
+      "MersHumanAgeGroupSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "type": "object",
+            "required": [
+              "ageGroup",
+              "ageGroupLabel"
+            ],
+            "properties": {
+              "ageGroup": {
+                "type": "array",
+                "description": "The age group(s) captured in the subestimate.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Children and youth (0-17 years)",
+                    "Adults (18-45 years)",
+                    "Adults (46-59 years)",
+                    "Seniors (≥60 years)"
+                  ]
+                },
+                "example": ["Children and youth (0-17 years)"]
+              },
+              "ageGroupLabel": {
+                "type": "string",
+                "description": "A more in-depth description of the age groups captured in the subestimate",
+                "example": "Children between the ages of four and eight"
+              }
+            }
+          }
+        ]
+      },
+      "MersAnimalAgeGroupSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "type": "object",
+            "required": [
+              "animalAgeGroup",
+              "animalAgeGroupLabel"
+            ],
+            "properties": {
+              "animalAgeGroup": {
+                "type": "array",
+                "description": "The age group(s) captured in the subestimate.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Juvenile (6 months-2 years)",
+                    "Adult (>2 years)",
+                    "Neonatal (≤6 months)"
+                  ],
+                  "example": "Juvenile (6 months-2 years)"
+                }
+              },
+              "animalAgeGroupLabel": {
+                "type": "string",
+                "description": "A more in-depth description of the age groups captured in the subestimate",
+                "example": "Camels between the ages of eight and twelve months"
+              }
+            }
+          }
+        ]
+      },
+      "MersTestUsedSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "assay"
+            ],
+            "properties": {
+              "assay": {
+                "type": "array",
+                "description": "The test(s) used to determine positivity.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "ELISA",
+                    "N2 RT-qPCR",
+                    "N3 RT-qPCR",
+                    "Other",
+                    "Virus Neutralization",
+                    "RT-PCR"
+                  ],
+                  "example": "ELISA"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "MersAnimalSpeciesSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "animalSpecies"
+            ],
+            "properties": {
+              "animalSpecies": {
+                "type": "string",
+                "description": "The species of animal that was primarily sampled for this study.",
+                "enum": [ "CAMEL", "BAT", "CATTLE", "SHEEP", "GOAT" ],
+                "example": "CAMEL"
+              }
+            }
+          }
+        ]
+      },
+      "MersSexSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "sex"
+            ],
+            "properties": {
+              "sex": {
+                "type": "string",
+                "description": "The sex of the population sampled.",
+                "enum": [
+                  "Male",
+                  "Female",
+                  "All"
+                ],
+                "example": "Male"
+              }
+            }
+          }
+        ]
+      },
+      "MersTimeFrameSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "samplingStartDate",
+              "samplingEndDate"
+            ],
+            "properties": {
+              "samplingStartDate": {
+                "type": "string",
+                "description": "The time when sampling started. Confirms to the ISO 8601 standard.",
+                "example": "2014-09-15T06:00:00.000Z"
+              },
+              "samplingEndDate": {
+                "type": "string",
+                "description": "The time when sampling ended. Confirms to the ISO 8601 standard.",
+                "example": "2014-10-15T06:00:00.000Z"
+              }
+            }
+          }
+        ]
+      },
+      "MersSampleTypeSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "specimenType"
+            ],
+            "properties": {
+              "specimenType": {
+                "type": "string",
+                "description": "The type of specimen extracted for the test",
+                "enum": [
+                  "Dried Blood",
+                  "Not reported",
+                  "Plasma",
+                  "Multiple Types",
+                  "Serum",
+                  "Whole Blood",
+                  "Saliva",
+                  "Nasal Swab or NP",
+                  "Rectal swab",
+                  "Milk",
+                  "Urine",
+                  "Muscle",
+                  "Throat swab or OP"
+                ],
+                "example": "Serum"
+              }
+            }
+          }
+        ]
+      },
+      "MersOccupationSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "occupation"
+            ],
+            "properties": {
+              "occupation": {
+                "type": "string",
+                "description": "The occupation of the population sampled",
+                "example": "Camels close contacts"
+              }
+            }
+          }
+        ]
+      },
+      "MersAnimalSourceLocationSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "animalImportedOrLocal",
+              "animalCountryOfImport",
+              "animalCountryOfImportAlphaTwoCode",
+              "animalCountryOfImportAlphaThreeCode"
+            ],
+            "properties": {
+              "animalImportedOrLocal": {
+                "type": "string",
+                "description": "Whether the animal is local or imported.",
+                "enum": [
+                  "Imported",
+                  "Local",
+                  "Not reported"
+                ],
+                "example": "Imported"
+              },
+              "animalCountryOfImport": {
+                "type": "string",
+                "description": "A string representation of the name of the country where the animals were imported from. Conforms to the WHO's country name list.",
+                "example": "Sudan"
+              },
+              "animalCountryOfImportAlphaTwoCode": {
+                "type": "string",
+                "description": "A country code for where the animals were imported from. Conforms to the ISO 3166-1 alpha-2 spec.",
+                "example": "SD"
+              },
+              "animalCountryOfImportAlphaThreeCode": {
+                "type": "string",
+                "description": "A country code for where the animals were imported from. Conforms to the ISO 3166-1 alpha-3 spec.",
+                "example": "SDN"
+              }
+            }
+          }
+        ]
+      },
+      "MersAnimalSamplingContextSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "animalDetectionSettings"
+            ],
+            "properties": {
+              "animalDetectionSettings": {
+                "type": "array",
+                "description": "The population(s) sampled in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Livestock markets",
+                    "Abattoirs",
+                    "Quarantine",
+                    "Farms",
+                    "Free-roaming herds",
+                    "Other",
+                    "Animal contacts of human cases",
+                    "Not reported",
+                    "Multiple populations"
+                  ],
+                  "example": "Farms"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
