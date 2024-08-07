@@ -69,41 +69,49 @@
             }
           },
           "testUsedSubestimates": {
+            "type": "array",
             "items": {
               "$ref": "#/components/schemas/MersTestUsedSubEstimate"
             }
           },
           "animalSpeciesSubestimates": {
+            "type": "array",
             "items": {
               "$ref": "#/components/schemas/MersAnimalSpeciesSubEstimate"
             }
           },
           "sexSubestimates": {
+            "type": "array",
             "items": {
               "$ref": "#/components/schemas/MersSexSubEstimate"
             }
           },
           "timeFrameSubestimates": {
+            "type": "array",
             "items": {
               "$ref": "#/components/schemas/MersTimeFrameSubEstimate"
             }
           },
           "sampleTypeSubestimates": {
+            "type": "array",
             "items": {
               "$ref": "#/components/schemas/MersSampleTypeSubEstimate"
             }
           },
           "occupationSubestimates": {
+            "type": "array",
             "items": {
               "$ref": "#/components/schemas/MersOccupationSubEstimate"
             }
           },
           "animalSourceLocationSubestimates": {
+            "type": "array",
             "items": {
               "$ref": "#/components/schemas/MersAnimalSourceLocationSubEstimate"
             }
           },
           "animalSamplingContextSubestimates": {
+            "type": "array",
             "items": {
               "$ref": "#/components/schemas/MersAnimalSamplingContextSubEstimate"
             }
