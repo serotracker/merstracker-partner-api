@@ -18,3 +18,8 @@
 ## Version 0.3.1 - August 7th 2024
 
 - Fixed body parsing on `POST` requests.
+
+## Version 0.3.2 - August 7th 2024
+
+- [BREAKING] `partitionKey` is passed as a query parameter rather than in the body for `/fao/merstracker-primary-estimates`
+- [BREAKING] `/fao/merstracker-primary-estimates` is transformed back into a `GET` request.

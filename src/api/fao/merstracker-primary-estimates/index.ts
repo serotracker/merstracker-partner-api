@@ -36,14 +36,23 @@ export const generateMersPrimaryEstimatesRequestHandler = (
   const databaseName = process.env.DATABASE_NAME;
 
   const mersPrimaryEstimatesRequestHandler: RequestHandler = async(request, response) => {
-    const requestBody = request.body;
+    let partitionKey: number = NaN
 
-    if(typeof requestBody['partitionKey'] !== 'number') {
+    try {
+      const queryPartitionKey = request.query.partitionKey;
+      if(!!queryPartitionKey && typeof queryPartitionKey === 'string') {
+        partitionKey = parseInt(queryPartitionKey)
+      }
+    }
+    catch (error) {
       return response.status(400).json({ message: "No valid partitionKey specified. The partition key must be a number" });
     }
 
-    // TODO: Real paritioning when we need it.
-    if(requestBody['partitionKey'] !== 1) {
+    if(Number.isNaN(partitionKey)) {
+      return response.status(400).json({ message: "No valid partitionKey specified. The partition key must be a number" });
+    }
+
+    if(partitionKey !== 1) {
       return response.json([]);
     }
 
