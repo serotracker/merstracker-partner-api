@@ -135,18 +135,325 @@
       },
       "BasicPrimaryMersEstimateInformation": {
         "required": [
-          "id"
+          "id",
+          "type",
+          "estimateId",
+          "country",
+          "countryAlphaTwoCode",
+          "countryAlphaThreeCode",
+          "latitude",
+          "longitude",
+          "sourceUrl",
+          "sourceType",
+          "sourceTitle",
+          "assay",
+          "isotypes",
+          "testProducer",
+          "testValidation"
         ],
         "properties": {
           "id": {
             "type": "string",
             "description": "A MongoDB ObjectId which is unique for this primary estimate information entry.",
             "example": "66b2e8b4a9f12d298701c782"
+          },
+          "estimateId": {
+            "type": "string",
+            "description": "A string that is unique to this primary estimate.",
+            "example": "151217_SaudiArabia_KingAbdulazizUniversity_Camels_OverallNasal"
+          },
+          "country": {
+            "type": "string",
+            "description": "A string representation of the name of the country where the sampling was conducted. Conforms to the WHO's country name list.",
+            "example": "Saudi Arabia"
+          },
+          "city": {
+            "type": "string",
+            "description": "A string representation of the name of the city where the sampling was conducted.",
+            "example": "Riyadh"
+          },
+          "state": {
+            "type": "string",
+            "description": "A string representation of the name of the state where the sampling was conducted.",
+            "example": "Riyadh Province"
+          },
+          "countryAlphaTwoCode": {
+            "type": "string",
+            "description": "A country code for where the sampling was conducted. Conforms to the ISO 3166-1 alpha-2 spec.",
+            "example": "SA"
+          },
+          "countryAlphaThreeCode": {
+            "type": "string",
+            "description": "A country code for where the sampling was conducted. Conforms to the ISO 3166-1 alpha-3 spec.",
+            "example": "SAU"
+          },
+          "latitude": {
+            "type": "number",
+            "description": "An approximate latitude for the location where sampling was conducted",
+            "example": 23.310373690263443
+          },
+          "longitude": {
+            "type": "number",
+            "description": "An approximate longitude for the location where sampling was conducted",
+            "example": 44.55634163788037
+          },
+          "whoRegion": {
+            "type": "string",
+            "description": "The WHO region where the sampling was conducted.",
+            "enum": [
+              "AFR",
+              "AMR",
+              "SEAR",
+              "EUR",
+              "EMR",
+              "WPR"
+            ],
+            "example": "EMR"
+          },
+          "unRegion": {
+            "type": "string",
+            "description": "The UN region where the sampling was conducted.",
+            "enum": [
+              "NORTHERN_AFRICA",
+              "EASTERN_AFRICA",
+              "MIDDLE_AFRICA",
+              "SOUTHERN_AFRICA",
+              "WESTERN_AFRICA",
+              "CARIBBEAN",
+              "CENTRAL_AMERICA",
+              "SOUTH_AMERICA",
+              "NORTHERN_AMERICA",
+              "CENTRAL_ASIA",
+              "EASTERN_ASIA",
+              "SOUTH_EASTERN_ASIA",
+              "SOUTHERN_ASIA",
+              "WESTERN_ASIA",
+              "EASTERN_EUROPE",
+              "NORTHERN_EUROPE",
+              "SOUTHERN_EUROPE",
+              "WESTERN_EUROPE",
+              "AUSTRALIA_AND_NEW_ZEALAND",
+              "MELANESIA",
+              "MICRONESIA",
+              "POLYNESIA"
+            ],
+            "example": "WESTERN_ASIA"
+          },
+          "firstAuthorFullName": {
+            "type": "string",
+            "description": "The full name of the first author of the study.",
+            "example": "Samy Kasem"
+          },
+          "sourceUrl": {
+            "type": "string",
+            "description": "A url to the source where this estimate was derived from.",
+            "example": "https://doi.org/10.1016/j.jiph.2017.09.022"
+          },
+          "sourceType": {
+            "type": "string",
+            "description": "The type of the source where this estimate was derived from.",
+            "enum": [
+              "Journal Article (Peer-Reviewed)"
+            ],
+            "example": "Journal Article (Peer-Reviewed)"
+          },
+          "sourceTitle": {
+            "type": "string",
+            "description": "The title of the source where this estimate was derived from.",
+            "example": "Cross-sectional study of MERS-CoV-specific RNA and antibodies in animals that have had contact with MERS patients in Saudi Arabia"
+          },
+          "institution": {
+            "type": "string",
+            "description": "The name of the institution which published the source where this estimate was derived from.",
+            "example": "The University of Hong Kong"
+          },
+          "studyInclusionCriteria": {
+            "type": "string",
+            "description": "A description of the study's inclusion criteria.",
+            "example": "This was part of a cooperative epidemiological response to the confirmed human cases of MERS with a history of animal contact. Notifications were issued by the Ministry of Health (MOH) associated with animals with a history of contact with MERS-patients"
+          },
+          "studyExclusionCriteria": {
+            "type": "string",
+            "description": "A description of the study's exclusion criteria.",
+            "example": "Camels who had been outside Saudi Arabia in the past four months were excluded."
+          },
+          "sensitivity": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the sensitivity of the test used as a percentage.",
+            "example": 0.95
+          },
+          "sensitivity95CILower": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for the sensitivity of the test as a percentage.",
+            "example": 0.93
+          },
+          "sensitivity95CIUpper": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for the sensitivity of the test as a percentage.",
+            "example": 0.97
+          },
+          "sensitivityDenominator": {
+            "type": "number",
+            "description": "The sample size used when testing for sensitivity",
+            "example": 80
+          },
+          "specificity": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the specificity of the test used as a percentage.",
+            "example": 0.85
+          },
+          "specificity95CILower": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for the specificity of the test as a percentage.",
+            "example": 0.83
+          },
+          "specificity95CIUpper": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for the specificity of the test as a percentage.",
+            "example": 0.87
+          },
+          "specificityDenominator": {
+            "type": "number",
+            "description": "The sample size used when testing for specificity",
+            "example": 90
+          },
+          "sampleNumerator": {
+            "type": "number",
+            "description": "The number of positive cases within the population sampled.",
+            "example": 422
+          },
+          "sampleDenominator": {
+            "type": "number",
+            "description": "The number of people or animals within the population sampled.",
+            "example": 595
+          },
+          "assay": {
+            "type": "array",
+            "description": "The test(s) used to determine positivity.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "ELISA",
+                "N2 RT-qPCR",
+                "N3 RT-qPCR",
+                "Other",
+                "Virus Neutralization",
+                "RT-PCR"
+              ],
+              "example": "ELISA"
+            }
+          },
+          "specimenType": {
+            "type": "string",
+            "description": "The type of specimen extracted for the test",
+            "enum": [
+              "Dried Blood",
+              "Not reported",
+              "Plasma",
+              "Multiple Types",
+              "Serum",
+              "Whole Blood",
+              "Saliva",
+              "Nasal Swab or NP",
+              "Rectal swab",
+              "Milk",
+              "Urine",
+              "Muscle",
+              "Throat swab or OP"
+            ],
+            "example": "Serum"
+          },
+          "sex": {
+            "type": "string",
+            "description": "The sex of the population sampled.",
+            "enum": [
+              "Male",
+              "Female",
+              "All"
+            ],
+            "example": "All"
+          },
+          "isotypes": {
+            "type": "array",
+            "description": "The isotype(s) tested for.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "IgA",
+                "IgG",
+                "IgM",
+                "Total Antibody",
+                "Neutralizing",
+                "Not reported",
+                "N/A"
+              ],
+              "example": "IgG"
+            }
+          },
+          "samplingStartDate": {
+            "type": "string",
+            "description": "The time when sampling started. Confirms to the ISO 8601 standard.",
+            "example": "2014-07-15T06:00:00.000Z"
+          },
+          "samplingMidDate": {
+            "type": "string",
+            "description": "A time representing the middle of the sampling timeframe. Confirms to the ISO 8601 standard.",
+            "example": "2015-07-15T06:00:00.000Z"
+          },
+          "samplingEndDate": {
+            "type": "string",
+            "description": "The time when sampling ended. Confirms to the ISO 8601 standard.",
+            "example": "2016-07-15T06:00:00.000Z"
+          },
+          "geographicScope": {
+            "type": "string",
+            "description": "Whether this study is a national study, a regional study, or a local study.",
+            "enum": [
+              "National",
+              "Regional",
+              "Local"
+            ],
+            "example": "National"
+          },
+          "testProducer": {
+            "type": "array",
+            "description": "The producers of the test used for determining positivity",
+            "items": {
+              "type": "string",
+              "example": "Euroimmun"
+            }
+          },
+          "testValidation": {
+            "type": "array",
+            "description": "The validation used for the sensitivity and specificty measurements",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Validated by manufacturers",
+                "Validated by developers",
+                "Validated by independent authors",
+                "Not reported"
+              ],
+              "example": "Validated by manufacturers"
+            }
           }
         }
       },
       "PrimaryHumanMersSeroprevalenceEstimateInformation": {
         "allOf": [
+          {
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "HUMAN_SEROPREVALENCE",
+                "example": "HUMAN_SEROPREVALENCE",
+                "enum": ["HUMAN_SEROPREVALENCE"]
+              }
+            }
+          },
           { "$ref": "#/components/schemas/BasicPrimaryMersEstimateInformation" },
           {
             "type": "object",
@@ -212,6 +519,19 @@
       },
       "PrimaryAnimalMersSeroprevalenceEstimateInformation": {
         "allOf": [
+          {
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "ANIMAL_SEROPREVALENCE",
+                "example": "ANIMAL_SEROPREVALENCE",
+                "enum": ["ANIMAL_SEROPREVALENCE"]
+              }
+            }
+          },
           { "$ref": "#/components/schemas/BasicPrimaryMersEstimateInformation" },
           {
             "type": "object",
@@ -302,6 +622,19 @@
       },
       "PrimaryHumanMersViralEstimateInformation": {
         "allOf": [
+          {
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "HUMAN_VIRAL",
+                "example": "HUMAN_VIRAL",
+                "enum": ["HUMAN_VIRAL"]
+              }
+            }
+          },
           { "$ref": "#/components/schemas/BasicPrimaryMersEstimateInformation" },
           {
             "type": "object",
@@ -367,6 +700,19 @@
       },
       "PrimaryAnimalMersViralEstimateInformation": {
         "allOf": [
+          {
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "ANIMAL_VIRAL",
+                "example": "ANIMAL_VIRAL",
+                "enum": ["ANIMAL_VIRAL"]
+              }
+            }
+          },
           { "$ref": "#/components/schemas/BasicPrimaryMersEstimateInformation" },
           {
             "type": "object",
