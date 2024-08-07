@@ -22,3 +22,9 @@ app.use('/', router);
 app.all('*', (req, res) => res.status(404).json(new ErrorResponseObject('Route not defined.')));
 
 export default app;
+
+export const config = {
+  api: {
+    bodyParser: true
+  }
+}
