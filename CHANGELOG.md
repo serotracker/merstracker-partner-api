@@ -14,3 +14,7 @@
 
 - Added `fao/merstracker-primary-estimate-partitions` to fetch every `partitionKey` in our database.
 - [BREAKING] Transformed `/fao/merstracker-primary-estimates` into a `POST` request which accepts a `partitionKey` in the request body.
+
+## Version 0.3.1 - August 7th 2024
+
+- Fixed body parsing on `POST` requests.
