@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "MERSTracker Partner API Documentation",
-    "version": "1.0.1"
+    "version": "0.2.0"
   },
   "schemes": ["https"],
   "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],
@@ -34,6 +34,21 @@
   "components": {
     "schemas": {
       "PrimaryMersEstimate": {
+        "required": [
+          "id",
+          "estimateId",
+          "primaryEstimateInfo",
+          "geographicalAreaSubestimates",
+          "ageGroupSubestimates",
+          "testUsedSubestimates",
+          "animalSpeciesSubestimates",
+          "sexSubestimates",
+          "timeFrameSubestimates",
+          "sampleTypeSubestimates",
+          "occupationSubestimates",
+          "animalSourceLocationSubestimates",
+          "animalSamplingContextSubestimates"
+        ],
         "properties": {
           "id": {
             "type": "string",
@@ -118,7 +133,10 @@
           }
         }
       },
-      "PrimaryAnimalMersSeroprevalenceEstimateInformation": {
+      "BasicPrimaryMersEstimateInformation": {
+        "required": [
+          "id"
+        ],
         "properties": {
           "id": {
             "type": "string",
@@ -128,29 +146,314 @@
         }
       },
       "PrimaryHumanMersSeroprevalenceEstimateInformation": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "A MongoDB ObjectId which is unique for this primary estimate information entry.",
-            "example": "66b2e8b4a9f12d298701c783"
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicPrimaryMersEstimateInformation" },
+          {
+            "type": "object",
+            "required": [
+              "seroprevalence"
+            ],
+            "properties": {
+              "seroprevalence": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the seroprevalence as a percentage.",
+                "example": 0.44
+              },
+              "seroprevalence95CILower": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for seroprevalence as a percentage.",
+                "example": 0.40
+              },
+              "seroprevalence95CIUpper": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for seroprevalence as a percentage.",
+                "example": 0.48
+              },
+              "ageGroup": {
+                "type": "array",
+                "description": "The age group(s) captured in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Children and youth (0-17 years)",
+                    "Adults (18-45 years)",
+                    "Adults (46-59 years)",
+                    "Seniors (≥60 years)"
+                  ],
+                  "example": ["Children and youth (0-17 years)", "Seniors (≥60 years)"]
+                }
+              },
+              "sampleFrame": {
+                "type": "string",
+                "enum": [
+                  "Household and community sample",
+                  "Marketplace vendor",
+                  "Blood donors",
+                  "Residual sera",
+                  "Outpatient population",
+                  "Healthcare workers",
+                  "Close contacts of cases",
+                  "Travellers/tourism",
+                  "Suspected cases",
+                  "Multiple populations",
+                  "Livestock workers",
+                  "Pilgrims",
+                  "Quarantine station workers",
+                  "Slaughterhouse workers",
+                  "Nomadic communities",
+                  "Close contacts of camels"
+                ],
+                "description": "The population sampled in the study.",
+                "example": "Close contacts of camels"
+              }
+            }
           }
-        }
+        ]
       },
-      "PrimaryAnimalMersViralEstimateInformation": {
-        "id": {
-          "type": "string",
-          "description": "A MongoDB ObjectId which is unique for this primary estimate information entry.",
-          "example": "66b2e8b4a9f12d298701c784"
-        }
+      "PrimaryAnimalMersSeroprevalenceEstimateInformation": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicPrimaryMersEstimateInformation" },
+          {
+            "type": "object",
+            "required": [
+              "seroprevalence",
+              "animalSpecies",
+              "animalType",
+              "animalDetectionSettings"
+            ],
+            "properties": {
+              "seroprevalence": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the seroprevalence as a percentage.",
+                "example": 0.44
+              },
+              "seroprevalence95CILower": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for seroprevalence as a percentage.",
+                "example": 0.40
+              },
+              "seroprevalence95CIUpper": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for seroprevalence as a percentage.",
+                "example": 0.48
+              },
+              "animalSpecies": {
+                "type": "string",
+                "description": "The species of animal that was primarily sampled for this study.",
+                "enum": ["CAMEL", "BAT", "CATTLE", "SHEEP", "GOAT"],
+                "example": "CAMEL"
+              },
+              "animalType": {
+                "type": "array",
+                "description": "Whether the animal is a wild animal or a domestic animal. Includes both values if the population included both.",
+                "items": {
+                  "type": "string",
+                  "enum": ["Domestic", "Wild", "Not reported"],
+                  "example": "Domestic"
+                }
+              },
+              "animalDetectionSettings": {
+                "type": "array",
+                "description": "The population(s) sampled in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Livestock markets",
+                    "Abattoirs",
+                    "Quarantine",
+                    "Farms",
+                    "Free-roaming herds",
+                    "Other",
+                    "Animal contacts of human cases",
+                    "Not reported",
+                    "Multiple populations"
+                  ],
+                  "example": "Farms"
+                }
+              },
+              "animalPurpose": {
+                "type": "string",
+                "description": "A description of the animal's purpose.",
+                "example": "Multiple purposes"
+              },
+              "animalImportedOrLocal": {
+                "type": "string",
+                "description": "Whether the animal is local or imported.",
+                "enum": [
+                  "Imported",
+                  "Local",
+                  "Not reported"
+                ],
+                "example": "Imported"
+              },
+              "animalAgeGroup": {
+                "type": "string",
+                "description": "The age group captured in the study.",
+                "enum": [
+                  "Juvenile (6 months-2 years)",
+                  "Adult (>2 years)",
+                  "Neonatal (≤6 months)"
+                ],
+                "example": "Juvenile (6 months-2 years)"
+              }
+            }
+          }
+        ]
       },
       "PrimaryHumanMersViralEstimateInformation": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "A MongoDB ObjectId which is unique for this primary estimate information entry.",
-            "example": "66b2e8b4a9f12d298701c785"
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicPrimaryMersEstimateInformation" },
+          {
+            "type": "object",
+            "required": [
+              "positivePrevalence"
+            ],
+            "properties": {
+              "positivePrevalence": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the positive viral prevalence as a percentage.",
+                "example": 0.44
+              },
+              "positivePrevalence95CILower": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for the positive viral prevalence as a percentage.",
+                "example": 0.40
+              },
+              "positivePrevalence95CIUpper": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for the positive viral prevalence as a percentage.",
+                "example": 0.48
+              },
+              "ageGroup": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Children and youth (0-17 years)",
+                    "Adults (18-45 years)",
+                    "Adults (46-59 years)",
+                    "Seniors (≥60 years)"
+                  ],
+                  "description": "The age group(s) captured in the study.",
+                  "example": ["Children and youth (0-17 years)", "Seniors (≥60 years)"]
+                }
+              },
+              "sampleFrame": {
+                "type": "string",
+                "enum": [
+                  "Household and community sample",
+                  "Marketplace vendor",
+                  "Blood donors",
+                  "Residual sera",
+                  "Outpatient population",
+                  "Healthcare workers",
+                  "Close contacts of cases",
+                  "Travellers/tourism",
+                  "Suspected cases",
+                  "Multiple populations",
+                  "Livestock workers",
+                  "Pilgrims",
+                  "Quarantine station workers",
+                  "Slaughterhouse workers",
+                  "Nomadic communities",
+                  "Close contacts of camels"
+                ],
+                "description": "The population sampled in the study.",
+                "example": "Close contacts of camels"
+              }
+            }
           }
-        }
+        ]
+      },
+      "PrimaryAnimalMersViralEstimateInformation": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicPrimaryMersEstimateInformation" },
+          {
+            "type": "object",
+            "required": [
+              "seroprevalence",
+              "animalSpecies",
+              "animalType",
+              "animalDetectionSettings"
+            ],
+            "properties": {
+              "positivePrevalence": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the positive viral prevalence as a percentage.",
+                "example": 0.44
+              },
+              "positivePrevalence95CILower": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for the positive viral prevalence as a percentage.",
+                "example": 0.40
+              },
+              "positivePrevalence95CIUpper": {
+                "type": "number",
+                "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for the positive viral prevalence as a percentage.",
+                "example": 0.48
+              },
+              "animalSpecies": {
+                "type": "string",
+                "description": "The species of animal that was primarily sampled for this study.",
+                "enum": ["CAMEL", "BAT", "CATTLE", "SHEEP", "GOAT"],
+                "example": "CAMEL"
+              },
+              "animalType": {
+                "type": "array",
+                "description": "Whether the animal is a wild animal or a domestic animal. Includes both values if the population included both.",
+                "items": {
+                  "type": "string",
+                  "enum": ["Domestic", "Wild", "Not reported"],
+                  "example": "Domestic"
+                }
+              },
+              "animalDetectionSettings": {
+                "type": "array",
+                "description": "The population(s) sampled in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Livestock markets",
+                    "Abattoirs",
+                    "Quarantine",
+                    "Farms",
+                    "Free-roaming herds",
+                    "Other",
+                    "Animal contacts of human cases",
+                    "Not reported",
+                    "Multiple populations"
+                  ],
+                  "example": "Farms"
+                }
+              },
+              "animalPurpose": {
+                "type": "string",
+                "description": "A description of the animal's purpose.",
+                "example": "Multiple purposes"
+              },
+              "animalImportedOrLocal": {
+                "type": "string",
+                "description": "Whether the animal is local or imported.",
+                "enum": [
+                  "Imported",
+                  "Local",
+                  "Not reported"
+                ],
+                "example": "Imported"
+              },
+              "animalAgeGroup": {
+                "type": "string",
+                "description": "The age group captured in the study.",
+                "enum": [
+                  "Juvenile (6 months-2 years)",
+                  "Adult (>2 years)",
+                  "Neonatal (≤6 months)"
+                ],
+                "example": "Juvenile (6 months-2 years)"
+              }
+            }
+          }
+        ]
       },
       "MersGeographicalAreaSubEstimate": {
         "properties": {

@@ -1,6 +1,6 @@
 {
-  "name": "iit-backend-v2",
-  "version": "1.0.1",
+  "name": "merstracker-partner-api",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
