@@ -15,7 +15,7 @@ enum MersAnimalType {
   WILD = "WILD",
 }
 
-enum MersEstimateType {
+export enum MersEstimateType {
   HUMAN_VIRAL = 'HUMAN_VIRAL',
   ANIMAL_VIRAL = 'ANIMAL_VIRAL',
   HUMAN_SEROPREVALENCE = 'HUMAN_SEROPREVALENCE',
@@ -154,9 +154,17 @@ type MersViralSubEstimateInformation = MersSubEstimateInformationBase & {
   positivePrevalence95CIUpper: number | undefined;
 }
 
-type MersSubEstimateInformation = 
+export type MersSubEstimateInformation = 
   | MersSeroprevalenceSubEstimateInformation
   | MersViralSubEstimateInformation;
+
+  export const isMersSeroprevalenceSubEstimateInformation = (subestimate: MersSubEstimateInformation): subestimate is Extract<typeof subestimate, { seroprevalence: number} > => {
+    return 'seroprevalence' in subestimate && typeof subestimate['seroprevalence'] === 'number';
+  }
+  
+  export const isMersViralSubEstimateInformation = (subestimate: MersSubEstimateInformation): subestimate is Extract<typeof subestimate, { positivePrevalence: number} > => {
+    return 'positivePrevalence' in subestimate && typeof subestimate['positivePrevalence'] === 'number';
+  }
 
 interface MersSubEstimateBase {
   id: string;

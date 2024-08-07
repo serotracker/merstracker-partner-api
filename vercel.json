@@ -1,5 +1,5 @@
 {
-  "version": 2,
-  "builds": [{ "src": "api/rest.js", "use": "@vercel/node" }],
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
   "routes": [{ "src": "(.*)", "dest": "api/rest.js" }]
 }
