@@ -18,7 +18,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PrimaryMersEstimate"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PrimaryMersEstimate"
+                  }
                 }
               }
             }
@@ -34,7 +37,209 @@
         "properties": {
           "id": {
             "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this primary estimate.",
             "example": "66b2e8b4a9f12d298701c781"
+          },
+          "estimateId": {
+            "type": "string",
+            "description": "A string that is unique to this primary estimate.",
+            "example": "151217_SaudiArabia_KingAbdulazizUniversity_Camels_OverallNasal"
+          },
+          "primaryEstimateInfo": { 
+            "oneOf": [
+              { "$ref": "#/components/schemas/PrimaryAnimalMersSeroprevalenceEstimateInformation" },
+              { "$ref": "#/components/schemas/PrimaryHumanMersSeroprevalenceEstimateInformation" },
+              { "$ref": "#/components/schemas/PrimaryAnimalMersViralEstimateInformation" },
+              { "$ref": "#/components/schemas/PrimaryHumanMersViralEstimateInformation" }
+            ]
+          },
+          "geographicalAreaSubestimates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MersGeographicalAreaSubEstimate"
+            }
+          },
+          "ageGroupSubestimates": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                { "$ref": "#/components/schemas/MersHumanAgeGroupSubEstimate" },
+                { "$ref": "#/components/schemas/MersAnimalAgeGroupSubEstimate" }
+              ]
+            }
+          },
+          "testUsedSubestimates": {
+            "items": {
+              "$ref": "#/components/schemas/MersTestUsedSubEstimate"
+            }
+          },
+          "animalSpeciesSubestimates": {
+            "items": {
+              "$ref": "#/components/schemas/MersAnimalSpeciesSubEstimate"
+            }
+          },
+          "sexSubestimates": {
+            "items": {
+              "$ref": "#/components/schemas/MersSexSubEstimate"
+            }
+          },
+          "timeFrameSubestimates": {
+            "items": {
+              "$ref": "#/components/schemas/MersTimeFrameSubEstimate"
+            }
+          },
+          "sampleTypeSubestimates": {
+            "items": {
+              "$ref": "#/components/schemas/MersSampleTypeSubEstimate"
+            }
+          },
+          "occupationSubestimates": {
+            "items": {
+              "$ref": "#/components/schemas/MersOccupationSubEstimate"
+            }
+          },
+          "animalSourceLocationSubestimates": {
+            "items": {
+              "$ref": "#/components/schemas/MersAnimalSourceLocationSubEstimate"
+            }
+          },
+          "animalSamplingContextSubestimates": {
+            "items": {
+              "$ref": "#/components/schemas/MersAnimalSamplingContextSubEstimate"
+            }
+          }
+        }
+      },
+      "PrimaryAnimalMersSeroprevalenceEstimateInformation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this primary estimate information entry.",
+            "example": "66b2e8b4a9f12d298701c782"
+          }
+        }
+      },
+      "PrimaryHumanMersSeroprevalenceEstimateInformation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this primary estimate information entry.",
+            "example": "66b2e8b4a9f12d298701c783"
+          }
+        }
+      },
+      "PrimaryAnimalMersViralEstimateInformation": {
+        "id": {
+          "type": "string",
+          "description": "A MongoDB ObjectId which is unique for this primary estimate information entry.",
+          "example": "66b2e8b4a9f12d298701c784"
+        }
+      },
+      "PrimaryHumanMersViralEstimateInformation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this primary estimate information entry.",
+            "example": "66b2e8b4a9f12d298701c785"
+          }
+        }
+      },
+      "MersGeographicalAreaSubEstimate": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this subestimate.",
+            "example": "66b2e8b4a9f12d298701c786"
+          }
+        }
+      },
+      "MersHumanAgeGroupSubEstimate": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this subestimate.",
+            "example": "66b2e8b4a9f12d298701c787"
+          }
+        }
+      },
+      "MersAnimalAgeGroupSubEstimate": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this subestimate.",
+            "example": "66b2f3dd71de389275837c29"
+          }
+        }
+      },
+      "MersTestUsedSubEstimate": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this subestimate.",
+            "example": "66b2e8b4a9f12d298701c788"
+          }
+        }
+      },
+      "MersAnimalSpeciesSubEstimate": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this subestimate.",
+            "example": "66b2e8b4a9f12d298701c789"
+          }
+        }
+      },
+      "MersSexSubEstimate": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this subestimate.",
+            "example": "66b2e8b4a9f12d298701c78a"
+          }
+        }
+      },
+      "MersTimeFrameSubEstimate": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this subestimate.",
+            "example": "66b2e8b4a9f12d298701c78b"
+          }
+        }
+      },
+      "MersSampleTypeSubEstimate": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this subestimate.",
+            "example": "66b2e8b4a9f12d298701c78c"
+          }
+        }
+      },
+      "MersOccupationSubEstimate": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this subestimate.",
+            "example": "66b2e8b4a9f12d298701c78d"
+          }
+        }
+      },
+      "MersAnimalSourceLocationSubEstimate": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this subestimate.",
+            "example": "66b2e8b4a9f12d298701c78e"
+          }
+        }
+      },
+      "MersAnimalSamplingContextSubEstimate": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A MongoDB ObjectId which is unique for this subestimate.",
+            "example": "66b2e8b4a9f12d298701c78f"
           }
         }
       }
