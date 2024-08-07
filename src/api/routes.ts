@@ -1,9 +1,11 @@
 import { Router } from 'express';
 import { generateMersPrimaryEstimatesRequestHandler } from './fao/merstracker-primary-estimates/index.js'
 import { MongoClient } from 'mongodb';
+import { JsonObject, serve, setup } from 'swagger-ui-express';
 
 interface GenerateRouterInput {
   mongoClient: MongoClient;
+  swaggerDocument: JsonObject;
 }
 
 interface GenerateRouterOutput {
@@ -11,7 +13,7 @@ interface GenerateRouterOutput {
 }
 
 const generateRouter = (input: GenerateRouterInput): GenerateRouterOutput => {
-  const { mongoClient } = input;
+  const { mongoClient, swaggerDocument } = input;
 
   const router = Router();
 
@@ -20,6 +22,7 @@ const generateRouter = (input: GenerateRouterInput): GenerateRouterOutput => {
   })
 
   router.get('/fao/merstracker-primary-estimates', mersPrimaryEstimatesRequestHandler);
+  router.use('/api-docs', serve, setup(swaggerDocument));
 
   return {
     router

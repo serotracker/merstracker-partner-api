@@ -1,0 +1,43 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "MERSTracker Partner API Documentation",
+    "version": "1.0.1"
+  },
+  "schemes": ["https"],
+  "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],
+  "paths": {
+    "/fao/merstracker-primary-estimates": {
+      "get": {
+        "tags": ["FAO Endpoints"],
+        "summary": "Endpoints built to integrate with the FAO's Empres-I dashboard.",
+        "description": "Get all of the primary MERS viral and seroprevalence estimates from our database.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrimaryMersEstimate"
+                }
+              }
+            }
+          },
+          "500": { "description": "Internal server error" }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PrimaryMersEstimate": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "66b2e8b4a9f12d298701c781"
+          }
+        }
+      }
+    }
+  }
+}

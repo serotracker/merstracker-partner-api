@@ -1,6 +1,7 @@
 import express from 'express';
 import { MongoClient } from "mongodb";
 import { generateRouter } from '../public/dist/src/api/routes.js';
+import swaggerDocument from "../swagger.json" with { type: "json" };
 
 const mongoUrl = process.env.MONGODB_URI;
 
@@ -14,7 +15,7 @@ const mongoClient = new MongoClient(mongoUrl);
 await mongoClient.connect();
 
 const app = express();
-const { router } = generateRouter({ mongoClient });
+const { router } = generateRouter({ mongoClient, swaggerDocument });
 
 app.use('/', router);
 
