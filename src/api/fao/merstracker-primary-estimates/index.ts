@@ -36,6 +36,17 @@ export const generateMersPrimaryEstimatesRequestHandler = (
   const databaseName = process.env.DATABASE_NAME;
 
   const mersPrimaryEstimatesRequestHandler: RequestHandler = async(request, response) => {
+    const requestBody = request.body;
+
+    if(typeof requestBody['partitionKey'] !== 'number') {
+      return response.status(400).json({ message: "No valid partitionKey specified. The partition key must be a number" });
+    }
+
+    // TODO: Real paritioning when we need it.
+    if(requestBody['partitionKey'] !== 1) {
+      return response.json([]);
+    }
+
     const mersPrimaryEstimatesCollection = mongoClient.db(databaseName).collection<MersPrimaryEstimateDocument>('mersPrimaryEstimates');
     const mersPrimaryEstimates = await mersPrimaryEstimatesCollection.find({}).toArray();
 
