@@ -486,9 +486,9 @@
                     "Adults (18-45 years)",
                     "Adults (46-59 years)",
                     "Seniors (≥60 years)"
-                  ],
-                  "example": ["Children and youth (0-17 years)", "Seniors (≥60 years)"]
-                }
+                  ]
+                },
+                "example": ["Children and youth (0-17 years)", "Seniors (≥60 years)"]
               },
               "sampleFrame": {
                 "type": "string",
@@ -607,14 +607,17 @@
                 "example": "Imported"
               },
               "animalAgeGroup": {
-                "type": "string",
-                "description": "The age group captured in the study.",
-                "enum": [
-                  "Juvenile (6 months-2 years)",
-                  "Adult (>2 years)",
-                  "Neonatal (≤6 months)"
-                ],
-                "example": "Juvenile (6 months-2 years)"
+                "type": "array",
+                "description": "The age group(s) captured in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Juvenile (6 months-2 years)",
+                    "Adult (>2 years)",
+                    "Neonatal (≤6 months)"
+                  ],
+                  "example": "Juvenile (6 months-2 years)"
+                }
               }
             }
           }
@@ -801,104 +804,474 @@
           }
         ]
       },
-      "MersGeographicalAreaSubEstimate": {
+      "SeroprevalenceSubEstimateInformation": {
+        "required": [
+          "seroprevalence"
+        ],
+        "properties": {
+          "sampleNumerator": {
+            "type": "number",
+            "description": "The number of positive cases within the population sampled.",
+            "example": 31
+          },
+          "sampleDenominator": {
+            "type": "number",
+            "description": "The number of people or animals within the population sampled.",
+            "example": 66
+          },
+          "seroprevalence": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the seroprevalence as a percentage.",
+            "example": 0.47
+          },
+          "seroprevalence95CILower": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for seroprevalence as a percentage.",
+            "example": 0.43
+          },
+          "seroprevalence95CIUpper": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for seroprevalence as a percentage.",
+            "example": 0.51
+          }
+        }
+      },
+      "ViralSubEstimateInformation": {
+        "required": [
+          "positivePrevalence"
+        ],
+        "properties": {
+          "sampleNumerator": {
+            "type": "number",
+            "description": "The number of positive cases within the population sampled.",
+            "example": 13
+          },
+          "sampleDenominator": {
+            "type": "number",
+            "description": "The number of people or animals within the population sampled.",
+            "example": 55
+          },
+          "positivePrevalence": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the virual positive prevalence as a percentage.",
+            "example": 0.24
+          },
+          "positivePrevalence95CILower": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the lower bound of the 95% confidence interval for the viral positive prevalence as a percentage.",
+            "example": 0.19
+          },
+          "positivePrevalence95CIUpper": {
+            "type": "number",
+            "description": "A number from 0 to 1.00 which represents the upper bound of the 95% confidence interval for the viral positive prevalence as a percentage.",
+            "example": 0.29
+          }
+        }
+      },
+      "BasicMersSubEstimate": {
+        "required": [
+          "id",
+          "estimateId",
+          "estimateInfo"
+        ],
         "properties": {
           "id": {
             "type": "string",
             "description": "A MongoDB ObjectId which is unique for this subestimate.",
             "example": "66b2e8b4a9f12d298701c786"
+          },
+          "estimateId": {
+            "type": "string",
+            "description": "A string that is unique to this primary estimate.",
+            "example": "151217_SaudiArabia_KingAbdulazizUniversity_Camels_Farm"
+          },
+          "estimateInfo": {
+            "oneOf": [
+              { "$ref": "#/components/schemas/SeroprevalenceSubEstimateInformation" },
+              { "$ref": "#/components/schemas/ViralSubEstimateInformation" }
+            ] 
           }
         }
+      },
+      "MersGeographicalAreaSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "type": "object",
+            "required": [
+              "country",
+              "countryAlphaTwoCode",
+              "countryAlphaThreeCode",
+              "latitude",
+              "longitude"
+            ],
+            "properties": {
+              "country": {
+                "type": "string",
+                "description": "A string representation of the name of the country where the sampling was conducted. Conforms to the WHO's country name list.",
+                "example": "Saudi Arabia"
+              },
+              "city": {
+                "type": "string",
+                "description": "A string representation of the name of the city where the sampling was conducted.",
+                "example": "Riyadh"
+              },
+              "state": {
+                "type": "string",
+                "description": "A string representation of the name of the state where the sampling was conducted.",
+                "example": "Riyadh Province"
+              },
+              "countryAlphaTwoCode": {
+                "type": "string",
+                "description": "A country code for where the sampling was conducted. Conforms to the ISO 3166-1 alpha-2 spec.",
+                "example": "SA"
+              },
+              "countryAlphaThreeCode": {
+                "type": "string",
+                "description": "A country code for where the sampling was conducted. Conforms to the ISO 3166-1 alpha-3 spec.",
+                "example": "SAU"
+              },
+              "latitude": {
+                "type": "number",
+                "description": "An approximate latitude for the location where sampling was conducted",
+                "example": 23.310373690263443
+              },
+              "longitude": {
+                "type": "number",
+                "description": "An approximate longitude for the location where sampling was conducted",
+                "example": 44.55634163788037
+              },
+              "whoRegion": {
+                "type": "string",
+                "description": "The WHO region where the sampling was conducted.",
+                "enum": [
+                  "AFR",
+                  "AMR",
+                  "SEAR",
+                  "EUR",
+                  "EMR",
+                  "WPR"
+                ],
+                "example": "EMR"
+              },
+              "unRegion": {
+                "type": "string",
+                "description": "The UN region where the sampling was conducted.",
+                "enum": [
+                  "NORTHERN_AFRICA",
+                  "EASTERN_AFRICA",
+                  "MIDDLE_AFRICA",
+                  "SOUTHERN_AFRICA",
+                  "WESTERN_AFRICA",
+                  "CARIBBEAN",
+                  "CENTRAL_AMERICA",
+                  "SOUTH_AMERICA",
+                  "NORTHERN_AMERICA",
+                  "CENTRAL_ASIA",
+                  "EASTERN_ASIA",
+                  "SOUTH_EASTERN_ASIA",
+                  "SOUTHERN_ASIA",
+                  "WESTERN_ASIA",
+                  "EASTERN_EUROPE",
+                  "NORTHERN_EUROPE",
+                  "SOUTHERN_EUROPE",
+                  "WESTERN_EUROPE",
+                  "AUSTRALIA_AND_NEW_ZEALAND",
+                  "MELANESIA",
+                  "MICRONESIA",
+                  "POLYNESIA"
+                ],
+                "example": "WESTERN_ASIA"
+              },
+              "geographicScope": {
+                "type": "string",
+                "description": "Whether this study is a national study, a regional study, or a local study.",
+                "enum": [
+                  "National",
+                  "Regional",
+                  "Local"
+                ],
+                "example": "National"
+              }
+            }
+          }
+        ]
       },
       "MersHumanAgeGroupSubEstimate": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "A MongoDB ObjectId which is unique for this subestimate.",
-            "example": "66b2e8b4a9f12d298701c787"
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "type": "object",
+            "required": [
+              "ageGroup",
+              "ageGroupLabel"
+            ],
+            "properties": {
+              "ageGroup": {
+                "type": "array",
+                "description": "The age group(s) captured in the subestimate.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Children and youth (0-17 years)",
+                    "Adults (18-45 years)",
+                    "Adults (46-59 years)",
+                    "Seniors (≥60 years)"
+                  ]
+                },
+                "example": ["Children and youth (0-17 years)"]
+              },
+              "ageGroupLabel": {
+                "type": "string",
+                "description": "A more in-depth description of the age groups captured in the subestimate",
+                "example": "Children between the ages of four and eight"
+              }
+            }
           }
-        }
+        ]
       },
       "MersAnimalAgeGroupSubEstimate": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "A MongoDB ObjectId which is unique for this subestimate.",
-            "example": "66b2f3dd71de389275837c29"
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "type": "object",
+            "required": [
+              "animalAgeGroup",
+              "animalAgeGroupLabel"
+            ],
+            "properties": {
+              "animalAgeGroup": {
+                "type": "array",
+                "description": "The age group(s) captured in the subestimate.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Juvenile (6 months-2 years)",
+                    "Adult (>2 years)",
+                    "Neonatal (≤6 months)"
+                  ],
+                  "example": "Juvenile (6 months-2 years)"
+                }
+              },
+              "animalAgeGroupLabel": {
+                "type": "string",
+                "description": "A more in-depth description of the age groups captured in the subestimate",
+                "example": "Camels between the ages of eight and twelve months"
+              }
+            }
           }
-        }
+        ]
       },
       "MersTestUsedSubEstimate": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "A MongoDB ObjectId which is unique for this subestimate.",
-            "example": "66b2e8b4a9f12d298701c788"
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "assay"
+            ],
+            "properties": {
+              "assay": {
+                "type": "array",
+                "description": "The test(s) used to determine positivity.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "ELISA",
+                    "N2 RT-qPCR",
+                    "N3 RT-qPCR",
+                    "Other",
+                    "Virus Neutralization",
+                    "RT-PCR"
+                  ],
+                  "example": "ELISA"
+                }
+              }
+            }
           }
-        }
+        ]
       },
       "MersAnimalSpeciesSubEstimate": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "A MongoDB ObjectId which is unique for this subestimate.",
-            "example": "66b2e8b4a9f12d298701c789"
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "animalSpecies"
+            ],
+            "properties": {
+              "animalSpecies": {
+                "type": "string",
+                "description": "The species of animal that was primarily sampled for this study.",
+                "enum": [ "CAMEL", "BAT", "CATTLE", "SHEEP", "GOAT" ],
+                "example": "CAMEL"
+              }
+            }
           }
-        }
+        ]
       },
       "MersSexSubEstimate": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "A MongoDB ObjectId which is unique for this subestimate.",
-            "example": "66b2e8b4a9f12d298701c78a"
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "sex"
+            ],
+            "properties": {
+              "sex": {
+                "type": "string",
+                "description": "The sex of the population sampled.",
+                "enum": [
+                  "Male",
+                  "Female",
+                  "All"
+                ],
+                "example": "Male"
+              }
+            }
           }
-        }
+        ]
       },
       "MersTimeFrameSubEstimate": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "A MongoDB ObjectId which is unique for this subestimate.",
-            "example": "66b2e8b4a9f12d298701c78b"
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "samplingStartDate",
+              "samplingEndDate"
+            ],
+            "properties": {
+              "samplingStartDate": {
+                "type": "string",
+                "description": "The time when sampling started. Confirms to the ISO 8601 standard.",
+                "example": "2014-09-15T06:00:00.000Z"
+              },
+              "samplingEndDate": {
+                "type": "string",
+                "description": "The time when sampling ended. Confirms to the ISO 8601 standard.",
+                "example": "2014-10-15T06:00:00.000Z"
+              }
+            }
           }
-        }
+        ]
       },
       "MersSampleTypeSubEstimate": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "A MongoDB ObjectId which is unique for this subestimate.",
-            "example": "66b2e8b4a9f12d298701c78c"
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "specimenType"
+            ],
+            "properties": {
+              "specimenType": {
+                "type": "string",
+                "description": "The type of specimen extracted for the test",
+                "enum": [
+                  "Dried Blood",
+                  "Not reported",
+                  "Plasma",
+                  "Multiple Types",
+                  "Serum",
+                  "Whole Blood",
+                  "Saliva",
+                  "Nasal Swab or NP",
+                  "Rectal swab",
+                  "Milk",
+                  "Urine",
+                  "Muscle",
+                  "Throat swab or OP"
+                ],
+                "example": "Serum"
+              }
+            }
           }
-        }
+        ]
       },
       "MersOccupationSubEstimate": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "A MongoDB ObjectId which is unique for this subestimate.",
-            "example": "66b2e8b4a9f12d298701c78d"
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "occupation"
+            ],
+            "properties": {
+              "occupation": {
+                "type": "string",
+                "description": "The occupation of the population sampled",
+                "example": "Camels close contacts"
+              }
+            }
           }
-        }
+        ]
       },
       "MersAnimalSourceLocationSubEstimate": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "A MongoDB ObjectId which is unique for this subestimate.",
-            "example": "66b2e8b4a9f12d298701c78e"
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "animalImportedOrLocal",
+              "animalCountryOfImport",
+              "animalCountryOfImportAlphaTwoCode",
+              "animalCountryOfImportAlphaThreeCode"
+            ],
+            "properties": {
+              "animalImportedOrLocal": {
+                "type": "string",
+                "description": "Whether the animal is local or imported.",
+                "enum": [
+                  "Imported",
+                  "Local",
+                  "Not reported"
+                ],
+                "example": "Imported"
+              },
+              "animalCountryOfImport": {
+                "type": "string",
+                "description": "A string representation of the name of the country where the animals were imported from. Conforms to the WHO's country name list.",
+                "example": "Sudan"
+              },
+              "animalCountryOfImportAlphaTwoCode": {
+                "type": "string",
+                "description": "A country code for where the animals were imported from. Conforms to the ISO 3166-1 alpha-2 spec.",
+                "example": "SD"
+              },
+              "animalCountryOfImportAlphaThreeCode": {
+                "type": "string",
+                "description": "A country code for where the animals were imported from. Conforms to the ISO 3166-1 alpha-3 spec.",
+                "example": "SDN"
+              }
+            }
           }
-        }
+        ]
       },
       "MersAnimalSamplingContextSubEstimate": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "A MongoDB ObjectId which is unique for this subestimate.",
-            "example": "66b2e8b4a9f12d298701c78f"
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "animalDetectionSettings"
+            ],
+            "properties": {
+              "animalDetectionSettings": {
+                "type": "array",
+                "description": "The population(s) sampled in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Livestock markets",
+                    "Abattoirs",
+                    "Quarantine",
+                    "Farms",
+                    "Free-roaming herds",
+                    "Other",
+                    "Animal contacts of human cases",
+                    "Not reported",
+                    "Multiple populations"
+                  ],
+                  "example": "Farms"
+                }
+              }
+            }
           }
-        }
+        ]
       }
     }
   }
