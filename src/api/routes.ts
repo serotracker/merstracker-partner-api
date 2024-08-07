@@ -22,7 +22,9 @@ const generateRouter = (input: GenerateRouterInput): GenerateRouterOutput => {
   })
 
   router.get('/fao/merstracker-primary-estimates', mersPrimaryEstimatesRequestHandler);
-  router.use('/api-docs', serve, setup(swaggerDocument));
+  router.use('/api-docs', serve, setup(swaggerDocument, {
+    customCssUrl: "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css"
+  }));
 
   return {
     router
