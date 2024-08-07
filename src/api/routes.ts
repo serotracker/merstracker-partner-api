@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { generateMersPrimaryEstimatesRequestHandler } from './fao/mers-tracker-primary-estimates/index.js'
+import { generateMersPrimaryEstimatesRequestHandler } from './fao/merstracker-primary-estimates/index.js'
 import { MongoClient } from 'mongodb';
 
 interface GenerateRouterInput {
