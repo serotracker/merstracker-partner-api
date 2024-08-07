@@ -2,16 +2,45 @@
   "openapi": "3.0.1",
   "info": {
     "title": "MERSTracker Partner API Documentation",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "schemes": ["https"],
   "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],
   "paths": {
-    "/fao/merstracker-primary-estimates": {
+    "/fao/merstracker-primary-estimate-partitions": {
       "get": {
         "tags": ["FAO Endpoints"],
-        "summary": "Endpoints built to integrate with the FAO's Empres-I dashboard.",
-        "description": "Get all of the primary MERS viral and seroprevalence estimates from our database.",
+        "summary": "For fetching all partition keys for the estimates. Part of our pagination for fetching estimates.",
+        "description": "Get all of partition keys for the estimates in our database.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MersPrimaryEstimatePartitionKeyResponse"
+                }
+              }
+            }
+          }
+        },
+        "500": { "description": "Internal server error" }
+      }
+    },
+    "/fao/merstracker-primary-estimates": {
+      "post": {
+        "tags": ["FAO Endpoints"],
+        "summary": "For fetching all primary seroprevalence estimates associated with a particular partition key for use in the FAO's Empres-I dashboard.",
+        "description": "Get primary MERS viral and seroprevalence estimates from our database.",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "A body containing the partition key to get the data for. Calling this endpoint for each partition key returned by /fao/merstracker-primary-estimate-partitions will give the full dataset.",
+            "required": true,
+            "schema": { "$ref": "#/components/schemas/MersPrimaryEstimateRequestBody" }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success",
@@ -21,6 +50,21 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/PrimaryMersEstimate"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "No partition key specified"
+                    }
                   }
                 }
               }
@@ -130,6 +174,34 @@
             "items": {
               "$ref": "#/components/schemas/MersAnimalSamplingContextSubEstimate"
             }
+          }
+        }
+      },
+      "MersPrimaryEstimatePartitionKeyResponse": {
+        "type": "object",
+        "required": [
+          "partitionKeys"
+        ],
+        "properties": {
+          "partitionKeys": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "example": 1
+            }
+          }
+        }
+      },
+      "MersPrimaryEstimateRequestBody": {
+        "type": "object",
+        "required": [
+          "partitionKey"
+        ],
+        "properties": {
+          "partitionKey": {
+            "type": "number",
+            "description": "The partition key to use to fetch the estimates",
+            "example": 1
           }
         }
       },

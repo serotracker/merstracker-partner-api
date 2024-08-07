@@ -9,3 +9,8 @@
 
 - Added `swagger.json` for generating API docs.
 - Added route `/api-docs` for housing the swagger documentation for the entire API.
+
+## Version 0.3.0 - August 7th 2024
+
+- Added `fao/merstracker-primary-estimate-partitions` to fetch every `partitionKey` in our database.
+- [BREAKING] Transformed `/fao/merstracker-primary-estimates` into a `POST` request which accepts a `partitionKey` in the request body.
