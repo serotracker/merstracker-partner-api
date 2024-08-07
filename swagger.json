@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "MERSTracker Partner API Documentation",
-    "version": "0.3.1"
+    "version": "0.3.2"
   },
   "schemes": ["https"],
   "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],
@@ -28,17 +28,18 @@
       }
     },
     "/fao/merstracker-primary-estimates": {
-      "post": {
+      "get": {
         "tags": ["FAO Endpoints"],
         "summary": "For fetching all primary seroprevalence estimates associated with a particular partition key for use in the FAO's Empres-I dashboard.",
         "description": "Get primary MERS viral and seroprevalence estimates from our database.",
         "parameters": [
           {
-            "in": "body",
-            "name": "body",
-            "description": "A body containing the partition key to get the data for. Calling this endpoint for each partition key returned by /fao/merstracker-primary-estimate-partitions will give the full dataset.",
+            "name": "partitionKey",
+            "in": "query",
+            "description": "The partition key to get data for. Calling this endpoint for each partition key returned by /fao/merstracker-primary-estimate-partitions will give the full dataset.",
             "required": true,
-            "schema": { "$ref": "#/components/schemas/MersPrimaryEstimateRequestBody" }
+            "type": "number",
+            "example": 1
           }
         ],
         "responses": {
@@ -189,19 +190,6 @@
               "type": "number",
               "example": 1
             }
-          }
-        }
-      },
-      "MersPrimaryEstimateRequestBody": {
-        "type": "object",
-        "required": [
-          "partitionKey"
-        ],
-        "properties": {
-          "partitionKey": {
-            "type": "number",
-            "description": "The partition key to use to fetch the estimates",
-            "example": 1
           }
         }
       },
