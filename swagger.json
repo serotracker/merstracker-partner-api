@@ -404,24 +404,27 @@
             }
           },
           "specimenType": {
-            "type": "string",
-            "description": "The type of specimen extracted for the test",
-            "enum": [
-              "Dried Blood",
-              "Not reported",
-              "Plasma",
-              "Multiple Types",
-              "Serum",
-              "Whole Blood",
-              "Saliva",
-              "Nasal Swab or NP",
-              "Rectal swab",
-              "Milk",
-              "Urine",
-              "Muscle",
-              "Throat swab or OP"
-            ],
-            "example": "Serum"
+            "type": "array",
+            "description": "The type(s) of specimen extracted for the test",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Dried Blood",
+                "Not reported",
+                "Plasma",
+                "Multiple Types",
+                "Serum",
+                "Whole Blood",
+                "Saliva",
+                "Nasal Swab or NP",
+                "Rectal swab",
+                "Milk",
+                "Urine",
+                "Muscle",
+                "Throat swab or OP"
+              ],
+              "example": "Serum"
+            }
           },
           "sex": {
             "type": "string",
@@ -1222,24 +1225,27 @@
             ],
             "properties": {
               "specimenType": {
-                "type": "string",
-                "description": "The type of specimen extracted for the test",
-                "enum": [
-                  "Dried Blood",
-                  "Not reported",
-                  "Plasma",
-                  "Multiple Types",
-                  "Serum",
-                  "Whole Blood",
-                  "Saliva",
-                  "Nasal Swab or NP",
-                  "Rectal swab",
-                  "Milk",
-                  "Urine",
-                  "Muscle",
-                  "Throat swab or OP"
-                ],
-                "example": "Serum"
+                "type": "array",
+                "description": "The type(s) of specimen extracted for the test",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Dried Blood",
+                    "Not reported",
+                    "Plasma",
+                    "Multiple Types",
+                    "Serum",
+                    "Whole Blood",
+                    "Saliva",
+                    "Nasal Swab or NP",
+                    "Rectal swab",
+                    "Milk",
+                    "Urine",
+                    "Muscle",
+                    "Throat swab or OP"
+                  ],
+                  "example": "Dried Blood"
+                }
               }
             }
           }

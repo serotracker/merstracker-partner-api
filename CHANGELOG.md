@@ -23,3 +23,8 @@
 
 - [BREAKING] `partitionKey` is passed as a query parameter rather than in the body for `/fao/merstracker-primary-estimates`
 - [BREAKING] `/fao/merstracker-primary-estimates` is transformed back into a `GET` request.
+
+## Version 0.3.3 - August 11th 2024
+
+- [BREAKING] Changed `specimenType` on `BasicPrimaryMersEstimateInformation` to be an array of strings rather than a nullable string.
+- [BREAKING] Changed `specimenType` on `MersSampleTypeSubEstimate` to be an array of strings.

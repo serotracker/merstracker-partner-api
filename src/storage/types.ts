@@ -67,7 +67,7 @@ interface MersEstimateDocumentBase {
   sampleDenominator: number | undefined;
   sampleNumerator: number | undefined;
   assay: string[];
-  specimenType: string | undefined;
+  specimenType: string[];
   sex: string | undefined;
   isotypes: string[];
   samplingStartDate: Date | undefined;
@@ -223,7 +223,7 @@ type MersTimeFrameSubEstimate = MersSubEstimateBase & {
 }
 
 type MersSampleTypeSubEstimate = MersSubEstimateBase & {
-  specimenType: string;
+  specimenType: string[];
 }
 
 type MersOccupationSubEstimate = MersSubEstimateBase & {
