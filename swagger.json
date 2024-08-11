@@ -207,6 +207,7 @@
           "sourceType",
           "sourceTitle",
           "assay",
+          "specimenType",
           "isotypes",
           "testProducer",
           "testValidation"

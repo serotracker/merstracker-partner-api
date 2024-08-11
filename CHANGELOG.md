@@ -26,5 +26,5 @@
 
 ## Version 0.3.3 - August 11th 2024
 
-- [BREAKING] Changed `specimenType` on `BasicPrimaryMersEstimateInformation` to be an array of strings rather than a nullable string.
-- [BREAKING] Changed `specimenType` on `MersSampleTypeSubEstimate` to be an array of strings.
+- [BREAKING] Changed `specimenType` on `BasicPrimaryMersEstimateInformation` to be a mandatory array of strings rather than an optional string.
+- [BREAKING] Changed `specimenType` on `MersSampleTypeSubEstimate` to be an array of strings rather than a mandatory string.
