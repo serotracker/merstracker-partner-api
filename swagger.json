@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "MERSTracker Partner API Documentation",
-    "version": "0.3.3"
+    "version": "0.3.4"
   },
   "schemes": ["https"],
   "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],
@@ -209,6 +209,7 @@
           "assay",
           "specimenType",
           "isotypes",
+          "antigen",
           "testProducer",
           "testValidation"
         ],
@@ -437,6 +438,22 @@
             ],
             "example": "All"
           },
+          "socioeconomicStatus": {
+            "type": "string",
+            "description": "The socioeconomic status of the population sampled.",
+            "example": "Wealthy individuals"
+          },
+          "exposureToCamels": {
+            "type": "string",
+            "description": "The exposure level to camels in the population sampled.",
+            "enum": [
+              "Direct exposure",
+              "Indirect exposure",
+              "No exposure",
+              "Mixed exposure"
+            ],
+            "example": "Indirect exposure"
+          },
           "isotypes": {
             "type": "array",
             "description": "The isotype(s) tested for.",
@@ -452,6 +469,20 @@
                 "N/A"
               ],
               "example": "IgG"
+            }
+          },
+          "antigen": {
+            "type": "array",
+            "description": "The antigen(s) or gene(s) tested for. Multiple values indicate an AND (Ex. Positive for UpE and N)",
+            "items": {
+              "type": "string",
+              "enum": [
+                "S1",
+                "Not reported",
+                "UpE",
+                "N"
+              ],
+              "example": "UpE"
             }
           },
           "samplingStartDate": {
@@ -484,8 +515,41 @@
             "description": "The producers of the test used for determining positivity",
             "items": {
               "type": "string",
+              "enum": [
+                "Not reported",
+                "In-house",
+                "Euroimmun",
+                "Roche",
+                "Other",
+                "Altona Diagnostics"
+              ],
               "example": "Euroimmun"
             }
+          },
+          "testProducerOther": {
+            "type": "string",
+            "description": "If the test producer is \"Other\", this field indicates what the test producer is.",
+            "example": "Alpha Diagnostic International, USA"
+          },
+          "testValidatedOn": {
+            "type": "string",
+            "description": "What species the test was tested on.",
+            "example": "Dromedary camel"
+          },
+          "positiveCutoff": {
+            "type": "string",
+            "description": "The positive cutoff for the testing. Values can vary greatly from estimate to estimate.",
+            "example": "Antibody titres of = 1:20 on neutralization assay"
+          },
+          "symptomPrevalenceOfPositives": {
+            "type": "number",
+            "description": "The symtom prevalence of the population determined positive.",
+            "example": 0.90
+          },
+          "symptomDefinition": {
+            "type": "string",
+            "description": "The definition used when determining whether someone displays symptoms and should be included in symptomPrevalenceOfPositives.",
+            "example": "Mild sniffles or sore throat"
           },
           "testValidation": {
             "type": "array",

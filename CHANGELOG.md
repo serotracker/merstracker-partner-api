@@ -28,3 +28,8 @@
 
 - [BREAKING] Changed `specimenType` on `BasicPrimaryMersEstimateInformation` to be a mandatory array of strings rather than an optional string.
 - [BREAKING] Changed `specimenType` on `MersSampleTypeSubEstimate` to be an array of strings rather than a mandatory string.
+
+## Version 0.3.4 - August 16th 2024
+
+- Added the `socioeconomicStatus`, `exposureToCamels`, `antigen`, `testProducerOther`, `testValidatedOn`, `positiveCutoff`, `symptomPrevalenceOfPositives`, and `symptomDefinition` fields to `BasicPrimaryMersEstimateInformation`.
+- Added an enum to `testProducer` on `BasicPrimaryMersEstimateInformation`.

@@ -69,14 +69,22 @@ interface MersEstimateDocumentBase {
   assay: string[];
   specimenType: string[];
   sex: string | undefined;
+  socioeconomicStatus: string | undefined;
+  exposureToCamels: string | undefined;
   isotypes: string[];
+  antigen: string[];
   samplingStartDate: Date | undefined;
   samplingEndDate: Date | undefined;
   samplingMidDate: Date | undefined;
   samplingMethod: string | undefined;
   geographicScope: string | undefined;
   testProducer: string[];
+  testProducerOther: string | undefined;
   testValidation: string[];
+  testValidatedOn: string | undefined;
+  positiveCutoff: string | undefined;
+  symptomPrevalenceOfPositives: number | undefined;
+  symptomDefinition: string | undefined;
   createdAt: Date;
   updatedAt: Date;
 }
