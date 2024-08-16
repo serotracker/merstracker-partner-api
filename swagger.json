@@ -1328,6 +1328,40 @@
                 "type": "string",
                 "description": "The occupation of the population sampled",
                 "example": "Camels close contacts"
+              },
+              "sampleFrame": {
+                "type": "string",
+                "enum": [
+                  "Household and community sample",
+                  "Marketplace vendor",
+                  "Blood donors",
+                  "Residual sera",
+                  "Outpatient population",
+                  "Healthcare workers",
+                  "Close contacts of cases",
+                  "Travellers/tourism",
+                  "Suspected cases",
+                  "Multiple populations",
+                  "Livestock workers",
+                  "Pilgrims",
+                  "Quarantine station workers",
+                  "Slaughterhouse workers",
+                  "Nomadic communities",
+                  "Close contacts of camels"
+                ],
+                "description": "The population sampled in the study.",
+                "example": "Nomadic communities"
+              },
+              "exposureToCamels": {
+                "type": "string",
+                "description": "The exposure level to camels in the population sampled.",
+                "enum": [
+                  "Direct exposure",
+                  "Indirect exposure",
+                  "No exposure",
+                  "Mixed exposure"
+                ],
+                "example": "Indirect exposure"
               }
             }
           }
