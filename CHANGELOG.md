@@ -33,3 +33,7 @@
 
 - Added the `socioeconomicStatus`, `exposureToCamels`, `antigen`, `testProducerOther`, `testValidatedOn`, `positiveCutoff`, `symptomPrevalenceOfPositives`, and `symptomDefinition` fields to `BasicPrimaryMersEstimateInformation`.
 - Added an enum to `testProducer` on `BasicPrimaryMersEstimateInformation`.
+
+## Version 0.3.5 - August 16th 2024
+
+- Added the `sampleFrame` and `exposureToCamels` fields to `MersOccupationSubEstimate`.
