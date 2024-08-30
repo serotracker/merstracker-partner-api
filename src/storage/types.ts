@@ -42,6 +42,7 @@ interface MersEstimateDocumentBase {
   subGroupingVariable: MersSubGroupingVariable;
   city: string | undefined;
   state: string | undefined;
+  district: string | undefined;
   country: string;
   countryAlphaTwoCode: string;
   countryAlphaThreeCode: string;
@@ -166,23 +167,24 @@ export type MersSubEstimateInformation =
   | MersSeroprevalenceSubEstimateInformation
   | MersViralSubEstimateInformation;
 
-  export const isMersSeroprevalenceSubEstimateInformation = (subestimate: MersSubEstimateInformation): subestimate is Extract<typeof subestimate, { seroprevalence: number} > => {
-    return 'seroprevalence' in subestimate && typeof subestimate['seroprevalence'] === 'number';
-  }
-  
-  export const isMersViralSubEstimateInformation = (subestimate: MersSubEstimateInformation): subestimate is Extract<typeof subestimate, { positivePrevalence: number} > => {
-    return 'positivePrevalence' in subestimate && typeof subestimate['positivePrevalence'] === 'number';
-  }
+export const isMersSeroprevalenceSubEstimateInformation = (subestimate: MersSubEstimateInformation): subestimate is Extract<typeof subestimate, { seroprevalence: number} > => {
+  return 'seroprevalence' in subestimate && typeof subestimate['seroprevalence'] === 'number';
+}
+
+export const isMersViralSubEstimateInformation = (subestimate: MersSubEstimateInformation): subestimate is Extract<typeof subestimate, { positivePrevalence: number} > => {
+  return 'positivePrevalence' in subestimate && typeof subestimate['positivePrevalence'] === 'number';
+}
 
 interface MersSubEstimateBase {
   id: string;
   estimateId: string;
   estimateInfo: MersSubEstimateInformation;
 }
-  
+
 type MersGeographicalAreaSubEstimate = MersSubEstimateBase & {
   city: string | undefined;
   state: string | undefined;
+  district: string | undefined;
   country: string;
   countryAlphaTwoCode: string;
   countryAlphaThreeCode: string;
@@ -236,6 +238,8 @@ type MersSampleTypeSubEstimate = MersSubEstimateBase & {
 
 type MersOccupationSubEstimate = MersSubEstimateBase & {
   occupation: string;
+  sampleFrame: string | undefined;
+  exposureToCamels: string | undefined;
 }
 
 type MersAnimalSourceLocationSubEstimate = MersSubEstimateBase & {
@@ -247,6 +251,16 @@ type MersAnimalSourceLocationSubEstimate = MersSubEstimateBase & {
 
 type MersAnimalSamplingContextSubEstimate = MersSubEstimateBase & {
   animalDetectionSettings: string[];
+}
+
+type MersCamelExposureLevelSubEstimate = MersSubEstimateBase & {
+  details: string;
+  sampleFrame: string;
+  exposureToCamels: string;
+}
+
+type MersNomadismSubEstimate = MersSubEstimateBase & {
+  details: string;
 }
 
 export interface MersPrimaryEstimateDocument {
@@ -263,6 +277,8 @@ export interface MersPrimaryEstimateDocument {
   occupationSubestimates: MersOccupationSubEstimate[];
   animalSourceLocationSubestimates: MersAnimalSourceLocationSubEstimate[];
   animalSamplingContextSubestimates: MersAnimalSamplingContextSubEstimate[];
+  camelExposureLevelSubestimates: MersCamelExposureLevelSubEstimate[];
+  nomadismSubestimates: MersNomadismSubEstimate[];
   createdAt: Date;
   updatedAt: Date;
 }

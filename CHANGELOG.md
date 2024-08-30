@@ -37,3 +37,16 @@
 ## Version 0.3.5 - August 16th 2024
 
 - Added the `sampleFrame` and `exposureToCamels` fields to `MersOccupationSubEstimate`.
+
+## Version 0.4.0 - August 30th 2024
+
+- [BREAKING] Added new enum values to several fields (`assay`, `specimenType`, `exposureToCamels`, `antigen`, `testProducer`, `sampleFrame`, `animalDetectionSettings`, and `animalAgeGroup`)
+- Added `district` to `MersGeographicalAreaSubEstimate`
+- Added `district` to `BasicPrimaryMersEstimateInformation`
+- Added the `MersCamelExposureLevelSubEstimate` subestimate type.
+- Added the `MersNomadismSubEstimate` subestimate type.
+- Added `camelExposureLevelSubestimates` to `BasicPrimaryMersEstimateInformation`.
+- Added `nomadismSubestimates` to `BasicPrimaryMersEstimateInformation`.
+- Added descriptions for all of the subestimate fields under the primary estimate (Ex. `geographicalAreaSubestimates`, `ageGroupSubestimates`, etc.)
+- Added `merstracker-grouped-estimates-geojson.json` which contains all of our data as of right now in the same schema as the API for importing into programs that work better with GeoJSON files over APIs.
+- Added `ckan-metadata.json` which is a draft for a CKAN header for importing our data into CKAN systems.
