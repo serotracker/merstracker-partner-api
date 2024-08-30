@@ -37,3 +37,7 @@
 ## Version 0.3.5 - August 16th 2024
 
 - Added the `sampleFrame` and `exposureToCamels` fields to `MersOccupationSubEstimate`.
+
+## Version 0.4.0 - August 30th 2024
+
+- [BREAKING] Added new enum values to several fields (`assay`, `specimenType`, `exposureToCamels`, `antigen`, `testProducer`, `sampleFrame`, `animalDetectionSettings`, and `animalAgeGroup`)
