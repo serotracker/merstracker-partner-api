@@ -145,6 +145,7 @@ export const generateMersPrimaryEstimatesRequestHandler = (
         estimateInfo: mapSubestimateInformationForApi(subestimate.estimateInfo),
         city: subestimate.city,
         state: subestimate.state,
+        district: subestimate.district,
         country: subestimate.country,
         countryAlphaTwoCode: subestimate.countryAlphaTwoCode,
         countryAlphaThreeCode: subestimate.countryAlphaThreeCode,
@@ -203,7 +204,9 @@ export const generateMersPrimaryEstimatesRequestHandler = (
         id: subestimate.id,
         estimateId: subestimate.estimateId,
         estimateInfo: mapSubestimateInformationForApi(subestimate.estimateInfo),
-        occupation: subestimate.occupation
+        occupation: subestimate.occupation,
+        sampleFrame: subestimate.sampleFrame,
+        exposureToCamels: subestimate.exposureToCamels
       })),
       animalSourceLocationSubestimates: mersPrimaryEstimate.animalSourceLocationSubestimates.map((subestimate) => ({
         id: subestimate.id,

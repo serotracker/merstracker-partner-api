@@ -92,7 +92,9 @@
           "sampleTypeSubestimates",
           "occupationSubestimates",
           "animalSourceLocationSubestimates",
-          "animalSamplingContextSubestimates"
+          "animalSamplingContextSubestimates",
+          "camelExposureLevelSubestimates",
+          "nomadismSubestimates"
         ],
         "properties": {
           "id": {
@@ -115,12 +117,14 @@
           },
           "geographicalAreaSubestimates": {
             "type": "array",
+            "description": "Subestimates which break down the prevalence further by geographic region (Ex. one sampled population was in Calgary, Alberta and another was in Toronto, Ontario).",
             "items": {
               "$ref": "#/components/schemas/MersGeographicalAreaSubEstimate"
             }
           },
           "ageGroupSubestimates": {
             "type": "array",
+            "description": "Subestimates which break down the prevalence further by age group (Ex. one sampled population was exclusively children under the age of 18 and another consisted exclusively of seniors above the age of 60).",
             "items": {
               "oneOf": [
                 { "$ref": "#/components/schemas/MersHumanAgeGroupSubEstimate" },
@@ -129,12 +133,14 @@
             }
           },
           "testUsedSubestimates": {
+            "description": "Subestimates which break down the prevalence further by test used (Ex. one sampled population was tested using a particular test and another was tested using another).",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/MersTestUsedSubEstimate"
             }
           },
           "animalSpeciesSubestimates": {
+            "description": "Subestimates which break down the prevalence further by the species of animal (Ex. one sampled population was only camels and another was only cattle).",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/MersAnimalSpeciesSubEstimate"
@@ -142,38 +148,58 @@
           },
           "sexSubestimates": {
             "type": "array",
+            "description": "Subestimates which break down the prevalence further by sex (Ex. one sampled population was exclusively female and another was mixed).",
             "items": {
               "$ref": "#/components/schemas/MersSexSubEstimate"
             }
           },
           "timeFrameSubestimates": {
             "type": "array",
+            "description": "Subestimates which break down the prevalence further by time sampled (Ex. one population was sampled between 2024-04-30 and 2024-05-07 while another was sampled between 2024-06-07 and 2024-06-13).",
             "items": {
               "$ref": "#/components/schemas/MersTimeFrameSubEstimate"
             }
           },
           "sampleTypeSubestimates": {
             "type": "array",
+            "description": "Subestimates which break down the prevalence further by specimen type (Ex. one population was tested using their blood and another was tested using their urine).",
             "items": {
               "$ref": "#/components/schemas/MersSampleTypeSubEstimate"
             }
           },
           "occupationSubestimates": {
             "type": "array",
+            "description": "Subestimates which break down the prevalence further by the occupation of the sampled population (Ex. one subestimate might consist of camel farmers and another might consist of healthcare workers).",
             "items": {
               "$ref": "#/components/schemas/MersOccupationSubEstimate"
             }
           },
           "animalSourceLocationSubestimates": {
             "type": "array",
+            "description": "Subestimates which break down the prevalence further by the country of the animal's origin, which can be different than where the animal had it's sample taken (Ex. one subestimate might consist of camels which are local to Saudi Arabia and another might consist of camels which were tested in Saudi Arabia but imported from Sudan).",
             "items": {
               "$ref": "#/components/schemas/MersAnimalSourceLocationSubEstimate"
             }
           },
           "animalSamplingContextSubestimates": {
             "type": "array",
+            "description": "Subestimates which break down the prevalence further by the sample frame of the animal (Ex. one subestimate might show the prevalence measured among camels living on a farm while another might show the prevalence measured among camels living in a quarantine centre).",
             "items": {
               "$ref": "#/components/schemas/MersAnimalSamplingContextSubEstimate"
+            }
+          },
+          "camelExposureLevelSubestimates": {
+            "type": "array",
+            "description": "Subestimates which break down the prevalence further by the population's exposure level to camels (Ex. one subestimate might show the prevalence measured among those with direct exposure to camels while another might show the prevalence measured among those with no direct exposure to camels).",
+            "items": {
+              "$ref": "#/components/schemas/MersCamelExposureLevelSubEstimate"
+            }
+          },
+          "nomadismSubestimates": {
+            "type": "array",
+            "description": "Subestimates which break down the prevalence further by the population's relationship to nomadism (Ex. one subestimate might show the prevalence measured among the nomadic portion of the total sampled population while another might show the prevalence measured among non-nomadic portion of the sampled population).",
+            "items": {
+              "$ref": "#/components/schemas/MersNomadismSubEstimate"
             }
           }
         }
@@ -238,6 +264,11 @@
             "type": "string",
             "description": "A string representation of the name of the state where the sampling was conducted.",
             "example": "Riyadh Province"
+          },
+          "district": {
+            "type": "string",
+            "description": "A string representation of the name of the district where the sampling was conducted.",
+            "example": "Bahawalnagar; Bahawalpur"
           },
           "countryAlphaTwoCode": {
             "type": "string",
@@ -1072,6 +1103,11 @@
                 "description": "A string representation of the name of the state where the sampling was conducted.",
                 "example": "Riyadh Province"
               },
+              "district": {
+                "type": "string",
+                "description": "A string representation of the name of the district where the sampling was conducted.",
+                "example": "Bahawalnagar; Bahawalpur"
+              },
               "countryAlphaTwoCode": {
                 "type": "string",
                 "description": "A country code for where the sampling was conducted. Conforms to the ISO 3166-1 alpha-2 spec.",
@@ -1468,6 +1504,81 @@
                   ],
                   "example": "Farms"
                 }
+              }
+            }
+          }
+        ]
+      },
+      "MersCamelExposureLevelSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "details",
+              "sampleFrame",
+              "exposureToCamels"
+            ],
+            "properties": {
+              "details": {
+                "type": "string",
+                "description": "A brief description for this population's relationship to camels.",
+                "example": "Community members not exposed to camels"
+              },
+              "sampleFrame": {
+                "type": "string",
+                "enum": [
+                  "Household and community sample",
+                  "Marketplace vendor",
+                  "Blood donors",
+                  "Residual sera",
+                  "Outpatient population",
+                  "Healthcare workers",
+                  "Close contacts of cases",
+                  "Travellers/tourism",
+                  "Suspected cases",
+                  "Multiple populations",
+                  "Livestock workers",
+                  "Pilgrims",
+                  "Quarantine station workers",
+                  "Slaughterhouse workers",
+                  "Nomadic communities",
+                  "Close contacts of camels",
+                  "Camel racetrack workers",
+                  "Camel traders",
+                  "Veterinary staff",
+                  "Veterinary surgeons"
+                ],
+                "description": "The population sampled in the study.",
+                "example": "Close contacts of camels"
+              },
+              "exposureToCamels": {
+                "type": "string",
+                "description": "The exposure level to camels in the population sampled.",
+                "enum": [
+                  "Direct exposure",
+                  "Indirect exposure",
+                  "Unknown exposure",
+                  "No exposure",
+                  "Mixed exposure"
+                ],
+                "example": "Indirect exposure"
+              }
+            }
+          }
+        ]
+      },
+      "MersNomadismSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "details"
+            ],
+            "properties": {
+              "details": {
+                "type": "string",
+                "description": "A brief description for this population's relationship to nomadism.",
+                "example": "Semi-nomadic"
               }
             }
           }

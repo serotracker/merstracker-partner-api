@@ -41,3 +41,10 @@
 ## Version 0.4.0 - August 30th 2024
 
 - [BREAKING] Added new enum values to several fields (`assay`, `specimenType`, `exposureToCamels`, `antigen`, `testProducer`, `sampleFrame`, `animalDetectionSettings`, and `animalAgeGroup`)
+- Added `district` to `MersGeographicalAreaSubEstimate`
+- Added `district` to `BasicPrimaryMersEstimateInformation`
+- Added the `MersCamelExposureLevelSubEstimate` subestimate type.
+- Added the `MersNomadismSubEstimate` subestimate type.
+- Added `camelExposureLevelSubestimates` to `BasicPrimaryMersEstimateInformation`.
+- Added `nomadismSubestimates` to `BasicPrimaryMersEstimateInformation`.
+- Added descriptions for all of the subestimate fields under the primary estimate (Ex. `geographicalAreaSubestimates`, `ageGroupSubestimates`, etc.)
