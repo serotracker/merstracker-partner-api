@@ -10,7 +10,7 @@
       "properties": {
         "estimateId": "180219_Qatar_QatarUniversity_Humans_blooddonors_primary",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0a0",
+          "id": "66d1c6525d0ac8d387bce0a0",
           "estimateId": "180219_Qatar_QatarUniversity_Humans_blooddonors_primary",
           "subGroupingVariable": "PRIMARY",
           "country": "Qatar",
@@ -132,7 +132,7 @@
       "properties": {
         "estimateId": "210915_Jordan_RoyalVeterinaryCollege_2014-2015_Serum",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0a3",
+          "id": "66d1c6525d0ac8d387bce0a3",
           "estimateId": "210915_Jordan_RoyalVeterinaryCollege_2014-2015_Serum",
           "subGroupingVariable": "PRIMARY",
           "city": "Aqaba, Ma’an",
@@ -327,7 +327,7 @@
       "properties": {
         "estimateId": "181220_Kenya_ ChineseAcademyofSciences_Camels_OverallSeroprev",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0a6",
+          "id": "66d1c6525d0ac8d387bce0a6",
           "estimateId": "181220_Kenya_ ChineseAcademyofSciences_Camels_OverallSeroprev",
           "subGroupingVariable": "PRIMARY",
           "country": "Kenya",
@@ -729,7 +729,7 @@
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Humans_2015",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0a9",
+          "id": "66d1c6525d0ac8d387bce0a9",
           "estimateId": "191118_Tamboul_UniversityofGezira_Humans_2015",
           "subGroupingVariable": "PRIMARY",
           "city": "Tamboul",
@@ -803,7 +803,7 @@
       "properties": {
         "estimateId": "140606_Qatar_ErasmusMedicalCenter_Camels_Nasal",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0ac",
+          "id": "66d1c6525d0ac8d387bce0ac",
           "estimateId": "140606_Qatar_ErasmusMedicalCenter_Camels_Nasal",
           "subGroupingVariable": "PRIMARY",
           "city": "Al Shahaniya",
@@ -878,7 +878,7 @@
       "properties": {
         "estimateId": "140718_Ethiopia_NetherlandsCentreforInfectiousDiseaseControl",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0af",
+          "id": "66d1c6525d0ac8d387bce0af",
           "estimateId": "140718_Ethiopia_NetherlandsCentreforInfectiousDiseaseControl",
           "subGroupingVariable": "PRIMARY",
           "state": "Afar, Somalia, Oromia",
@@ -959,7 +959,7 @@
       "properties": {
         "estimateId": "210311_MarsabitCounty_WashingtonStateUniversity_Humans",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0b2",
+          "id": "66d1c6525d0ac8d387bce0b2",
           "estimateId": "210311_MarsabitCounty_WashingtonStateUniversity_Humans",
           "subGroupingVariable": "PRIMARY",
           "district": "Marsabit County",
@@ -1028,7 +1028,7 @@
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Slaughterhouse_Nasal",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0b5",
+          "id": "66d1c6525d0ac8d387bce0b5",
           "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Slaughterhouse_Nasal",
           "subGroupingVariable": "PRIMARY",
           "city": "Tamboul",
@@ -1092,7 +1092,7 @@
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Market_Nasal",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0b8",
+          "id": "66d1c6525d0ac8d387bce0b8",
           "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Market_Nasal",
           "subGroupingVariable": "PRIMARY",
           "city": "Tamboul",
@@ -1156,7 +1156,7 @@
       "properties": {
         "estimateId": "301018_SaudiArabia_KingSaudUniversity_BloodDonors",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0bb",
+          "id": "66d1c6525d0ac8d387bce0bb",
           "estimateId": "301018_SaudiArabia_KingSaudUniversity_BloodDonors",
           "subGroupingVariable": "PRIMARY",
           "city": "Riyadh",
@@ -1257,7 +1257,7 @@
       "properties": {
         "estimateId": "220810_Diyala_UniversityofDiyala_Humans",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0be",
+          "id": "66d1c6525d0ac8d387bce0be",
           "estimateId": "220810_Diyala_UniversityofDiyala_Humans",
           "subGroupingVariable": "PRIMARY",
           "state": "Diyala Province",
@@ -1432,7 +1432,7 @@
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Slaughterhouse_Serum",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0c1",
+          "id": "66d1c6525d0ac8d387bce0c1",
           "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Slaughterhouse_Serum",
           "subGroupingVariable": "PRIMARY",
           "city": "Tamboul",
@@ -1540,7 +1540,7 @@
       "properties": {
         "estimateId": "150715_Doha_ErasmusMedicalCenter_Nasal",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0c4",
+          "id": "66d1c6525d0ac8d387bce0c4",
           "estimateId": "150715_Doha_ErasmusMedicalCenter_Nasal",
           "subGroupingVariable": "PRIMARY",
           "city": "Doha",
@@ -1686,7 +1686,7 @@
       "properties": {
         "estimateId": "210915_Jordan_RoyalVeterinaryCollege_2017-2018_Nasal",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0c7",
+          "id": "66d1c6525d0ac8d387bce0c7",
           "estimateId": "210915_Jordan_RoyalVeterinaryCollege_2017-2018_Nasal",
           "subGroupingVariable": "PRIMARY",
           "city": "Aqaba, Ma’an",
@@ -1755,7 +1755,7 @@
       "properties": {
         "estimateId": "180507_SaudiArabia_UniversityofHongKong_Serum",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0ca",
+          "id": "66d1c6525d0ac8d387bce0ca",
           "estimateId": "180507_SaudiArabia_UniversityofHongKong_Serum",
           "subGroupingVariable": "PRIMARY",
           "country": "Saudi Arabia",
@@ -1822,7 +1822,7 @@
       "properties": {
         "estimateId": "181011_Pakistan_WuhanInstituteofVirology_Camels_Serum",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0cd",
+          "id": "66d1c6525d0ac8d387bce0cd",
           "estimateId": "181011_Pakistan_WuhanInstituteofVirology_Camels_Serum",
           "subGroupingVariable": "PRIMARY",
           "country": "Pakistan",
@@ -2039,7 +2039,7 @@
       "properties": {
         "estimateId": "181220_Kenya_ ChineseAcademyofSciences_Camels_OverallMolecular",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0d0",
+          "id": "66d1c6525d0ac8d387bce0d0",
           "estimateId": "181220_Kenya_ ChineseAcademyofSciences_Camels_OverallMolecular",
           "subGroupingVariable": "PRIMARY",
           "country": "Kenya",
@@ -2147,7 +2147,7 @@
       "properties": {
         "estimateId": "301018_SaudiArabia_KingSaudUniversity_CamelWorkers_Primary",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0d3",
+          "id": "66d1c6525d0ac8d387bce0d3",
           "estimateId": "301018_SaudiArabia_KingSaudUniversity_CamelWorkers_Primary",
           "subGroupingVariable": "PRIMARY",
           "city": "Riyadh",
@@ -2222,7 +2222,7 @@
       "properties": {
         "estimateId": "210915_Jordan_RoyalVeterinaryCollege_2017-2018_Serum",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0d6",
+          "id": "66d1c6525d0ac8d387bce0d6",
           "estimateId": "210915_Jordan_RoyalVeterinaryCollege_2017-2018_Serum",
           "subGroupingVariable": "PRIMARY",
           "city": "Aqaba, Ma’an",
@@ -2395,7 +2395,7 @@
       "properties": {
         "estimateId": "191001_Egypt_AssiutUniversity_Humans",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0d9",
+          "id": "66d1c6525d0ac8d387bce0d9",
           "estimateId": "191001_Egypt_AssiutUniversity_Humans",
           "subGroupingVariable": "PRIMARY",
           "state": "Upper Egypt",
@@ -2541,7 +2541,7 @@
       "properties": {
         "estimateId": "210915_Jordan_RoyalVeterinaryCollege_2014-2015_Nasal",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0dc",
+          "id": "66d1c6525d0ac8d387bce0dc",
           "estimateId": "210915_Jordan_RoyalVeterinaryCollege_2014-2015_Nasal",
           "subGroupingVariable": "PRIMARY",
           "city": "Aqaba, Ma’an",
@@ -2610,7 +2610,7 @@
       "properties": {
         "estimateId": "201111_Kenya_FAOUN",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0df",
+          "id": "66d1c6525d0ac8d387bce0df",
           "estimateId": "201111_Kenya_FAOUN",
           "subGroupingVariable": "PRIMARY",
           "district": "Isiolo, Marsabit, Turkana, Laikipia, Nakuru",
@@ -2851,7 +2851,7 @@
       "properties": {
         "estimateId": "171211_Dhahran_JohnsHopkinsAramcoHealthcare",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0e2",
+          "id": "66d1c6525d0ac8d387bce0e2",
           "estimateId": "171211_Dhahran_JohnsHopkinsAramcoHealthcare",
           "subGroupingVariable": "PRIMARY",
           "city": "Dhahran",
@@ -2939,7 +2939,7 @@
       "properties": {
         "estimateId": "140516_Egypt_StJudeChildrensResearchHospital_Humans",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0e5",
+          "id": "66d1c6525d0ac8d387bce0e5",
           "estimateId": "140516_Egypt_StJudeChildrensResearchHospital_Humans",
           "subGroupingVariable": "PRIMARY",
           "city": "Alexandria, Cairo, Nile Delta region",
@@ -3001,7 +3001,7 @@
       "properties": {
         "estimateId": "150722_AlHasa_UniversityofHongKong",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0e8",
+          "id": "66d1c6525d0ac8d387bce0e8",
           "estimateId": "150722_AlHasa_UniversityofHongKong",
           "subGroupingVariable": "PRIMARY",
           "district": "Al Hasa",
@@ -3123,7 +3123,7 @@
       "properties": {
         "estimateId": "181220_Kenya_ ChineseAcademyofSciences_Humans_primary",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0eb",
+          "id": "66d1c6525d0ac8d387bce0eb",
           "estimateId": "181220_Kenya_ ChineseAcademyofSciences_Humans_primary",
           "subGroupingVariable": "PRIMARY",
           "country": "Kenya",
@@ -3227,7 +3227,7 @@
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Market_Serum",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0ee",
+          "id": "66d1c6525d0ac8d387bce0ee",
           "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Market_Serum",
           "subGroupingVariable": "PRIMARY",
           "city": "Tamboul",
@@ -3292,7 +3292,7 @@
       "properties": {
         "estimateId": "140516_Egypt_StJudeChildrensResearchHospital_Camels_Serum",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0f1",
+          "id": "66d1c6525d0ac8d387bce0f1",
           "estimateId": "140516_Egypt_StJudeChildrensResearchHospital_Camels_Serum",
           "subGroupingVariable": "PRIMARY",
           "city": "Alexandria, Cairo, Nile Delta region",
@@ -3356,7 +3356,7 @@
       "properties": {
         "estimateId": "180618_Kano_UniversityofHongKong_Camels",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0f4",
+          "id": "66d1c6525d0ac8d387bce0f4",
           "estimateId": "180618_Kano_UniversityofHongKong_Camels",
           "subGroupingVariable": "PRIMARY",
           "city": "Kano",
@@ -3454,7 +3454,7 @@
       "properties": {
         "estimateId": "070916_Egypt_EgyptianMinistryofHealthandPopulation_Humans_Overall",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0f7",
+          "id": "66d1c6525d0ac8d387bce0f7",
           "estimateId": "070916_Egypt_EgyptianMinistryofHealthandPopulation_Humans_Overall",
           "subGroupingVariable": "PRIMARY",
           "city": "Cairo",
@@ -3587,7 +3587,7 @@
       "properties": {
         "estimateId": "140606_Qatar_ErasmusMedicalCenter_Camels_Serum",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0fa",
+          "id": "66d1c6525d0ac8d387bce0fa",
           "estimateId": "140606_Qatar_ErasmusMedicalCenter_Camels_Serum",
           "subGroupingVariable": "PRIMARY",
           "city": "Al Shahaniya",
@@ -3664,7 +3664,7 @@
       "properties": {
         "estimateId": "180618_Kano_UniversityofHongKong_Humans",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce0fd",
+          "id": "66d1c6525d0ac8d387bce0fd",
           "estimateId": "180618_Kano_UniversityofHongKong_Humans",
           "subGroupingVariable": "PRIMARY",
           "city": "Kano",
@@ -3751,7 +3751,7 @@
       "properties": {
         "estimateId": "140516_Egypt_StJudeChildrensResearchHospital_Camels",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce100",
+          "id": "66d1c6525d0ac8d387bce100",
           "estimateId": "140516_Egypt_StJudeChildrensResearchHospital_Camels",
           "subGroupingVariable": "PRIMARY",
           "city": "Alexandria, Cairo, Nile Delta region",
@@ -3869,7 +3869,7 @@
       "properties": {
         "estimateId": "201201_MarsabitCounty_USCDC_Camels",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce103",
+          "id": "66d1c6525d0ac8d387bce103",
           "estimateId": "201201_MarsabitCounty_USCDC_Camels",
           "subGroupingVariable": "PRIMARY",
           "district": "Marsabit County",
@@ -4024,7 +4024,7 @@
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Imported_Nasal",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce106",
+          "id": "66d1c6525d0ac8d387bce106",
           "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Imported_Nasal",
           "subGroupingVariable": "PRIMARY",
           "city": "Doha",
@@ -4088,7 +4088,7 @@
       "properties": {
         "estimateId": "180219_Qatar_QatarUniversity_Humans_closecontacts_primary",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce109",
+          "id": "66d1c6525d0ac8d387bce109",
           "estimateId": "180219_Qatar_QatarUniversity_Humans_closecontacts_primary",
           "subGroupingVariable": "PRIMARY",
           "country": "Qatar",
@@ -4187,7 +4187,7 @@
       "properties": {
         "estimateId": "181011_Pakistan_WuhanInstituteofVirology_Humans_Serum",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce10c",
+          "id": "66d1c6525d0ac8d387bce10c",
           "estimateId": "181011_Pakistan_WuhanInstituteofVirology_Humans_Serum",
           "subGroupingVariable": "PRIMARY",
           "country": "Pakistan",
@@ -4262,7 +4262,7 @@
       "properties": {
         "estimateId": "061119_Cholistan_UniversityofVeterinaryandAnimalSciences_OverallPRNT",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce10f",
+          "id": "66d1c6525d0ac8d387bce10f",
           "estimateId": "061119_Cholistan_UniversityofVeterinaryandAnimalSciences_OverallPRNT",
           "subGroupingVariable": "PRIMARY",
           "state": "Cholistan",
@@ -4384,7 +4384,7 @@
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Imported_Serum",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce112",
+          "id": "66d1c6525d0ac8d387bce112",
           "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Imported_Serum",
           "subGroupingVariable": "PRIMARY",
           "city": "Doha",
@@ -4449,7 +4449,7 @@
       "properties": {
         "estimateId": "151217_SaudiArabia_KingAbdulazizUniversity_Camels_OverallNasal",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce115",
+          "id": "66d1c6525d0ac8d387bce115",
           "estimateId": "151217_SaudiArabia_KingAbdulazizUniversity_Camels_OverallNasal",
           "subGroupingVariable": "PRIMARY",
           "country": "Saudi Arabia",
@@ -4761,7 +4761,7 @@
       "properties": {
         "estimateId": "181011_Pakistan_WuhanInstituteofVirology_Camels_Nasal",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce118",
+          "id": "66d1c6525d0ac8d387bce118",
           "estimateId": "181011_Pakistan_WuhanInstituteofVirology_Camels_Nasal",
           "subGroupingVariable": "PRIMARY",
           "country": "Pakistan",
@@ -4828,7 +4828,7 @@
       "properties": {
         "estimateId": "191001_Egypt_AssiutUniversity_Camels",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce11b",
+          "id": "66d1c6525d0ac8d387bce11b",
           "estimateId": "191001_Egypt_AssiutUniversity_Camels",
           "subGroupingVariable": "PRIMARY",
           "state": "Upper Egypt",
@@ -4995,7 +4995,7 @@
       "properties": {
         "estimateId": "220810_Diyala_UniversityofDiyala_Camels",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce11e",
+          "id": "66d1c6525d0ac8d387bce11e",
           "estimateId": "220810_Diyala_UniversityofDiyala_Camels",
           "subGroupingVariable": "PRIMARY",
           "state": "Diyala Province",
@@ -5131,7 +5131,7 @@
       "properties": {
         "estimateId": "180507_SaudiArabia_UniversityofHongKong_Nasal",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce121",
+          "id": "66d1c6525d0ac8d387bce121",
           "estimateId": "180507_SaudiArabia_UniversityofHongKong_Nasal",
           "subGroupingVariable": "PRIMARY",
           "country": "Saudi Arabia",
@@ -5225,7 +5225,7 @@
       "properties": {
         "estimateId": "140718_Nigeria_NetherlandsCentreforInfectiousDiseaseControl",
         "primaryEstimateInfo": {
-          "_id": "66d1c6525d0ac8d387bce124",
+          "id": "66d1c6525d0ac8d387bce124",
           "estimateId": "140718_Nigeria_NetherlandsCentreforInfectiousDiseaseControl",
           "subGroupingVariable": "PRIMARY",
           "state": "Kano, Sokoto, Borno, Adamawa",
