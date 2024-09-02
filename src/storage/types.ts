@@ -8,6 +8,7 @@ enum MersAnimalSpecies {
   GOAT = "GOAT",
   CATTLE = "CATTLE",
   BAT = "BAT",
+  DONKEY = "DONKEY"
 }
 
 enum MersAnimalType {
