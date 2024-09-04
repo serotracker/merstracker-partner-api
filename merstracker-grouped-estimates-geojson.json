@@ -5,7 +5,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [51.2638965690801, 25.27761736978295]
+        "coordinates": [51.13571501496219, 25.264391894355995]
       },
       "properties": {
         "estimateId": "180219_Qatar_QatarUniversity_Humans_blooddonors_primary",
@@ -17,8 +17,8 @@
           "countryAlphaThreeCode": "QAT",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 25.27761736978295,
-          "longitude": 51.2638965690801,
+          "latitude": 25.264391894355995,
+          "longitude": 51.13571501496219,
           "firstAuthorFullName": "Reham A Al Kahlout",
           "sourceUrl": "https://doi.org/10.1155/2019/1386740",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -42,6 +42,9 @@
           "testProducer": ["Euroimmun"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "NR",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0.00002,
           "ageGroup": [
@@ -50,7 +53,7 @@
             "Seniors (≥60 years)"
           ],
           "sampleFrame": "Blood donors",
-          "id": "66d5fe2b98aac31016456c87"
+          "id": "66d876de663fbbf4891c7846"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -126,7 +129,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [35.098518846691206, 29.604437214921752]
+        "coordinates": [34.919969443371954, 29.587403815417836]
       },
       "properties": {
         "estimateId": "210915_Jordan_RoyalVeterinaryCollege_2014-2015_Serum",
@@ -139,8 +142,8 @@
           "countryAlphaThreeCode": "JOR",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 29.604437214921752,
-          "longitude": 35.098518846691206,
+          "latitude": 29.587403815417836,
+          "longitude": 34.919969443371954,
           "firstAuthorFullName": "Peter Holloway",
           "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8386791/",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -161,6 +164,9 @@
           "geographicScope": "Local",
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.868,
           "seroprevalence95CILower": 0.828,
@@ -175,7 +181,7 @@
             "Adult (>2 years)",
             "Neonatal (≤6 months)"
           ],
-          "id": "66d5fe2b98aac31016456c8a"
+          "id": "66d876de663fbbf4891c7849"
         },
         "geographicalAreaSubestimates": [
           {
@@ -190,8 +196,8 @@
             "country": "Jordan",
             "countryAlphaTwoCode": "JO",
             "countryAlphaThreeCode": "JOR",
-            "latitude": 30.110994479607946,
-            "longitude": 35.63720461194103,
+            "latitude": 30.277774282534665,
+            "longitude": 35.68477911719966,
             "whoRegion": "EMR",
             "unRegion": "WESTERN_ASIA",
             "geographicScope": "Local"
@@ -208,8 +214,8 @@
             "country": "Jordan",
             "countryAlphaTwoCode": "JO",
             "countryAlphaThreeCode": "JOR",
-            "latitude": 29.551411655691094,
-            "longitude": 34.90746561664617,
+            "latitude": 29.449058984586948,
+            "longitude": 34.93438782431009,
             "whoRegion": "EMR",
             "unRegion": "WESTERN_ASIA",
             "geographicScope": "Local"
@@ -320,7 +326,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [37.838465510222704, 0.5906852492916527]
+        "coordinates": [37.847367002344264, 0.44716617936773934]
       },
       "properties": {
         "estimateId": "181220_Kenya_ ChineseAcademyofSciences_Camels_OverallSeroprev",
@@ -332,8 +338,8 @@
           "countryAlphaThreeCode": "KEN",
           "whoRegion": "AFR",
           "unRegion": "EASTERN_AFRICA",
-          "latitude": 0.5906852492916527,
-          "longitude": 37.838465510222704,
+          "latitude": 0.44716617936773934,
+          "longitude": 37.847367002344264,
           "firstAuthorFullName": "Sheila Ommeh",
           "sourceUrl": "https://doi.org/10.1007/s12250-018-0076-4",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -362,6 +368,9 @@
           "testValidation": ["Validated by developers"],
           "testValidatedOn": "Humans",
           "positiveCutoff": "0.35",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.681,
           "animalSpecies": "CAMEL",
@@ -369,7 +378,7 @@
           "animalDetectionSettings": ["Free-roaming herds"],
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Juvenile (6 months-2 years)", "Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456c8d"
+          "id": "66d876de663fbbf4891c784c"
         },
         "geographicalAreaSubestimates": [
           {
@@ -386,8 +395,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.5466093855163371,
-            "longitude": 37.955642150915324,
+            "latitude": 0.5467682484089518,
+            "longitude": 37.78367287387173,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -406,8 +415,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.48127944506650944,
-            "longitude": 37.86305433668727,
+            "latitude": 0.6245506261181542,
+            "longitude": 37.789329950363644,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -426,8 +435,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.4849340532881167,
-            "longitude": 37.80787050850197,
+            "latitude": 0.6032493074238237,
+            "longitude": 37.76435330204648,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -446,8 +455,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.43812780193747125,
-            "longitude": 37.77158009565588,
+            "latitude": 0.5079370885517,
+            "longitude": 37.76183583353491,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -466,8 +475,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.4514528686433144,
-            "longitude": 37.91040648802413,
+            "latitude": 0.586572478222553,
+            "longitude": 37.83044697873748,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -486,8 +495,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.5417022720924356,
-            "longitude": 37.93346261897212,
+            "latitude": 0.6209759382932374,
+            "longitude": 37.81508662533788,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -506,8 +515,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.6297793342603994,
-            "longitude": 37.808652460669265,
+            "latitude": 0.6132018076011574,
+            "longitude": 37.949947888450865,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -526,8 +535,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.4388581660341711,
-            "longitude": 37.95424851085548,
+            "latitude": 0.4932516206369541,
+            "longitude": 37.89571052834045,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -546,8 +555,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.48564211927320167,
-            "longitude": 37.82076058279237,
+            "latitude": 0.49025714807493237,
+            "longitude": 37.862640150854205,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -566,8 +575,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.47473383175245754,
-            "longitude": 37.802921207916306,
+            "latitude": 0.46825807034604516,
+            "longitude": 37.844729219807796,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -586,8 +595,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.4788544505459421,
-            "longitude": 37.87906885566941,
+            "latitude": 0.586065810511113,
+            "longitude": 37.81775065403246,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -606,8 +615,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.563954389917507,
-            "longitude": 37.859760586392646,
+            "latitude": 0.528890019648161,
+            "longitude": 37.87921442915039,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -626,8 +635,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.46695072851483843,
-            "longitude": 37.908192535746615,
+            "latitude": 0.46744631343105536,
+            "longitude": 37.80150135448978,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Local"
@@ -721,7 +730,73 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [33.48684247900463, 14.957483698198175]
+        "coordinates": [40.95544373976046, 11.828828481926529]
+      },
+      "properties": {
+        "estimateId": "190618_Afar_NihonUniversity_Serum",
+        "primaryEstimateInfo": {
+          "estimateId": "190618_Afar_NihonUniversity_Serum",
+          "subGroupingVariable": "PRIMARY",
+          "state": "Afar",
+          "country": "Ethiopia",
+          "countryAlphaTwoCode": "ET",
+          "countryAlphaThreeCode": "ETH",
+          "whoRegion": "AFR",
+          "unRegion": "EASTERN_AFRICA",
+          "latitude": 11.828828481926529,
+          "longitude": 40.95544373976046,
+          "firstAuthorFullName": "Kazuya Shirato",
+          "sourceUrl": "https://doi.org/10.3389/fmicb.2019.01326",
+          "sourceType": "Journal Article (Peer-Reviewed)",
+          "sourceTitle": "Middle east respiratory syndrome coronavirus in dromedaries in Ethiopia is antigenically different from the Middle East isolate EMC",
+          "insitutution": "Nihon University",
+          "studyInclusionCriteria": "Dromedaries in the Afar region of Ethiopia",
+          "sampleDenominator": 184,
+          "sampleNumerator": 179,
+          "assay": ["Virus Neutralization"],
+          "specimenType": ["Serum"],
+          "sex": "All",
+          "isotypes": ["Neutralizing"],
+          "antigen": [],
+          "samplingStartDate": "2013-03-15T06:00:00.000Z",
+          "samplingEndDate": "2013-08-15T06:00:00.000Z",
+          "samplingMidDate": "2013-05-30T18:00:00.000Z",
+          "samplingMethod": "Convenience",
+          "geographicScope": "Regional",
+          "testProducer": ["In-house"],
+          "testValidation": ["Not reported"],
+          "positiveCutoff": "Specimens showing neutralization at more than 20-fold dilution relative to the negative control were considered positive for MERS-CoV infection",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
+          "type": "ANIMAL_SEROPREVALENCE",
+          "seroprevalence": 0.972,
+          "animalSpecies": "CAMEL",
+          "animalType": ["DOMESTIC"],
+          "animalDetectionSettings": ["Not reported"],
+          "animalImportedOrLocal": "Local",
+          "animalAgeGroup": ["Adult (>2 years)", "Juvenile (6 months-2 years)"],
+          "id": "66d876de663fbbf4891c784f"
+        },
+        "geographicalAreaSubestimates": [],
+        "ageGroupSubestimates": [],
+        "testUsedSubestimates": [],
+        "animalSpeciesSubestimates": [],
+        "sexSubestimates": [],
+        "timeFrameSubestimates": [],
+        "sampleTypeSubestimates": [],
+        "occupationSubestimates": [],
+        "animalSourceLocationSubestimates": [],
+        "animalSamplingContextSubestimates": [],
+        "camelExposureLevelSubestimates": [],
+        "nomadismSubestimates": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [33.36693983437788, 14.928263118813978]
       },
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Humans_2015",
@@ -734,8 +809,8 @@
           "countryAlphaThreeCode": "SDN",
           "whoRegion": "EMR",
           "unRegion": "NORTHERN_AFRICA",
-          "latitude": 14.957483698198175,
-          "longitude": 33.48684247900463,
+          "latitude": 14.928263118813978,
+          "longitude": 33.36693983437788,
           "firstAuthorFullName": "Elmoubasher Farag",
           "sourceUrl": "https://wwwnc.cdc.gov/eid/article/25/12/19-0882_article ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -758,11 +833,14 @@
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "1:20",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0,
           "ageGroup": ["Adults (18-45 years)", "Adults (46-59 years)"],
           "sampleFrame": "Multiple populations",
-          "id": "66d5fe2b98aac31016456c90"
+          "id": "66d876de663fbbf4891c7852"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -794,7 +872,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [51.26684960169044, 25.387173438787073]
+        "coordinates": [51.24405513431687, 25.282559413982394]
       },
       "properties": {
         "estimateId": "140606_Qatar_ErasmusMedicalCenter_Camels_Nasal",
@@ -807,8 +885,8 @@
           "countryAlphaThreeCode": "QAT",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 25.387173438787073,
-          "longitude": 51.26684960169044,
+          "latitude": 25.282559413982394,
+          "longitude": 51.24405513431687,
           "firstAuthorFullName": "C B Reusken",
           "sourceUrl": "https://www.eurosurveillance.org/content/10.2807/1560-7917.ES2014.19.23.20829 ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -829,6 +907,9 @@
           "geographicScope": "Local",
           "testProducer": ["Not reported"],
           "testValidation": ["Not reported"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0.417,
           "animalSpecies": "CAMEL",
@@ -837,7 +918,7 @@
           "animalPurpose": "Milking",
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456c93"
+          "id": "66d876de663fbbf4891c7855"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -868,7 +949,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [42.82143768481765, 9.335743158931436]
+        "coordinates": [42.81763965533263, 9.322361736447336]
       },
       "properties": {
         "estimateId": "140718_Ethiopia_NetherlandsCentreforInfectiousDiseaseControl",
@@ -881,8 +962,8 @@
           "countryAlphaThreeCode": "ETH",
           "whoRegion": "AFR",
           "unRegion": "EASTERN_AFRICA",
-          "latitude": 9.335743158931436,
-          "longitude": 42.82143768481765,
+          "latitude": 9.322361736447336,
+          "longitude": 42.81763965533263,
           "firstAuthorFullName": "Chantal B.E.M. Reusken",
           "sourceUrl": "https://doi.org/10.3201%2Feid2008.140590",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -903,6 +984,9 @@
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "4000 RFU",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.963,
           "animalSpecies": "CAMEL",
@@ -910,7 +994,7 @@
           "animalDetectionSettings": ["Not reported"],
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Adult (>2 years)", "Juvenile (6 months-2 years)"],
-          "id": "66d5fe2b98aac31016456c96"
+          "id": "66d876de663fbbf4891c7858"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [
@@ -948,7 +1032,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [37.83126146966405, 0.5166528143230045]
+        "coordinates": [37.86162946302989, 0.5417414741226787]
       },
       "properties": {
         "estimateId": "210311_MarsabitCounty_WashingtonStateUniversity_Humans",
@@ -961,8 +1045,8 @@
           "countryAlphaThreeCode": "KEN",
           "whoRegion": "AFR",
           "unRegion": "EASTERN_AFRICA",
-          "latitude": 0.5166528143230045,
-          "longitude": 37.83126146966405,
+          "latitude": 0.5417414741226787,
+          "longitude": 37.86162946302989,
           "firstAuthorFullName": "Peninah Munyua",
           "sourceUrl": "https://wwwnc.cdc.gov/eid/article/27/4/20-4458_article",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -987,6 +1071,9 @@
           "positiveCutoff": "5.3 copies/reaction",
           "symptomPrevalenceOfPositives": 0,
           "symptomDefinition": "Respiratory symptoms (fever, running nose, cough, nasal stuffiness, sore throat, chest pain)",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_VIRAL",
           "positivePrevalence": 0.011,
           "ageGroup": [
@@ -996,7 +1083,7 @@
             "Seniors (≥60 years)"
           ],
           "sampleFrame": "Close contacts of camels",
-          "id": "66d5fe2b98aac31016456c99"
+          "id": "66d876de663fbbf4891c785b"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -1016,7 +1103,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [33.40057579810662, 14.979214170995528]
+        "coordinates": [33.51662384898374, 14.98399824611471]
       },
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Slaughterhouse_Nasal",
@@ -1029,8 +1116,8 @@
           "countryAlphaThreeCode": "SDN",
           "whoRegion": "EMR",
           "unRegion": "NORTHERN_AFRICA",
-          "latitude": 14.979214170995528,
-          "longitude": 33.40057579810662,
+          "latitude": 14.98399824611471,
+          "longitude": 33.51662384898374,
           "firstAuthorFullName": "Elmoubasher Farag",
           "sourceUrl": "https://wwwnc.cdc.gov/eid/article/25/12/19-0882_article ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -1051,6 +1138,9 @@
           "geographicScope": "Local",
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0,
           "animalSpecies": "CAMEL",
@@ -1059,7 +1149,7 @@
           "animalPurpose": "Meat",
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456c9c"
+          "id": "66d876de663fbbf4891c785e"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -1079,7 +1169,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [33.495970103643494, 15.023818505469624]
+        "coordinates": [33.435834531383385, 15.021268164914733]
       },
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Market_Nasal",
@@ -1092,8 +1182,8 @@
           "countryAlphaThreeCode": "SDN",
           "whoRegion": "EMR",
           "unRegion": "NORTHERN_AFRICA",
-          "latitude": 15.023818505469624,
-          "longitude": 33.495970103643494,
+          "latitude": 15.021268164914733,
+          "longitude": 33.435834531383385,
           "firstAuthorFullName": "Elmoubasher Farag",
           "sourceUrl": "https://wwwnc.cdc.gov/eid/article/25/12/19-0882_article ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -1114,6 +1204,9 @@
           "geographicScope": "Local",
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0,
           "animalSpecies": "CAMEL",
@@ -1122,7 +1215,7 @@
           "animalPurpose": "Meat and milk",
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456c9f"
+          "id": "66d876de663fbbf4891c7861"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -1142,7 +1235,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [46.624392280065074, 24.620058838367783]
+        "coordinates": [46.7325714944239, 24.705324245839826]
       },
       "properties": {
         "estimateId": "301018_SaudiArabia_KingSaudUniversity_BloodDonors",
@@ -1156,8 +1249,8 @@
           "countryAlphaThreeCode": "SAU",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 24.620058838367783,
-          "longitude": 46.624392280065074,
+          "latitude": 24.705324245839826,
+          "longitude": 46.7325714944239,
           "firstAuthorFullName": "Abeer N Alshukairi",
           "sourceUrl": "https://doi.org/10.1128/mbio.01985-18",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -1181,11 +1274,14 @@
           "testProducer": ["Euroimmun"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "The ELISA for MERS-CoV S-specific antibody was read as positive (>1.1), negative (<0.8), or borderline (0.8 to 1.1).",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0,
           "ageGroup": ["Adults (18-45 years)", "Adults (46-59 years)"],
           "sampleFrame": "Blood donors",
-          "id": "66d5fe2b98aac31016456ca2"
+          "id": "66d876de663fbbf4891c7864"
         },
         "geographicalAreaSubestimates": [
           {
@@ -1200,8 +1296,8 @@
             "country": "Saudi Arabia",
             "countryAlphaTwoCode": "SA",
             "countryAlphaThreeCode": "SAU",
-            "latitude": 24.579988909614446,
-            "longitude": 46.72551897253044,
+            "latitude": 24.715736506453243,
+            "longitude": 46.81210105622628,
             "whoRegion": "EMR",
             "unRegion": "WESTERN_ASIA",
             "geographicScope": "Local"
@@ -1218,8 +1314,8 @@
             "country": "United States of America",
             "countryAlphaTwoCode": "US",
             "countryAlphaThreeCode": "USA",
-            "latitude": 42.08924125920232,
-            "longitude": -93.50432553239834,
+            "latitude": 42.01708361756719,
+            "longitude": -93.5008249218397,
             "whoRegion": "AMR",
             "unRegion": "NORTHERN_AMERICA",
             "geographicScope": "Regional"
@@ -1242,7 +1338,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [44.68286390858843, 33.778077090461224]
+        "coordinates": [44.60612582254037, 33.787317937041394]
       },
       "properties": {
         "estimateId": "220810_Diyala_UniversityofDiyala_Humans",
@@ -1255,8 +1351,8 @@
           "countryAlphaThreeCode": "IRQ",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 33.778077090461224,
-          "longitude": 44.68286390858843,
+          "latitude": 33.787317937041394,
+          "longitude": 44.60612582254037,
           "firstAuthorFullName": "Abdulrazak Hasan",
           "sourceUrl": "https://journals.tubitak.gov.tr/medical/vol52/iss4/5/",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -1282,13 +1378,16 @@
           "positiveCutoff": "Not reported",
           "symptomPrevalenceOfPositives": 0.478,
           "symptomDefinition": "Flu-like symptoms",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0.511,
           "seroprevalence95CILower": 0.409,
           "seroprevalence95CIUpper": 0.613,
           "ageGroup": ["Adults (18-45 years)", "Adults (46-59 years)"],
           "sampleFrame": "Multiple populations",
-          "id": "66d5fe2b98aac31016456ca5"
+          "id": "66d876de663fbbf4891c7867"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [
@@ -1416,7 +1515,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [33.32669824286895, 14.923723638796886]
+        "coordinates": [33.35212598164515, 14.842179702845513]
       },
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Slaughterhouse_Serum",
@@ -1429,8 +1528,8 @@
           "countryAlphaThreeCode": "SDN",
           "whoRegion": "EMR",
           "unRegion": "NORTHERN_AFRICA",
-          "latitude": 14.923723638796886,
-          "longitude": 33.32669824286895,
+          "latitude": 14.842179702845513,
+          "longitude": 33.35212598164515,
           "firstAuthorFullName": "Elmoubasher Farag",
           "sourceUrl": "https://wwwnc.cdc.gov/eid/article/25/12/19-0882_article ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -1452,6 +1551,9 @@
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "1:20",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 1,
           "animalSpecies": "CAMEL",
@@ -1460,7 +1562,7 @@
           "animalPurpose": "Meat",
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456ca8"
+          "id": "66d876de663fbbf4891c786a"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -1533,7 +1635,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [51.51437287421205, 25.331608883128904]
+        "coordinates": [51.51635414819396, 25.32579055818283]
       },
       "properties": {
         "estimateId": "150715_Doha_ErasmusMedicalCenter_Nasal",
@@ -1546,8 +1648,8 @@
           "countryAlphaThreeCode": "QAT",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 25.331608883128904,
-          "longitude": 51.51437287421205,
+          "latitude": 25.32579055818283,
+          "longitude": 51.51635414819396,
           "firstAuthorFullName": "Elmoubasher A. B. A. Farag",
           "sourceUrl": "https://www.tandfonline.com/doi/full/10.3402/iee.v5.28305 ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -1568,6 +1670,9 @@
           "geographicScope": "Local",
           "testProducer": ["Not reported"],
           "testValidation": ["Not reported"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0.6,
           "animalSpecies": "CAMEL",
@@ -1580,7 +1685,7 @@
             "Adult (>2 years)",
             "Neonatal (≤6 months)"
           ],
-          "id": "66d5fe2b98aac31016456cab"
+          "id": "66d876de663fbbf4891c786d"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [
@@ -1678,7 +1783,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [34.94098990794755, 29.5848992127431]
+        "coordinates": [35.00766611035682, 29.612290814955166]
       },
       "properties": {
         "estimateId": "210915_Jordan_RoyalVeterinaryCollege_2017-2018_Nasal",
@@ -1691,8 +1796,8 @@
           "countryAlphaThreeCode": "JOR",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 29.5848992127431,
-          "longitude": 34.94098990794755,
+          "latitude": 29.612290814955166,
+          "longitude": 35.00766611035682,
           "firstAuthorFullName": "Peter Holloway",
           "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8386791/",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -1714,6 +1819,9 @@
           "testProducer": ["QIAGEN"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "<40",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0,
           "animalSpecies": "CAMEL",
@@ -1726,7 +1834,7 @@
             "Adult (>2 years)",
             "Neonatal (≤6 months)"
           ],
-          "id": "66d5fe2b98aac31016456cae"
+          "id": "66d876de663fbbf4891c7870"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -1746,7 +1854,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [44.71471430227049, 23.293459541389318]
+        "coordinates": [44.66865356436447, 23.45009879184743]
       },
       "properties": {
         "estimateId": "180507_SaudiArabia_UniversityofHongKong_Serum",
@@ -1758,8 +1866,8 @@
           "countryAlphaThreeCode": "SAU",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 23.293459541389318,
-          "longitude": 44.71471430227049,
+          "latitude": 23.45009879184743,
+          "longitude": 44.66865356436447,
           "firstAuthorFullName": "Samy Kasem",
           "sourceUrl": "https://doi.org/10.1016/j.jiph.2017.09.022",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -1784,6 +1892,9 @@
           "testValidation": ["Validated by independent authors"],
           "testValidatedOn": "Dromedary camel",
           "positiveCutoff": "Not reported",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.709,
           "animalSpecies": "CAMEL",
@@ -1792,7 +1903,7 @@
           "animalPurpose": "Not reported",
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Juvenile (6 months-2 years)", "Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456cb1"
+          "id": "66d876de663fbbf4891c7873"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -1812,7 +1923,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [67.6562957576343, 28.126171360695984]
+        "coordinates": [67.74334648800128, 28.156951249199036]
       },
       "properties": {
         "estimateId": "181011_Pakistan_WuhanInstituteofVirology_Camels_Serum",
@@ -1824,8 +1935,8 @@
           "countryAlphaThreeCode": "PAK",
           "whoRegion": "EMR",
           "unRegion": "SOUTHERN_ASIA",
-          "latitude": 28.126171360695984,
-          "longitude": 67.6562957576343,
+          "latitude": 28.156951249199036,
+          "longitude": 67.74334648800128,
           "firstAuthorFullName": "Ali Zohaib",
           "sourceUrl": "https://doi.org/10.1007/s12250-018-0051-0",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -1850,6 +1961,9 @@
           "testValidation": ["Validated by developers"],
           "testValidatedOn": "Not reported",
           "positiveCutoff": "0.15",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.756,
           "animalSpecies": "CAMEL",
@@ -1862,7 +1976,7 @@
           "animalPurpose": "Multiple purposes",
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Juvenile (6 months-2 years)", "Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456cb4"
+          "id": "66d876de663fbbf4891c7876"
         },
         "geographicalAreaSubestimates": [
           {
@@ -1879,8 +1993,8 @@
             "country": "Pakistan",
             "countryAlphaTwoCode": "PK",
             "countryAlphaThreeCode": "PAK",
-            "latitude": 30.102951299133927,
-            "longitude": 67.11606511151076,
+            "latitude": 30.16610825818259,
+            "longitude": 66.9829024090568,
             "whoRegion": "EMR",
             "unRegion": "SOUTHERN_ASIA",
             "geographicScope": "Regional"
@@ -1899,8 +2013,8 @@
             "country": "Pakistan",
             "countryAlphaTwoCode": "PK",
             "countryAlphaThreeCode": "PAK",
-            "latitude": 33.95022454752645,
-            "longitude": 71.674632590335,
+            "latitude": 33.91935420592596,
+            "longitude": 71.63952082158177,
             "whoRegion": "EMR",
             "unRegion": "SOUTHERN_ASIA",
             "geographicScope": "Regional"
@@ -1919,8 +2033,8 @@
             "country": "Pakistan",
             "countryAlphaTwoCode": "PK",
             "countryAlphaThreeCode": "PAK",
-            "latitude": 31.65594813842753,
-            "longitude": 74.34106788402,
+            "latitude": 31.621369869822253,
+            "longitude": 74.31994658545838,
             "whoRegion": "EMR",
             "unRegion": "SOUTHERN_ASIA",
             "geographicScope": "Regional"
@@ -1939,8 +2053,8 @@
             "country": "Pakistan",
             "countryAlphaTwoCode": "PK",
             "countryAlphaThreeCode": "PAK",
-            "latitude": 24.9082135102397,
-            "longitude": 66.95412451618711,
+            "latitude": 24.83522700581684,
+            "longitude": 66.94113584825323,
             "whoRegion": "EMR",
             "unRegion": "SOUTHERN_ASIA",
             "geographicScope": "Regional"
@@ -2028,7 +2142,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [37.847051307832736, 0.48332513045574516]
+        "coordinates": [37.87881962798183, 0.48297385454178327]
       },
       "properties": {
         "estimateId": "181220_Kenya_ ChineseAcademyofSciences_Camels_OverallMolecular",
@@ -2040,8 +2154,8 @@
           "countryAlphaThreeCode": "KEN",
           "whoRegion": "AFR",
           "unRegion": "EASTERN_AFRICA",
-          "latitude": 0.48332513045574516,
-          "longitude": 37.847051307832736,
+          "latitude": 0.48297385454178327,
+          "longitude": 37.87881962798183,
           "firstAuthorFullName": "Sheila Ommeh",
           "sourceUrl": "https://doi.org/10.1007/s12250-018-0076-4",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -2068,6 +2182,10 @@
           "testProducerOther": "TaqMan",
           "testValidation": ["Validated by developers"],
           "testValidatedOn": "Humans",
+          "sequencingDone": true,
+          "clade": ["C2"],
+          "accessionNumbers": "Not reported",
+          "genomeSequenced": ["FULL_LENGTH"],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0.00009,
           "animalSpecies": "CAMEL",
@@ -2075,7 +2193,7 @@
           "animalDetectionSettings": ["Free-roaming herds"],
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Juvenile (6 months-2 years)", "Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456cb7"
+          "id": "66d876de663fbbf4891c7879"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [
@@ -2135,7 +2253,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [46.71467306652698, 24.596647137540675]
+        "coordinates": [46.81400129707042, 24.576228458621564]
       },
       "properties": {
         "estimateId": "301018_SaudiArabia_KingSaudUniversity_CamelWorkers_Primary",
@@ -2149,8 +2267,8 @@
           "countryAlphaThreeCode": "SAU",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 24.596647137540675,
-          "longitude": 46.71467306652698,
+          "latitude": 24.576228458621564,
+          "longitude": 46.81400129707042,
           "firstAuthorFullName": "Abeer N Alshukairi",
           "sourceUrl": "https://doi.org/10.1128/mbio.01985-18",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -2174,11 +2292,14 @@
           "testProducer": ["Euroimmun", "In-house"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "The ELISA for MERS-CoV S-specific antibody was read as positive (>1.1), negative (<0.8), or borderline (0.8 to 1.1).",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0.5,
           "ageGroup": ["Adults (18-45 years)", "Adults (46-59 years)"],
           "sampleFrame": "Close contacts of camels",
-          "id": "66d5fe2b98aac31016456cba"
+          "id": "66d876de663fbbf4891c787c"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -2209,7 +2330,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [35.10074805225337, 29.52869063942617]
+        "coordinates": [35.10054856409435, 29.59201081362677]
       },
       "properties": {
         "estimateId": "210915_Jordan_RoyalVeterinaryCollege_2017-2018_Serum",
@@ -2222,8 +2343,8 @@
           "countryAlphaThreeCode": "JOR",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 29.52869063942617,
-          "longitude": 35.10074805225337,
+          "latitude": 29.59201081362677,
+          "longitude": 35.10054856409435,
           "firstAuthorFullName": "Peter Holloway",
           "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8386791/",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -2244,6 +2365,9 @@
           "geographicScope": "Local",
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.702,
           "seroprevalence95CILower": 0.656,
@@ -2258,7 +2382,7 @@
             "Adult (>2 years)",
             "Neonatal (≤6 months)"
           ],
-          "id": "66d5fe2b98aac31016456cbd"
+          "id": "66d876de663fbbf4891c787f"
         },
         "geographicalAreaSubestimates": [
           {
@@ -2273,8 +2397,8 @@
             "country": "Jordan",
             "countryAlphaTwoCode": "JO",
             "countryAlphaThreeCode": "JOR",
-            "latitude": 29.46272270621857,
-            "longitude": 34.94634371330528,
+            "latitude": 29.549836530758174,
+            "longitude": 34.91615645880689,
             "whoRegion": "EMR",
             "unRegion": "WESTERN_ASIA",
             "geographicScope": "Local"
@@ -2291,8 +2415,8 @@
             "country": "Jordan",
             "countryAlphaTwoCode": "JO",
             "countryAlphaThreeCode": "JOR",
-            "latitude": 30.18853232096649,
-            "longitude": 35.72042822773581,
+            "latitude": 30.138648747336923,
+            "longitude": 35.663598084679485,
             "whoRegion": "EMR",
             "unRegion": "WESTERN_ASIA",
             "geographicScope": "Local"
@@ -2381,7 +2505,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [29.948175777115623, 26.554922712995264]
+        "coordinates": [29.845120321957822, 26.451027334539706]
       },
       "properties": {
         "estimateId": "191001_Egypt_AssiutUniversity_Humans",
@@ -2394,8 +2518,8 @@
           "countryAlphaThreeCode": "EGY",
           "whoRegion": "EMR",
           "unRegion": "NORTHERN_AFRICA",
-          "latitude": 26.554922712995264,
-          "longitude": 29.948175777115623,
+          "latitude": 26.451027334539706,
+          "longitude": 29.845120321957822,
           "firstAuthorFullName": "Amal SM Saye",
           "sourceUrl": "https://jidc.org/index.php/journal/article/view/32146454/2206 ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -2421,11 +2545,14 @@
           "testValidation": ["Validated by independent authors"],
           "testValidatedOn": "Camels",
           "positiveCutoff": "Ratio over 1.1",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0.25,
           "ageGroup": ["Adults (18-45 years)", "Adults (46-59 years)"],
           "sampleFrame": "Camel traders",
-          "id": "66d5fe2b98aac31016456cc0"
+          "id": "66d876de663fbbf4891c7882"
         },
         "geographicalAreaSubestimates": [
           {
@@ -2440,8 +2567,8 @@
             "country": "Egypt",
             "countryAlphaTwoCode": "EG",
             "countryAlphaThreeCode": "EGY",
-            "latitude": 26.52756978627825,
-            "longitude": 29.869698559363723,
+            "latitude": 26.588909718929685,
+            "longitude": 29.78029232342037,
             "whoRegion": "EMR",
             "unRegion": "NORTHERN_AFRICA",
             "geographicScope": "Local"
@@ -2458,8 +2585,8 @@
             "country": "Egypt",
             "countryAlphaTwoCode": "EG",
             "countryAlphaThreeCode": "EGY",
-            "latitude": 27.175566998739626,
-            "longitude": 31.145892846626406,
+            "latitude": 27.259599398436894,
+            "longitude": 31.249516858250594,
             "whoRegion": "EMR",
             "unRegion": "NORTHERN_AFRICA",
             "geographicScope": "Local"
@@ -2526,7 +2653,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [35.05833163541776, 29.612230429550543]
+        "coordinates": [35.05659979048556, 29.6095090039106]
       },
       "properties": {
         "estimateId": "210915_Jordan_RoyalVeterinaryCollege_2014-2015_Nasal",
@@ -2539,8 +2666,8 @@
           "countryAlphaThreeCode": "JOR",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 29.612230429550543,
-          "longitude": 35.05833163541776,
+          "latitude": 29.6095090039106,
+          "longitude": 35.05659979048556,
           "firstAuthorFullName": "Peter Holloway",
           "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8386791/",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -2562,6 +2689,9 @@
           "testProducer": ["QIAGEN"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "<40",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0,
           "animalSpecies": "CAMEL",
@@ -2574,7 +2704,7 @@
             "Adult (>2 years)",
             "Neonatal (≤6 months)"
           ],
-          "id": "66d5fe2b98aac31016456cc3"
+          "id": "66d876de663fbbf4891c7885"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -2594,7 +2724,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [37.920854232669754, 0.5916093559152082]
+        "coordinates": [37.87353791390589, 0.5528062719747207]
       },
       "properties": {
         "estimateId": "201111_Kenya_FAOUN",
@@ -2607,8 +2737,8 @@
           "countryAlphaThreeCode": "KEN",
           "whoRegion": "AFR",
           "unRegion": "EASTERN_AFRICA",
-          "latitude": 0.5916093559152082,
-          "longitude": 37.920854232669754,
+          "latitude": 0.5528062719747207,
+          "longitude": 37.87353791390589,
           "firstAuthorFullName": "Rinah Sitawa",
           "sourceUrl": "https://doi.org/10.1016%2Fj.prevetmed.2020.105197",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -2629,6 +2759,9 @@
           "geographicScope": "Regional",
           "testProducer": ["Euroimmun"],
           "testValidation": ["Not reported"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.629,
           "animalSpecies": "CAMEL",
@@ -2641,7 +2774,7 @@
             "Adult (>2 years)",
             "Neonatal (≤6 months)"
           ],
-          "id": "66d5fe2b98aac31016456cc6"
+          "id": "66d876de663fbbf4891c7888"
         },
         "geographicalAreaSubestimates": [
           {
@@ -2658,8 +2791,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.4586225116760019,
-            "longitude": 37.81326987793017,
+            "latitude": 0.5065064092426373,
+            "longitude": 37.805905487326754,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Regional"
@@ -2678,8 +2811,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.6173550740992342,
-            "longitude": 37.89643063158611,
+            "latitude": 0.5433565063669558,
+            "longitude": 37.942567412849144,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Regional"
@@ -2698,8 +2831,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.5802128794366932,
-            "longitude": 37.85130355399957,
+            "latitude": 0.6216410852771452,
+            "longitude": 37.806660511770886,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Regional"
@@ -2718,8 +2851,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.4530436236562314,
-            "longitude": 37.79387188805551,
+            "latitude": 0.49602629688868527,
+            "longitude": 37.852486845461115,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Regional"
@@ -2738,8 +2871,8 @@
             "country": "Kenya",
             "countryAlphaTwoCode": "KE",
             "countryAlphaThreeCode": "KEN",
-            "latitude": 0.5902413957133203,
-            "longitude": 37.7850291348519,
+            "latitude": 0.6031808305183506,
+            "longitude": 37.77814379440297,
             "whoRegion": "AFR",
             "unRegion": "EASTERN_AFRICA",
             "geographicScope": "Regional"
@@ -2834,7 +2967,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [44.68476410817908, 23.467125550939006]
+        "coordinates": [44.704421888015915, 23.443301760382905]
       },
       "properties": {
         "estimateId": "171211_Dhahran_JohnsHopkinsAramcoHealthcare",
@@ -2847,8 +2980,8 @@
           "countryAlphaThreeCode": "SAU",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 23.467125550939006,
-          "longitude": 44.68476410817908,
+          "latitude": 23.443301760382905,
+          "longitude": 44.704421888015915,
           "firstAuthorFullName": "Jaffar A. Al-Tawfiq",
           "sourceUrl": "https://doi.org/10.1016%2Fj.tmaid.2017.10.004",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -2870,6 +3003,9 @@
           "geographicScope": "Local",
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_VIRAL",
           "positivePrevalence": 0.000073,
           "ageGroup": [
@@ -2878,7 +3014,7 @@
             "Seniors (≥60 years)"
           ],
           "sampleFrame": "Suspected cases",
-          "id": "66d5fe2b98aac31016456cc9"
+          "id": "66d876de663fbbf4891c788b"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -2921,7 +3057,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [29.97131902467994, 31.20439849980355]
+        "coordinates": [29.99469180581226, 31.175141019675664]
       },
       "properties": {
         "estimateId": "140516_Egypt_StJudeChildrensResearchHospital_Humans",
@@ -2934,8 +3070,8 @@
           "countryAlphaThreeCode": "EGY",
           "whoRegion": "EMR",
           "unRegion": "NORTHERN_AFRICA",
-          "latitude": 31.20439849980355,
-          "longitude": 29.97131902467994,
+          "latitude": 31.175141019675664,
+          "longitude": 29.99469180581226,
           "firstAuthorFullName": "Daniel K.W. Chu",
           "sourceUrl": "https://wwwnc.cdc.gov/eid/article/20/6/14-0299_article ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -2958,11 +3094,14 @@
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "titer >=20",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0,
           "ageGroup": ["Adults (18-45 years)", "Adults (46-59 years)"],
           "sampleFrame": "Slaughterhouse workers",
-          "id": "66d5fe2b98aac31016456ccc"
+          "id": "66d876de663fbbf4891c788e"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -2982,7 +3121,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [44.739773715953284, 23.345257741481184]
+        "coordinates": [44.62514964730419, 23.293723625208933]
       },
       "properties": {
         "estimateId": "150722_AlHasa_UniversityofHongKong",
@@ -2995,8 +3134,8 @@
           "countryAlphaThreeCode": "SAU",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 23.345257741481184,
-          "longitude": 44.739773715953284,
+          "latitude": 23.293723625208933,
+          "longitude": 44.62514964730419,
           "firstAuthorFullName": "Maged G. Hemid",
           "sourceUrl": "https://wwwnc.cdc.gov/eid/article/21/4/14-1949_article",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -3018,11 +3157,14 @@
           "geographicScope": "Regional",
           "testProducer": ["In-house"],
           "testValidation": ["Validated by independent authors"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0,
           "ageGroup": ["Adults (18-45 years)", "Adults (46-59 years)"],
           "sampleFrame": "Multiple populations",
-          "id": "66d5fe2b98aac31016456ccf"
+          "id": "66d876de663fbbf4891c7891"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -3103,7 +3245,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [37.7995705789271, 0.4990774473143781]
+        "coordinates": [37.799685321369004, 0.47641369671303146]
       },
       "properties": {
         "estimateId": "181220_Kenya_ ChineseAcademyofSciences_Humans_primary",
@@ -3115,8 +3257,8 @@
           "countryAlphaThreeCode": "KEN",
           "whoRegion": "AFR",
           "unRegion": "EASTERN_AFRICA",
-          "latitude": 0.4990774473143781,
-          "longitude": 37.7995705789271,
+          "latitude": 0.47641369671303146,
+          "longitude": 37.799685321369004,
           "firstAuthorFullName": "Sheila Ommeh",
           "sourceUrl": "https://doi.org/10.1007/s12250-018-0076-4",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -3146,6 +3288,9 @@
           "testValidation": ["Validated by developers"],
           "testValidatedOn": "Humans",
           "positiveCutoff": "0.35",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0.025,
           "ageGroup": [
@@ -3154,7 +3299,7 @@
             "Seniors (≥60 years)"
           ],
           "sampleFrame": "Close contacts of camels",
-          "id": "66d5fe2b98aac31016456cd2"
+          "id": "66d876de663fbbf4891c7894"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -3206,7 +3351,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [33.410176649810495, 15.002437562487156]
+        "coordinates": [33.51763570753761, 15.021570761784066]
       },
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Market_Serum",
@@ -3219,8 +3364,8 @@
           "countryAlphaThreeCode": "SDN",
           "whoRegion": "EMR",
           "unRegion": "NORTHERN_AFRICA",
-          "latitude": 15.002437562487156,
-          "longitude": 33.410176649810495,
+          "latitude": 15.021570761784066,
+          "longitude": 33.51763570753761,
           "firstAuthorFullName": "Elmoubasher Farag",
           "sourceUrl": "https://wwwnc.cdc.gov/eid/article/25/12/19-0882_article ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -3242,6 +3387,9 @@
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "1:20",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.963,
           "animalSpecies": "CAMEL",
@@ -3250,7 +3398,7 @@
           "animalPurpose": "Meat and milk",
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456cd5"
+          "id": "66d876de663fbbf4891c7897"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -3270,7 +3418,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [29.870242905231432, 31.245746002286236]
+        "coordinates": [29.909519883161312, 31.103515892082644]
       },
       "properties": {
         "estimateId": "140516_Egypt_StJudeChildrensResearchHospital_Camels_Serum",
@@ -3283,8 +3431,8 @@
           "countryAlphaThreeCode": "EGY",
           "whoRegion": "EMR",
           "unRegion": "NORTHERN_AFRICA",
-          "latitude": 31.245746002286236,
-          "longitude": 29.870242905231432,
+          "latitude": 31.103515892082644,
+          "longitude": 29.909519883161312,
           "firstAuthorFullName": "Daniel K.W. Chu",
           "sourceUrl": "https://wwwnc.cdc.gov/eid/article/20/6/14-0299_article ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -3306,6 +3454,9 @@
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "titer >=20",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.923,
           "animalSpecies": "CAMEL",
@@ -3313,7 +3464,7 @@
           "animalDetectionSettings": ["Abattoirs"],
           "animalImportedOrLocal": "Imported",
           "animalAgeGroup": ["Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456cd8"
+          "id": "66d876de663fbbf4891c789a"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -3333,7 +3484,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [8.486004799328823, 12.030906325086534]
+        "coordinates": [8.586075624252494, 11.965766813041297]
       },
       "properties": {
         "estimateId": "180618_Kano_UniversityofHongKong_Camels",
@@ -3346,8 +3497,8 @@
           "countryAlphaThreeCode": "NGA",
           "whoRegion": "AFR",
           "unRegion": "WESTERN_AFRICA",
-          "latitude": 12.030906325086534,
-          "longitude": 8.486004799328823,
+          "latitude": 11.965766813041297,
+          "longitude": 8.586075624252494,
           "firstAuthorFullName": "Ray TY So",
           "sourceUrl": "https://doi.org/10.2807%2F1560-7917.ES.2018.23.32.1800175",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -3368,6 +3519,9 @@
           "geographicScope": "Local",
           "testProducer": ["Not reported"],
           "testValidation": ["Not reported"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0.02175,
           "animalSpecies": "CAMEL",
@@ -3376,7 +3530,7 @@
           "animalPurpose": "Meat",
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Juvenile (6 months-2 years)", "Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456cdb"
+          "id": "66d876de663fbbf4891c789d"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [
@@ -3430,7 +3584,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [31.298830883537697, 29.963260640228196]
+        "coordinates": [31.25806807267955, 30.028907584370458]
       },
       "properties": {
         "estimateId": "070916_Egypt_EgyptianMinistryofHealthandPopulation_Humans_Overall",
@@ -3443,8 +3597,8 @@
           "countryAlphaThreeCode": "EGY",
           "whoRegion": "EMR",
           "unRegion": "NORTHERN_AFRICA",
-          "latitude": 29.963260640228196,
-          "longitude": 31.298830883537697,
+          "latitude": 30.028907584370458,
+          "longitude": 31.25806807267955,
           "firstAuthorFullName": "Samir Refaey",
           "sourceUrl": "https://doi.org/10.1111/irv.12429",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -3467,6 +3621,9 @@
           "geographicScope": "Local",
           "testProducer": ["Not reported"],
           "testValidation": ["Not reported"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_VIRAL",
           "positivePrevalence": 0,
           "ageGroup": [
@@ -3476,7 +3633,7 @@
             "Seniors (≥60 years)"
           ],
           "sampleFrame": "Pilgrims",
-          "id": "66d5fe2b98aac31016456cde"
+          "id": "66d876de663fbbf4891c78a0"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -3562,7 +3719,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [51.254875458794686, 25.27834754889231]
+        "coordinates": [51.14819630921137, 25.32015838435647]
       },
       "properties": {
         "estimateId": "140606_Qatar_ErasmusMedicalCenter_Camels_Serum",
@@ -3575,8 +3732,8 @@
           "countryAlphaThreeCode": "QAT",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 25.27834754889231,
-          "longitude": 51.254875458794686,
+          "latitude": 25.32015838435647,
+          "longitude": 51.14819630921137,
           "firstAuthorFullName": "C B Reusken",
           "sourceUrl": "https://www.eurosurveillance.org/content/10.2807/1560-7917.ES2014.19.23.20829 ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -3599,6 +3756,9 @@
           "testValidation": ["Validated by independent authors"],
           "testValidatedOn": "Not reported",
           "positiveCutoff": "4,000 relative mean fluorescent intensity",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 1,
           "animalSpecies": "CAMEL",
@@ -3607,7 +3767,7 @@
           "animalPurpose": "Milking",
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456ce1"
+          "id": "66d876de663fbbf4891c78a3"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -3638,7 +3798,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [8.498473045223493, 11.904888811552054]
+        "coordinates": [8.451360569371287, 11.949184716548189]
       },
       "properties": {
         "estimateId": "180618_Kano_UniversityofHongKong_Humans",
@@ -3651,8 +3811,8 @@
           "countryAlphaThreeCode": "NGA",
           "whoRegion": "AFR",
           "unRegion": "WESTERN_AFRICA",
-          "latitude": 11.904888811552054,
-          "longitude": 8.498473045223493,
+          "latitude": 11.949184716548189,
+          "longitude": 8.451360569371287,
           "firstAuthorFullName": "Ray TY So",
           "sourceUrl": "https://doi.org/10.2807%2F1560-7917.ES.2018.23.32.1800175",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -3675,11 +3835,14 @@
           "testProducer": ["Euroimmun", "In-house"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "A ≥ 90% reduction of signal was considered as evidence of neutralisation in the ppNT assay",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0,
           "ageGroup": ["Adults (18-45 years)", "Adults (46-59 years)"],
           "sampleFrame": "Slaughterhouse workers",
-          "id": "66d5fe2b98aac31016456ce4"
+          "id": "66d876de663fbbf4891c78a6"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -3724,7 +3887,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [29.924989794811772, 31.108222523348196]
+        "coordinates": [29.869938136536117, 31.293847807765022]
       },
       "properties": {
         "estimateId": "140516_Egypt_StJudeChildrensResearchHospital_Camels",
@@ -3737,8 +3900,8 @@
           "countryAlphaThreeCode": "EGY",
           "whoRegion": "EMR",
           "unRegion": "NORTHERN_AFRICA",
-          "latitude": 31.108222523348196,
-          "longitude": 29.924989794811772,
+          "latitude": 31.293847807765022,
+          "longitude": 29.869938136536117,
           "firstAuthorFullName": "Daniel K.W. Chu",
           "sourceUrl": "https://wwwnc.cdc.gov/eid/article/20/6/14-0299_article ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -3759,6 +3922,10 @@
           "geographicScope": "Regional",
           "testProducer": ["Not reported"],
           "testValidation": ["Not reported"],
+          "sequencingDone": true,
+          "clade": ["A"],
+          "accessionNumbers": "noKJ477102",
+          "genomeSequenced": ["FULL_LENGTH"],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0.036,
           "animalSpecies": "CAMEL",
@@ -3766,7 +3933,7 @@
           "animalDetectionSettings": ["Abattoirs"],
           "animalImportedOrLocal": "Imported",
           "animalAgeGroup": ["Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456ce7"
+          "id": "66d876de663fbbf4891c78a9"
         },
         "geographicalAreaSubestimates": [
           {
@@ -3781,8 +3948,8 @@
             "country": "Egypt",
             "countryAlphaTwoCode": "EG",
             "countryAlphaThreeCode": "EGY",
-            "latitude": 26.497561883002756,
-            "longitude": 29.916333417896034,
+            "latitude": 26.400859205859078,
+            "longitude": 29.814365967421914,
             "whoRegion": "EMR",
             "unRegion": "NORTHERN_AFRICA",
             "geographicScope": "Local"
@@ -3799,8 +3966,8 @@
             "country": "Egypt",
             "countryAlphaTwoCode": "EG",
             "countryAlphaThreeCode": "EGY",
-            "latitude": 31.210925803065628,
-            "longitude": 29.95993498259017,
+            "latitude": 31.188008280887917,
+            "longitude": 29.893239326659938,
             "whoRegion": "EMR",
             "unRegion": "NORTHERN_AFRICA",
             "geographicScope": "Local"
@@ -3817,8 +3984,8 @@
             "country": "Egypt",
             "countryAlphaTwoCode": "EG",
             "countryAlphaThreeCode": "EGY",
-            "latitude": 29.973173663712846,
-            "longitude": 31.224255576030764,
+            "latitude": 30.078057745868193,
+            "longitude": 31.267496053175158,
             "whoRegion": "EMR",
             "unRegion": "NORTHERN_AFRICA",
             "geographicScope": "Local"
@@ -3841,7 +4008,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [37.92716499974079, 0.5617782389717714]
+        "coordinates": [37.84180967763971, 0.5900288317085348]
       },
       "properties": {
         "estimateId": "201201_MarsabitCounty_USCDC_Camels",
@@ -3854,8 +4021,8 @@
           "countryAlphaThreeCode": "KEN",
           "whoRegion": "AFR",
           "unRegion": "EASTERN_AFRICA",
-          "latitude": 0.5617782389717714,
-          "longitude": 37.92716499974079,
+          "latitude": 0.5900288317085348,
+          "longitude": 37.84180967763971,
           "firstAuthorFullName": "I. Ngere",
           "sourceUrl": "https://doi.org/10.1017/s0950268820002939",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -3876,6 +4043,9 @@
           "geographicScope": "Regional",
           "testProducer": ["Not reported"],
           "testValidation": ["Not reported"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.763,
           "animalSpecies": "CAMEL",
@@ -3887,7 +4057,7 @@
             "Adult (>2 years)",
             "Neonatal (≤6 months)"
           ],
-          "id": "66d5fe2b98aac31016456cea"
+          "id": "66d876de663fbbf4891c78ac"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [
@@ -3995,7 +4165,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [51.60431460808537, 25.245375061622653]
+        "coordinates": [51.56813999107814, 25.19565973261558]
       },
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Imported_Nasal",
@@ -4008,8 +4178,8 @@
           "countryAlphaThreeCode": "QAT",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 25.245375061622653,
-          "longitude": 51.60431460808537,
+          "latitude": 25.19565973261558,
+          "longitude": 51.56813999107814,
           "firstAuthorFullName": "Elmoubasher Farag",
           "sourceUrl": "https://wwwnc.cdc.gov/eid/article/25/12/19-0882_article ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -4030,6 +4200,9 @@
           "geographicScope": "Local",
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0.033,
           "animalSpecies": "CAMEL",
@@ -4038,7 +4211,7 @@
           "animalPurpose": "Meat, milk, racing",
           "animalImportedOrLocal": "Imported",
           "animalAgeGroup": ["Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456ced"
+          "id": "66d876de663fbbf4891c78af"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -4058,7 +4231,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [51.1517195755303, 25.329829746483416]
+        "coordinates": [51.12756301501009, 25.256955304720094]
       },
       "properties": {
         "estimateId": "180219_Qatar_QatarUniversity_Humans_closecontacts_primary",
@@ -4070,8 +4243,8 @@
           "countryAlphaThreeCode": "QAT",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 25.329829746483416,
-          "longitude": 51.1517195755303,
+          "latitude": 25.256955304720094,
+          "longitude": 51.12756301501009,
           "firstAuthorFullName": "Reham A Al Kahlout",
           "sourceUrl": "https://doi.org/10.1155/2019/1386740",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -4094,6 +4267,9 @@
           "geographicScope": "National",
           "testProducer": [],
           "testValidation": [],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0.00007,
           "ageGroup": [
@@ -4102,7 +4278,7 @@
             "Adults (46-59 years)"
           ],
           "sampleFrame": "Close contacts of cases",
-          "id": "66d5fe2b98aac31016456cf0"
+          "id": "66d876de663fbbf4891c78b2"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -4156,7 +4332,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [67.78745561974272, 28.18454906377214]
+        "coordinates": [67.69299374120546, 28.16131310816566]
       },
       "properties": {
         "estimateId": "181011_Pakistan_WuhanInstituteofVirology_Humans_Serum",
@@ -4168,8 +4344,8 @@
           "countryAlphaThreeCode": "PAK",
           "whoRegion": "EMR",
           "unRegion": "SOUTHERN_ASIA",
-          "latitude": 28.18454906377214,
-          "longitude": 67.78745561974272,
+          "latitude": 28.16131310816566,
+          "longitude": 67.69299374120546,
           "firstAuthorFullName": "Ali Zohaib",
           "sourceUrl": "https://doi.org/10.1007/s12250-018-0051-0",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -4195,11 +4371,14 @@
           "testValidation": ["Validated by developers"],
           "testValidatedOn": "Not reported",
           "positiveCutoff": "0.15",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0.015,
           "ageGroup": ["Adults (18-45 years)", "Adults (46-59 years)"],
           "sampleFrame": "Livestock handlers",
-          "id": "66d5fe2b98aac31016456cf3"
+          "id": "66d876de663fbbf4891c78b5"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -4230,7 +4409,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [67.77110192307077, 28.153416469535273]
+        "coordinates": [67.70974011113712, 28.234905098273458]
       },
       "properties": {
         "estimateId": "061119_Cholistan_UniversityofVeterinaryandAnimalSciences_OverallPRNT",
@@ -4244,8 +4423,8 @@
           "countryAlphaThreeCode": "PAK",
           "whoRegion": "EMR",
           "unRegion": "SOUTHERN_ASIA",
-          "latitude": 28.153416469535273,
-          "longitude": 67.77110192307077,
+          "latitude": 28.234905098273458,
+          "longitude": 67.70974011113712,
           "firstAuthorFullName": "Jian Zheng",
           "sourceUrl": "https://doi.org/10.3201%2Feid2512.191169",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -4270,6 +4449,9 @@
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "We considered serum\nsamples with PRNT50>1:20 positive.",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "HUMAN_SEROPREVALENCE",
           "seroprevalence": 0.12,
           "ageGroup": [
@@ -4279,7 +4461,7 @@
             "Seniors (≥60 years)"
           ],
           "sampleFrame": "Close contacts of camels",
-          "id": "66d5fe2b98aac31016456cf6"
+          "id": "66d876de663fbbf4891c78b8"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -4351,7 +4533,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [51.462043401573794, 25.220411712297906]
+        "coordinates": [51.53028799839248, 25.34705406353568]
       },
       "properties": {
         "estimateId": "191118_Tamboul_UniversityofGezira_Camels_Imported_Serum",
@@ -4364,8 +4546,8 @@
           "countryAlphaThreeCode": "QAT",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 25.220411712297906,
-          "longitude": 51.462043401573794,
+          "latitude": 25.34705406353568,
+          "longitude": 51.53028799839248,
           "firstAuthorFullName": "Elmoubasher Farag",
           "sourceUrl": "https://wwwnc.cdc.gov/eid/article/25/12/19-0882_article ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -4387,6 +4569,9 @@
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "1:20",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.989,
           "animalSpecies": "CAMEL",
@@ -4395,7 +4580,7 @@
           "animalPurpose": "Meat, milk, racing",
           "animalImportedOrLocal": "Imported",
           "animalAgeGroup": ["Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456cf9"
+          "id": "66d876de663fbbf4891c78bb"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -4415,7 +4600,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [44.55539600133954, 23.28631887482096]
+        "coordinates": [44.713241742283635, 23.445828305498758]
       },
       "properties": {
         "estimateId": "151217_SaudiArabia_KingAbdulazizUniversity_Camels_OverallNasal",
@@ -4427,8 +4612,8 @@
           "countryAlphaThreeCode": "SAU",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 23.28631887482096,
-          "longitude": 44.55539600133954,
+          "latitude": 23.445828305498758,
+          "longitude": 44.713241742283635,
           "firstAuthorFullName": "Jamal S. M. Sabir",
           "sourceUrl": "https://doi.org/10.1126/science.aac8608",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -4451,6 +4636,10 @@
           "testProducer": ["In-house"],
           "testValidation": ["Validated by independent authors"],
           "testValidatedOn": "Test validated by authors, in human sample. ",
+          "sequencingDone": true,
+          "clade": ["B"],
+          "accessionNumbers": "KT368824-KT368916",
+          "genomeSequenced": ["FULL_LENGTH"],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0.121,
           "animalSpecies": "CAMEL",
@@ -4458,7 +4647,7 @@
           "animalDetectionSettings": ["Farms", "Livestock markets"],
           "animalImportedOrLocal": "Imported",
           "animalAgeGroup": [],
-          "id": "66d5fe2b98aac31016456cfc"
+          "id": "66d876de663fbbf4891c78be"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [
@@ -4726,7 +4915,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [67.78975415350685, 28.20437384930892]
+        "coordinates": [67.78562431122117, 28.105112165869084]
       },
       "properties": {
         "estimateId": "181011_Pakistan_WuhanInstituteofVirology_Camels_Nasal",
@@ -4738,8 +4927,8 @@
           "countryAlphaThreeCode": "PAK",
           "whoRegion": "EMR",
           "unRegion": "SOUTHERN_ASIA",
-          "latitude": 28.20437384930892,
-          "longitude": 67.78975415350685,
+          "latitude": 28.105112165869084,
+          "longitude": 67.78562431122117,
           "firstAuthorFullName": "Ali Zohaib",
           "sourceUrl": "https://doi.org/10.1007/s12250-018-0051-0",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -4760,6 +4949,9 @@
           "geographicScope": "National",
           "testProducer": ["Not reported"],
           "testValidation": [],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0.284,
           "animalSpecies": "CAMEL",
@@ -4772,7 +4964,7 @@
           "animalPurpose": "Multiple purposes",
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Juvenile (6 months-2 years)", "Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456cff"
+          "id": "66d876de663fbbf4891c78c1"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -4792,7 +4984,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [29.949971054679896, 26.436155664678935]
+        "coordinates": [29.96190662958052, 26.40832620741093]
       },
       "properties": {
         "estimateId": "191001_Egypt_AssiutUniversity_Camels",
@@ -4805,8 +4997,8 @@
           "countryAlphaThreeCode": "EGY",
           "whoRegion": "EMR",
           "unRegion": "NORTHERN_AFRICA",
-          "latitude": 26.436155664678935,
-          "longitude": 29.949971054679896,
+          "latitude": 26.40832620741093,
+          "longitude": 29.96190662958052,
           "firstAuthorFullName": "Amal SM Saye",
           "sourceUrl": "https://jidc.org/index.php/journal/article/view/32146454/2206 ",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -4831,6 +5023,9 @@
           "testValidation": ["Validated by independent authors"],
           "testValidatedOn": "Camels",
           "positiveCutoff": "Ratio over 1.1",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.587,
           "animalSpecies": "CAMEL",
@@ -4839,7 +5034,7 @@
           "animalPurpose": "Slaughter",
           "animalImportedOrLocal": "Imported",
           "animalAgeGroup": ["Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456d02"
+          "id": "66d876de663fbbf4891c78c4"
         },
         "geographicalAreaSubestimates": [
           {
@@ -4854,8 +5049,8 @@
             "country": "Egypt",
             "countryAlphaTwoCode": "EG",
             "countryAlphaThreeCode": "EGY",
-            "latitude": 26.51208260898694,
-            "longitude": 29.825891606179443,
+            "latitude": 26.504082785870644,
+            "longitude": 29.938819776417894,
             "whoRegion": "EMR",
             "unRegion": "NORTHERN_AFRICA",
             "geographicScope": "Local"
@@ -4872,8 +5067,8 @@
             "country": "Egypt",
             "countryAlphaTwoCode": "EG",
             "countryAlphaThreeCode": "EGY",
-            "latitude": 24.02455876206882,
-            "longitude": 32.93228477841241,
+            "latitude": 24.08054153203078,
+            "longitude": 32.89930254486871,
             "whoRegion": "EMR",
             "unRegion": "NORTHERN_AFRICA",
             "geographicScope": "Local"
@@ -4890,8 +5085,8 @@
             "country": "Egypt",
             "countryAlphaTwoCode": "EG",
             "countryAlphaThreeCode": "EGY",
-            "latitude": 27.114799902667503,
-            "longitude": 31.155859281491466,
+            "latitude": 27.268015180530874,
+            "longitude": 31.253694546509866,
             "whoRegion": "EMR",
             "unRegion": "NORTHERN_AFRICA",
             "geographicScope": "Local"
@@ -4958,7 +5153,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [44.647934886797394, 33.679566359494544]
+        "coordinates": [44.723277820005286, 33.77593249899861]
       },
       "properties": {
         "estimateId": "220810_Diyala_UniversityofDiyala_Camels",
@@ -4971,8 +5166,8 @@
           "countryAlphaThreeCode": "IRQ",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 33.679566359494544,
-          "longitude": 44.647934886797394,
+          "latitude": 33.77593249899861,
+          "longitude": 44.723277820005286,
           "firstAuthorFullName": "Abdulrazak Hasan",
           "sourceUrl": "https://journals.tubitak.gov.tr/medical/vol52/iss4/5/",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -4995,6 +5190,9 @@
           "testProducerOther": "Alpha Diagnostic International, USA",
           "testValidation": ["Not reported"],
           "positiveCutoff": "Not reported",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.9,
           "seroprevalence95CILower": 0.825,
@@ -5005,7 +5203,7 @@
           "animalPurpose": "Not reported",
           "animalImportedOrLocal": "Not reported",
           "animalAgeGroup": ["Juvenile (6 months-2 years)", "Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456d05"
+          "id": "66d876de663fbbf4891c78c7"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [
@@ -5093,7 +5291,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [44.70100764146447, 23.37924327522628]
+        "coordinates": [44.60874891228014, 23.43466955391731]
       },
       "properties": {
         "estimateId": "180507_SaudiArabia_UniversityofHongKong_Nasal",
@@ -5105,8 +5303,8 @@
           "countryAlphaThreeCode": "SAU",
           "whoRegion": "EMR",
           "unRegion": "WESTERN_ASIA",
-          "latitude": 23.37924327522628,
-          "longitude": 44.70100764146447,
+          "latitude": 23.43466955391731,
+          "longitude": 44.60874891228014,
           "firstAuthorFullName": "Samy Kasem",
           "sourceUrl": "https://doi.org/10.1016/j.jiph.2017.09.022",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -5127,6 +5325,9 @@
           "geographicScope": "National",
           "testProducer": ["Roche"],
           "testValidation": [],
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_VIRAL",
           "positivePrevalence": 0.126,
           "animalSpecies": "CAMEL",
@@ -5135,7 +5336,7 @@
           "animalPurpose": "Not reported",
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Juvenile (6 months-2 years)", "Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456d08"
+          "id": "66d876de663fbbf4891c78ca"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],
@@ -5186,7 +5387,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [8.493419835236088, 12.00559046106104]
+        "coordinates": [8.592913508217071, 11.981973422969055]
       },
       "properties": {
         "estimateId": "140718_Nigeria_NetherlandsCentreforInfectiousDiseaseControl",
@@ -5199,8 +5400,8 @@
           "countryAlphaThreeCode": "NGA",
           "whoRegion": "AFR",
           "unRegion": "WESTERN_AFRICA",
-          "latitude": 12.00559046106104,
-          "longitude": 8.493419835236088,
+          "latitude": 11.981973422969055,
+          "longitude": 8.592913508217071,
           "firstAuthorFullName": "Chantal B.E.M. Reusken",
           "sourceUrl": "https://doi.org/10.3201%2Feid2008.140590",
           "sourceType": "Journal Article (Peer-Reviewed)",
@@ -5221,6 +5422,9 @@
           "testProducer": ["In-house"],
           "testValidation": ["Not reported"],
           "positiveCutoff": "4000 RFU",
+          "sequencingDone": false,
+          "clade": [],
+          "genomeSequenced": [],
           "type": "ANIMAL_SEROPREVALENCE",
           "seroprevalence": 0.94,
           "animalSpecies": "CAMEL",
@@ -5229,7 +5433,74 @@
           "animalPurpose": "Meat production",
           "animalImportedOrLocal": "Local",
           "animalAgeGroup": ["Adult (>2 years)"],
-          "id": "66d5fe2b98aac31016456d0b"
+          "id": "66d876de663fbbf4891c78cd"
+        },
+        "geographicalAreaSubestimates": [],
+        "ageGroupSubestimates": [],
+        "testUsedSubestimates": [],
+        "animalSpeciesSubestimates": [],
+        "sexSubestimates": [],
+        "timeFrameSubestimates": [],
+        "sampleTypeSubestimates": [],
+        "occupationSubestimates": [],
+        "animalSourceLocationSubestimates": [],
+        "animalSamplingContextSubestimates": [],
+        "camelExposureLevelSubestimates": [],
+        "nomadismSubestimates": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [40.677249907832454, 10.104615783018323]
+      },
+      "properties": {
+        "estimateId": "190618_Afar_NihonUniversity_Nasal",
+        "primaryEstimateInfo": {
+          "estimateId": "190618_Afar_NihonUniversity_Nasal",
+          "subGroupingVariable": "PRIMARY",
+          "city": "Awash, Amibara, Gewane, Semera",
+          "state": "Afar",
+          "country": "Ethiopia",
+          "countryAlphaTwoCode": "ET",
+          "countryAlphaThreeCode": "ETH",
+          "whoRegion": "AFR",
+          "unRegion": "EASTERN_AFRICA",
+          "latitude": 10.104615783018323,
+          "longitude": 40.677249907832454,
+          "firstAuthorFullName": "Kazuya Shirato",
+          "sourceUrl": "https://doi.org/10.3389/fmicb.2019.01326",
+          "sourceType": "Journal Article (Peer-Reviewed)",
+          "sourceTitle": "Middle east respiratory syndrome coronavirus in dromedaries in Ethiopia is antigenically different from the Middle East isolate EMC",
+          "insitutution": "Nihon University",
+          "studyInclusionCriteria": "Dromedaries in the Afar region of Ethiopia",
+          "sampleDenominator": 258,
+          "sampleNumerator": 39,
+          "assay": ["RT-LAMP", "RT-PCR"],
+          "specimenType": ["Nasal Swab or NP"],
+          "sex": "All",
+          "isotypes": ["N/A"],
+          "antigen": ["N", "LAMP ORF1a", "UpE", "ORF1a"],
+          "samplingStartDate": "2017-08-01T06:00:00.000Z",
+          "samplingEndDate": "2017-08-31T06:00:00.000Z",
+          "samplingMidDate": "2017-08-16T06:00:00.000Z",
+          "samplingMethod": "Convenience",
+          "geographicScope": "Regional",
+          "testProducer": ["Eiken", "QIAGEN"],
+          "testValidation": ["Not reported"],
+          "sequencingDone": true,
+          "clade": ["C2"],
+          "accessionNumbers": "MK564474, MK564475",
+          "genomeSequenced": ["FULL_LENGTH"],
+          "type": "ANIMAL_VIRAL",
+          "positivePrevalence": 0.151,
+          "animalSpecies": "CAMEL",
+          "animalType": ["DOMESTIC"],
+          "animalDetectionSettings": ["Farms"],
+          "animalImportedOrLocal": "Local",
+          "animalAgeGroup": ["Juvenile (6 months-2 years)"],
+          "id": "66d876de663fbbf4891c78d0"
         },
         "geographicalAreaSubestimates": [],
         "ageGroupSubestimates": [],

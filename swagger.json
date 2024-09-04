@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "MERSTracker Partner API Documentation",
-    "version": "0.5.0"
+    "version": "0.6.0"
   },
   "schemes": ["https"],
   "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],
@@ -237,7 +237,10 @@
           "isotypes",
           "antigen",
           "testProducer",
-          "testValidation"
+          "testValidation",
+          "sequencingDone",
+          "clade",
+          "genomeSequenced"
         ],
         "properties": {
           "id": {
@@ -605,6 +608,44 @@
                 "Not reported"
               ],
               "example": "Validated by manufacturers"
+            }
+          },
+          "sequencingDone": {
+            "type": "boolean",
+            "description": "Whether or not genomic sequencing was done.",
+            "example": true
+          },
+          "clade": {
+            "type": "array",
+            "description": "The clades from the genomic sequencing. Always empty if sequencingDone is false.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "A",
+                "B",
+                "C1",
+                "C2",
+                "C"
+              ],
+              "example": "C"
+            }
+          },
+          "accessionNumbers": {
+            "type": "string",
+            "description": "The accession numbers relating to the genomic sequencing. Always null if sequencingDone is false.",
+            "example": true
+          },
+          "genomeSequenced": {
+            "type": "array",
+            "description": "The genomes sequenced. Always empty if sequencingDone is false.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "FULL_LENGTH",
+                "PARTIAL_S_GENE",
+                "PARTIAL_N_GENE"
+              ],
+              "example": "FULL_LENGTH"
             }
           }
         }

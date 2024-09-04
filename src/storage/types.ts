@@ -16,6 +16,20 @@ enum MersAnimalType {
   WILD = "WILD",
 }
 
+enum Clade {
+  A = 'A',
+  B = 'B',
+  C1 = 'C1',
+  C2 = 'C2',
+  C = 'C'
+}
+
+enum GenomeSequenced {
+  FULL_LENGTH = 'FULL_LENGTH',
+  PARTIAL_S_GENE = 'PARTIAL_S_GENE',
+  PARTIAL_N_GENE = 'PARTIAL_N_GENE'
+}
+
 export enum MersEstimateType {
   HUMAN_VIRAL = 'HUMAN_VIRAL',
   ANIMAL_VIRAL = 'ANIMAL_VIRAL',
@@ -87,6 +101,10 @@ interface MersEstimateDocumentBase {
   positiveCutoff: string | undefined;
   symptomPrevalenceOfPositives: number | undefined;
   symptomDefinition: string | undefined;
+  sequencingDone: boolean;
+  clade: Clade[];
+  accessionNumbers: string | undefined;
+  genomeSequenced: GenomeSequenced[];
   createdAt: Date;
   updatedAt: Date;
 }
