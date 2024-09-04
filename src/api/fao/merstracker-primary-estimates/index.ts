@@ -102,6 +102,10 @@ export const generateMersPrimaryEstimatesRequestHandler = (
         geographicScope: mersPrimaryEstimate.primaryEstimateInfo.geographicScope,
         testProducer: mersPrimaryEstimate.primaryEstimateInfo.testProducer,
         testValidation: mersPrimaryEstimate.primaryEstimateInfo.testValidation,
+        sequencingDone: mersPrimaryEstimate.primaryEstimateInfo.sequencingDone,
+        clade: mersPrimaryEstimate.primaryEstimateInfo.clade,
+        accessionNumbers: mersPrimaryEstimate.primaryEstimateInfo.accessionNumbers,
+        genomeSequenced: mersPrimaryEstimate.primaryEstimateInfo.genomeSequenced,
         ...( mersPrimaryEstimate.primaryEstimateInfo.type === MersEstimateType.HUMAN_SEROPREVALENCE ? {
           seroprevalence: mersPrimaryEstimate.primaryEstimateInfo.seroprevalence,
           seroprevalence95CILower: mersPrimaryEstimate.primaryEstimateInfo.seroprevalence95CILower,

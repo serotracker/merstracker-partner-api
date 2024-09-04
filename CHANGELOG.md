@@ -57,4 +57,4 @@
 
 ## Version 0.6.0 - September 4th 2024
 
-- Added `sequencingDone`, `clade`, `accessionNumbers`, and `genomeSequenced` to `MersGeographicalAreaSubEstimate`.
+- Added `sequencingDone`, `clade`, `accessionNumbers`, and `genomeSequenced` to `BasicPrimaryMersEstimateInformation`.
