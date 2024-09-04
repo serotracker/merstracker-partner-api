@@ -54,3 +54,7 @@
 ## Version 0.5.0 - September 1st 2024
 
 - [BREAKING] The `animalSpecies` field has a new enum value, `DONKEY`.
+
+## Version 0.6.0 - September 4th 2024
+
+- Added `sequencingDone`, `clade`, `accessionNumbers`, and `genomeSequenced` to `MersGeographicalAreaSubEstimate`.
