@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "MERSTracker Partner API Documentation",
-    "version": "0.6.0"
+    "version": "0.7.0"
   },
   "schemes": ["https"],
   "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],
@@ -438,7 +438,9 @@
                 "Microneutralization",
                 "Pseudoparticle Neutralization",
                 "Protein microarray",
-                "Immunofluorescence"
+                "Immunofluorescence",
+                "RT-LAMP",
+                "PRNT"
               ],
               "example": "ELISA"
             }
@@ -462,7 +464,8 @@
                 "Urine",
                 "Muscle",
                 "Throat swab or OP",
-                "Lymph nodes"
+                "Lymph nodes",
+                "Sputum"
               ],
               "example": "Serum"
             }
@@ -489,7 +492,7 @@
               "Direct exposure",
               "Indirect exposure",
               "Unknown exposure",
-              "No exposure",
+              "No or limited exposure",
               "Mixed exposure"
             ],
             "example": "Indirect exposure"
@@ -524,7 +527,10 @@
                 "ORF1A",
                 "Spike RBD",
                 "N2",
-                "N3"
+                "N3",
+                "LAMP ORF1a",
+                "S",
+                "ORF1b"
               ],
               "example": "UpE"
             }
@@ -566,7 +572,10 @@
                 "Roche",
                 "Other",
                 "Altona Diagnostics",
-                "QIAGEN"
+                "QIAGEN",
+                "Corman",
+                "QProbe",
+                "Eiken"
               ],
               "example": "Euroimmun"
             }
@@ -775,7 +784,16 @@
               "animalSpecies": {
                 "type": "string",
                 "description": "The species of animal that was primarily sampled for this study.",
-                "enum": ["CAMEL", "BAT", "CATTLE", "SHEEP", "GOAT", "DONKEY"],
+                "enum": [
+                  "CAMEL",
+                  "BAT",
+                  "CATTLE",
+                  "SHEEP",
+                  "GOAT",
+                  "DONKEY",
+                  "WATER_BUFFALO",
+                  "BABOON"
+                ],
                 "example": "CAMEL"
               },
               "animalType": {
@@ -965,7 +983,16 @@
               "animalSpecies": {
                 "type": "string",
                 "description": "The species of animal that was primarily sampled for this study.",
-                "enum": ["CAMEL", "BAT", "CATTLE", "SHEEP", "GOAT", "DONKEY"],
+                "enum": [
+                  "CAMEL",
+                  "BAT",
+                  "CATTLE",
+                  "SHEEP",
+                  "GOAT",
+                  "DONKEY",
+                  "WATER_BUFFALO",
+                  "BABOON"
+                ],
                 "example": "CAMEL"
               },
               "animalType": {
@@ -1314,7 +1341,9 @@
                     "Microneutralization",
                     "Pseudoparticle Neutralization",
                     "Protein microarray",
-                    "Immunofluorescence"
+                    "Immunofluorescence",
+                    "RT-LAMP",
+                    "PRNT"
                   ],
                   "example": "ELISA"
                 }
@@ -1334,7 +1363,16 @@
               "animalSpecies": {
                 "type": "string",
                 "description": "The species of animal that was primarily sampled for this study.",
-                "enum": [ "CAMEL", "BAT", "CATTLE", "SHEEP", "GOAT", "DONKEY" ],
+                "enum": [
+                  "CAMEL",
+                  "BAT",
+                  "CATTLE",
+                  "SHEEP",
+                  "GOAT",
+                  "DONKEY",
+                  "WATER_BUFFALO",
+                  "BABOON"
+                ],
                 "example": "CAMEL"
               }
             }
@@ -1413,7 +1451,8 @@
                     "Urine",
                     "Muscle",
                     "Throat swab or OP",
-                    "Lymph nodes"
+                    "Lymph nodes",
+                    "Sputum"
                   ],
                   "example": "Dried Blood"
                 }
@@ -1469,7 +1508,7 @@
                   "Direct exposure",
                   "Indirect exposure",
                   "Unknown exposure",
-                  "No exposure",
+                  "No or limited exposure",
                   "Mixed exposure"
                 ],
                 "example": "Indirect exposure"
@@ -1599,7 +1638,7 @@
                   "Direct exposure",
                   "Indirect exposure",
                   "Unknown exposure",
-                  "No exposure",
+                  "No or limited exposure",
                   "Mixed exposure"
                 ],
                 "example": "Indirect exposure"
