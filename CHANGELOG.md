@@ -68,3 +68,5 @@
 - [BREAKING] Added new enum values to `antigen` (`LAMP ORF1a`, `S`, and `ORF1b`).
 - [BREAKING] Added new enum values to `testProducer` (`Corman`, `QProbe`, and `Eiken`).
 - Updated the GeoJSON file to contain the most recent data from Airtable.
+- typescript `5.5.4` -> `5.6.2`
+- mongodb `6.8.0` -> `6.8.1`
