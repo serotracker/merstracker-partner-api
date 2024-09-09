@@ -58,3 +58,15 @@
 ## Version 0.6.0 - September 4th 2024
 
 - Added `sequencingDone`, `clade`, `accessionNumbers`, and `genomeSequenced` to `BasicPrimaryMersEstimateInformation`.
+
+## Version 0.7.0 - September 9th 2024
+
+- [BREAKING] Added new enum values to `animalSpecies` (`WATER_BUFFALO` and `BABOON`).
+- [BREAKING] Added new enum values to `assay` (`RT-LAMP` and `PRNT`).
+- [BREAKING] Added a new enum value to `specimenType` (`Sputum`).
+- [BREAKING] Changed one of the enum values for `exposureToCamels` from `No exposure` to `No or limited exposure`.
+- [BREAKING] Added new enum values to `antigen` (`LAMP ORF1a`, `S`, and `ORF1b`).
+- [BREAKING] Added new enum values to `testProducer` (`Corman`, `QProbe`, and `Eiken`).
+- Updated the GeoJSON file to contain the most recent data from Airtable.
+- typescript `5.5.4` -> `5.6.2`
+- mongodb `6.8.0` -> `6.8.1`
