@@ -70,3 +70,8 @@
 - Updated the GeoJSON file to contain the most recent data from Airtable.
 - typescript `5.5.4` -> `5.6.2`
 - mongodb `6.8.0` -> `6.8.1`
+
+## Version 0.7.1 - September 9th 2024
+
+- Updated the GeoJSON file to contain the most recent data from Airtable.
+- Some estimates which previously were missing `sampleNumerator`s and `sampleDenominator`s now derive those values from the seroprevalence if one of the numerator or denominator is missing and the other is present.
