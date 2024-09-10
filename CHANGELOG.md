@@ -75,3 +75,7 @@
 
 - Updated the GeoJSON file to contain the most recent data from Airtable.
 - Some estimates which previously were missing `sampleNumerator`s and `sampleDenominator`s now derive those values from the seroprevalence if one of the numerator or denominator is missing and the other is present.
+
+## Version 0.7.2 - September 9th 2024
+
+- express `4.19.2` -> `4.20.0` in light of CVE-2024-45296
