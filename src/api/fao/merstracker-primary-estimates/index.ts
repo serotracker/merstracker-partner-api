@@ -219,7 +219,8 @@ export const generateMersPrimaryEstimatesRequestHandler = (
         animalImportedOrLocal: subestimate.animalImportedOrLocal,
         animalCountryOfImport: subestimate.animalCountriesOfImport.at(0),
         animalCountryOfImportAlphaTwoCode: subestimate.animalCountriesOfImport.at(0),
-        animalCountryOfImportAlphaThreeCode: subestimate.animalCountriesOfImport.at(0)
+        animalCountryOfImportAlphaThreeCode: subestimate.animalCountriesOfImport.at(0),
+        animalCountriesOfImport: subestimate.animalCountriesOfImport
       })),
       animalSamplingContextSubestimates: mersPrimaryEstimate.animalSamplingContextSubestimates.map((subestimate) => ({
         id: subestimate.id,
