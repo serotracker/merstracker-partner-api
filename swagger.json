@@ -340,6 +340,11 @@
             "description": "The full name of the first author of the study.",
             "example": "Samy Kasem"
           },
+          "sourcePublicationYear": {
+            "type": "string",
+            "description": "The year the source for the estimate was published.",
+            "example": 2024
+          },
           "sourceUrl": {
             "type": "string",
             "description": "A url to the source where this estimate was derived from.",

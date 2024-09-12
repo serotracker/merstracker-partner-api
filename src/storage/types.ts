@@ -68,6 +68,7 @@ interface MersEstimateDocumentBase {
   latitude: number;
   longitude: number;
   firstAuthorFullName: string;
+  sourcePublicationYear: number;
   sourceUrl: string;
   sourceType: string;
   sourceTitle: string;

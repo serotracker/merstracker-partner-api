@@ -76,6 +76,7 @@ export const generateMersPrimaryEstimatesRequestHandler = (
         whoRegion: mersPrimaryEstimate.primaryEstimateInfo.whoRegion,
         unRegion: mersPrimaryEstimate.primaryEstimateInfo.unRegion,
         firstAuthorFullName: mersPrimaryEstimate.primaryEstimateInfo.firstAuthorFullName,
+        sourcePublicationYear: mersPrimaryEstimate.primaryEstimateInfo.sourcePublicationYear,
         sourceUrl: mersPrimaryEstimate.primaryEstimateInfo.sourceUrl,
         sourceType: mersPrimaryEstimate.primaryEstimateInfo.sourceType,
         sourceTitle: mersPrimaryEstimate.primaryEstimateInfo.sourceTitle,
