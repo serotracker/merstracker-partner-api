@@ -82,8 +82,9 @@
 
 ## Version 0.8.0 - September 12th 2024
 
-- Updated the GeoJSON file to contain the most recent data from Airtable.
 - [BREAKING] removed `animalCountryOfImport`, `animalCountryOfImportAlphaTwoCode`, and `animalCountryOfImportAlphaThreeCode` from `MersAnimalSourceLocationSubEstimate` in the GeoJSON file.
+- [BREAKING] Made `animalCountryOfImport`, `animalCountryOfImportAlphaTwoCode`, and `animalCountryOfImportAlphaThreeCode` no longer mandatory on `MersAnimalSourceLocationSubEstimate`.
+- Updated the GeoJSON file to contain the most recent data from Airtable.
 - Deprecated `animalCountryOfImport`, `animalCountryOfImportAlphaTwoCode`, and `animalCountryOfImportAlphaThreeCode` from `MersAnimalSourceLocationSubEstimate` from the Swagger API.
 - Added `animalCountriesOfImport` to `MersAnimalSourceLocationSubEstimate` on both the Swagger API and the GeoJSON file.
 - express `4.20.0` -> `4.21.0`
