@@ -217,9 +217,9 @@ export const generateMersPrimaryEstimatesRequestHandler = (
         estimateId: subestimate.estimateId,
         estimateInfo: mapSubestimateInformationForApi(subestimate.estimateInfo),
         animalImportedOrLocal: subestimate.animalImportedOrLocal,
-        animalCountryOfImport: subestimate.animalCountryOfImport,
-        animalCountryOfImportAlphaTwoCode: subestimate.animalCountryOfImportAlphaTwoCode,
-        animalCountryOfImportAlphaThreeCode: subestimate.animalCountryOfImportAlphaThreeCode,
+        animalCountryOfImport: subestimate.animalCountriesOfImport.at(0),
+        animalCountryOfImportAlphaTwoCode: subestimate.animalCountriesOfImport.at(0),
+        animalCountryOfImportAlphaThreeCode: subestimate.animalCountriesOfImport.at(0)
       })),
       animalSamplingContextSubestimates: mersPrimaryEstimate.animalSamplingContextSubestimates.map((subestimate) => ({
         id: subestimate.id,
