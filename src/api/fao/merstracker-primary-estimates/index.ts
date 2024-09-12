@@ -76,6 +76,7 @@ export const generateMersPrimaryEstimatesRequestHandler = (
         whoRegion: mersPrimaryEstimate.primaryEstimateInfo.whoRegion,
         unRegion: mersPrimaryEstimate.primaryEstimateInfo.unRegion,
         firstAuthorFullName: mersPrimaryEstimate.primaryEstimateInfo.firstAuthorFullName,
+        sourcePublicationYear: mersPrimaryEstimate.primaryEstimateInfo.sourcePublicationYear,
         sourceUrl: mersPrimaryEstimate.primaryEstimateInfo.sourceUrl,
         sourceType: mersPrimaryEstimate.primaryEstimateInfo.sourceType,
         sourceTitle: mersPrimaryEstimate.primaryEstimateInfo.sourceTitle,
@@ -217,9 +218,10 @@ export const generateMersPrimaryEstimatesRequestHandler = (
         estimateId: subestimate.estimateId,
         estimateInfo: mapSubestimateInformationForApi(subestimate.estimateInfo),
         animalImportedOrLocal: subestimate.animalImportedOrLocal,
-        animalCountryOfImport: subestimate.animalCountryOfImport,
-        animalCountryOfImportAlphaTwoCode: subestimate.animalCountryOfImportAlphaTwoCode,
-        animalCountryOfImportAlphaThreeCode: subestimate.animalCountryOfImportAlphaThreeCode,
+        animalCountryOfImport: subestimate.animalCountriesOfImport.at(0),
+        animalCountryOfImportAlphaTwoCode: subestimate.animalCountriesOfImport.at(0),
+        animalCountryOfImportAlphaThreeCode: subestimate.animalCountriesOfImport.at(0),
+        animalCountriesOfImport: subestimate.animalCountriesOfImport
       })),
       animalSamplingContextSubestimates: mersPrimaryEstimate.animalSamplingContextSubestimates.map((subestimate) => ({
         id: subestimate.id,

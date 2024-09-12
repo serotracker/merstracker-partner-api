@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "MERSTracker Partner API Documentation",
-    "version": "0.7.2"
+    "version": "0.8.0"
   },
   "schemes": ["https"],
   "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],
@@ -339,6 +339,11 @@
             "type": "string",
             "description": "The full name of the first author of the study.",
             "example": "Samy Kasem"
+          },
+          "sourcePublicationYear": {
+            "type": "string",
+            "description": "The year the source for the estimate was published.",
+            "example": 2024
           },
           "sourceUrl": {
             "type": "string",
@@ -1523,9 +1528,7 @@
           {
             "required": [
               "animalImportedOrLocal",
-              "animalCountryOfImport",
-              "animalCountryOfImportAlphaTwoCode",
-              "animalCountryOfImportAlphaThreeCode"
+              "animalCountriesOfImport"
             ],
             "properties": {
               "animalImportedOrLocal": {
@@ -1541,17 +1544,52 @@
               "animalCountryOfImport": {
                 "type": "string",
                 "description": "A string representation of the name of the country where the animals were imported from. Conforms to the WHO's country name list.",
-                "example": "Sudan"
+                "example": "Sudan",
+                "deprecated": true
               },
               "animalCountryOfImportAlphaTwoCode": {
                 "type": "string",
                 "description": "A country code for where the animals were imported from. Conforms to the ISO 3166-1 alpha-2 spec.",
-                "example": "SD"
+                "example": "SD",
+                "deprecated": true
               },
               "animalCountryOfImportAlphaThreeCode": {
                 "type": "string",
                 "description": "A country code for where the animals were imported from. Conforms to the ISO 3166-1 alpha-3 spec.",
-                "example": "SDN"
+                "example": "SDN",
+                "deprecated": true
+              },
+              "animalCountriesOfImport": {
+                "type": "array",
+                "description": "The country/countries where the animals were imported from",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "country",
+                    "countryAlphaTwoCode",
+                    "countryAlphaThreeCode"
+                  ],
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "description": "A string representation of the name of the country where the animals were imported from. Conforms to the WHO's country name list.",
+                      "example": "Oman",
+                      "deprecated": true
+                    },
+                    "countryAlphaTwoCode": {
+                      "type": "string",
+                      "description": "A country code for where the animals were imported from. Conforms to the ISO 3166-1 alpha-2 spec.",
+                      "example": "OM",
+                      "deprecated": true
+                    },
+                    "countryAlphaThreeCode": {
+                      "type": "string",
+                      "description": "A country code for where the animals were imported from. Conforms to the ISO 3166-1 alpha-3 spec.",
+                      "example": "OMN",
+                      "deprecated": true
+                    }
+                  }
+                }
               }
             }
           }

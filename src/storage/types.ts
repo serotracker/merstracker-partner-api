@@ -68,6 +68,7 @@ interface MersEstimateDocumentBase {
   latitude: number;
   longitude: number;
   firstAuthorFullName: string;
+  sourcePublicationYear: number;
   sourceUrl: string;
   sourceType: string;
   sourceTitle: string;
@@ -265,9 +266,11 @@ type MersOccupationSubEstimate = MersSubEstimateBase & {
 
 type MersAnimalSourceLocationSubEstimate = MersSubEstimateBase & {
   animalImportedOrLocal: string;
-  animalCountryOfImport: string;
-  animalCountryOfImportAlphaTwoCode: string;
-  animalCountryOfImportAlphaThreeCode: string;
+  animalCountriesOfImport: Array<{
+    country: string;
+    countryAlphaTwoCode: string;
+    countryAlphaThreeCode: string;
+  }>
 }
 
 type MersAnimalSamplingContextSubEstimate = MersSubEstimateBase & {

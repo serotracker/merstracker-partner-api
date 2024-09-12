@@ -79,3 +79,14 @@
 ## Version 0.7.2 - September 9th 2024
 
 - express `4.19.2` -> `4.20.0` in light of CVE-2024-45296
+
+## Version 0.8.0 - September 12th 2024
+
+- [BREAKING] removed `animalCountryOfImport`, `animalCountryOfImportAlphaTwoCode`, and `animalCountryOfImportAlphaThreeCode` from `MersAnimalSourceLocationSubEstimate` in the GeoJSON file.
+- [BREAKING] Made `animalCountryOfImport`, `animalCountryOfImportAlphaTwoCode`, and `animalCountryOfImportAlphaThreeCode` no longer mandatory on `MersAnimalSourceLocationSubEstimate`.
+- Updated the GeoJSON file to contain the most recent data from Airtable.
+- Added `sourcePublicationYear` to `BasicPrimaryMersEstimateInformation`.
+- Deprecated `animalCountryOfImport`, `animalCountryOfImportAlphaTwoCode`, and `animalCountryOfImportAlphaThreeCode` from `MersAnimalSourceLocationSubEstimate` from the Swagger API.
+- Added `animalCountriesOfImport` to `MersAnimalSourceLocationSubEstimate` on both the Swagger API and the GeoJSON file.
+- express `4.20.0` -> `4.21.0`
+- mongodb `6.8.1` -> `6.9.0`
