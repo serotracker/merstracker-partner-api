@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "MERSTracker Partner API Documentation",
-    "version": "0.8.0"
+    "version": "0.8.1"
   },
   "schemes": ["https"],
   "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],

@@ -90,3 +90,9 @@
 - Added `animalCountriesOfImport` to `MersAnimalSourceLocationSubEstimate` on both the Swagger API and the GeoJSON file.
 - express `4.20.0` -> `4.21.0`
 - mongodb `6.8.1` -> `6.9.0`
+
+## Version 0.8.1 - September 14th 2024
+
+- Added the `humanCountriesOfTravelSubestimates` field to the `PrimaryMersEstimate` type.
+- Added the `animalCountriesOfImport` field to `PrimaryAnimalMersSeroprevalenceEstimateInformation` and `PrimaryAnimalMersViralEstimateInformation`.
+- Added the `humanCountriesOfTravel` field to `PrimaryHumanMersSeroprevalenceEstimateInformation` and `PrimaryHumanMersViralEstimateInformation`.
