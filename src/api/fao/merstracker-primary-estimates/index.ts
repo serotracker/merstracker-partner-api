@@ -112,7 +112,12 @@ export const generateMersPrimaryEstimatesRequestHandler = (
           seroprevalence95CILower: mersPrimaryEstimate.primaryEstimateInfo.seroprevalence95CILower,
           seroprevalence95CIUpper: mersPrimaryEstimate.primaryEstimateInfo.seroprevalence95CIUpper,
           ageGroup: mersPrimaryEstimate.primaryEstimateInfo.ageGroup,
-          sampleFrame: mersPrimaryEstimate.primaryEstimateInfo.sampleFrame
+          sampleFrame: mersPrimaryEstimate.primaryEstimateInfo.sampleFrame,
+          humanCountriesOfTravel: mersPrimaryEstimate.primaryEstimateInfo.humanCountriesOfTravel.map((element) => ({
+            country: element.country,
+            countryAlphaTwoCode: element.countryAlphaTwoCode,
+            countryAlphaThreeCode: element.countryAlphaThreeCode
+          }))
         } : {}),
         ...( mersPrimaryEstimate.primaryEstimateInfo.type === MersEstimateType.ANIMAL_SEROPREVALENCE ? {
           seroprevalence: mersPrimaryEstimate.primaryEstimateInfo.seroprevalence,
@@ -124,13 +129,23 @@ export const generateMersPrimaryEstimatesRequestHandler = (
           animalPurpose: mersPrimaryEstimate.primaryEstimateInfo.animalPurpose,
           animalImportedOrLocal: mersPrimaryEstimate.primaryEstimateInfo.animalImportedOrLocal,
           animalAgeGroup: mersPrimaryEstimate.primaryEstimateInfo.animalAgeGroup,
+          animalCountriesOfImport: mersPrimaryEstimate.primaryEstimateInfo.animalCountriesOfImport.map((element) => ({
+            country: element.country,
+            countryAlphaTwoCode: element.countryAlphaTwoCode,
+            countryAlphaThreeCode: element.countryAlphaThreeCode
+          }))
         } : {}),
         ...( mersPrimaryEstimate.primaryEstimateInfo.type === MersEstimateType.HUMAN_VIRAL ? {
           positivePrevalence: mersPrimaryEstimate.primaryEstimateInfo.positivePrevalence,
           positivePrevalence95CILower: mersPrimaryEstimate.primaryEstimateInfo.positivePrevalence95CILower,
           positivePrevalence95CIUpper: mersPrimaryEstimate.primaryEstimateInfo.positivePrevalence95CIUpper,
           ageGroup: mersPrimaryEstimate.primaryEstimateInfo.ageGroup,
-          sampleFrame: mersPrimaryEstimate.primaryEstimateInfo.sampleFrame
+          sampleFrame: mersPrimaryEstimate.primaryEstimateInfo.sampleFrame,
+          humanCountriesOfTravel: mersPrimaryEstimate.primaryEstimateInfo.humanCountriesOfTravel.map((element) => ({
+            country: element.country,
+            countryAlphaTwoCode: element.countryAlphaTwoCode,
+            countryAlphaThreeCode: element.countryAlphaThreeCode
+          }))
         } : {}),
         ...( mersPrimaryEstimate.primaryEstimateInfo.type === MersEstimateType.ANIMAL_VIRAL ? {
           positivePrevalence: mersPrimaryEstimate.primaryEstimateInfo.positivePrevalence,
@@ -142,6 +157,11 @@ export const generateMersPrimaryEstimatesRequestHandler = (
           animalPurpose: mersPrimaryEstimate.primaryEstimateInfo.animalPurpose,
           animalImportedOrLocal: mersPrimaryEstimate.primaryEstimateInfo.animalImportedOrLocal,
           animalAgeGroup: mersPrimaryEstimate.primaryEstimateInfo.animalAgeGroup,
+          animalCountriesOfImport: mersPrimaryEstimate.primaryEstimateInfo.animalCountriesOfImport.map((element) => ({
+            country: element.country,
+            countryAlphaTwoCode: element.countryAlphaTwoCode,
+            countryAlphaThreeCode: element.countryAlphaThreeCode
+          }))
         } : {}),
       },
       geographicalAreaSubestimates: mersPrimaryEstimate.geographicalAreaSubestimates.map((subestimate) => ({
@@ -229,6 +249,30 @@ export const generateMersPrimaryEstimatesRequestHandler = (
         estimateInfo: mapSubestimateInformationForApi(subestimate.estimateInfo),
         animalDetectionSettings: subestimate.animalDetectionSettings
       })),
+      camelExposureLevelSubestimates: mersPrimaryEstimate.camelExposureLevelSubestimates.map((subestimate) => ({
+        id: subestimate.id,
+        estimateId: subestimate.estimateId,
+        estimateInfo: mapSubestimateInformationForApi(subestimate.estimateInfo),
+        details: subestimate.details,
+        sampleFrame: subestimate.sampleFrame,
+        exposureToCamels: subestimate.exposureToCamels
+      })),
+      nomadismSubestimates: mersPrimaryEstimate.nomadismSubestimates.map((subestimate) => ({
+        id: subestimate.id,
+        estimateId: subestimate.estimateId,
+        estimateInfo: mapSubestimateInformationForApi(subestimate.estimateInfo),
+        details: subestimate.details
+      })),
+      humanCountriesOfTravelSubestimates: mersPrimaryEstimate.humanCountriesOfTravelSubestimates.map((subestimate) => ({
+        id: subestimate.id,
+        estimateId: subestimate.estimateId,
+        estimateInfo: mapSubestimateInformationForApi(subestimate.estimateInfo),
+        humanCountriesOfTravel: subestimate.humanCountriesOfTravel.map((element) => ({
+          country: element.country,
+          countryAlphaTwoCode: element.countryAlphaTwoCode,
+          countryAlphaThreeCode: element.countryAlphaThreeCode
+        }))
+      }))
     })))
   }
 
