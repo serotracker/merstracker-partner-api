@@ -94,7 +94,8 @@
           "animalSourceLocationSubestimates",
           "animalSamplingContextSubestimates",
           "camelExposureLevelSubestimates",
-          "nomadismSubestimates"
+          "nomadismSubestimates",
+          "humanCountriesOfTravelSubestimates"
         ],
         "properties": {
           "id": {
@@ -200,6 +201,13 @@
             "description": "Subestimates which break down the prevalence further by the population's relationship to nomadism (Ex. one subestimate might show the prevalence measured among the nomadic portion of the total sampled population while another might show the prevalence measured among non-nomadic portion of the sampled population).",
             "items": {
               "$ref": "#/components/schemas/MersNomadismSubEstimate"
+            }
+          },
+          "humanCountriesOfTravelSubestimates": {
+            "type": "array",
+            "description": "Subestimates which break down the a human estimate further by the country from which the population has recently arrived from (Ex. one subestimate might show the prevalence measured among a portion of the total sampled population which is arriving from Saudi Arabia while another might show the prevalence measured among the portion of the sampled population which is arriving from Oman).",
+            "items": {
+              "$ref": "#/components/schemas/MersHumanCountriesOfTravelSubEstimate"
             }
           }
         }
@@ -683,7 +691,8 @@
           {
             "type": "object",
             "required": [
-              "seroprevalence"
+              "seroprevalence",
+              "humanCountriesOfTravel"
             ],
             "properties": {
               "seroprevalence": {
@@ -741,6 +750,38 @@
                 ],
                 "description": "The population sampled in the study.",
                 "example": "Close contacts of camels"
+              },
+              "humanCountriesOfTravel": {
+                "type": "array",
+                "description": "The country/countries where these travellers have recently arrived from.",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "country",
+                    "countryAlphaTwoCode",
+                    "countryAlphaThreeCode"
+                  ],
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "description": "A string representation of the name of the country where the people are arriving from. Conforms to the WHO's country name list.",
+                      "example": "Oman",
+                      "deprecated": true
+                    },
+                    "countryAlphaTwoCode": {
+                      "type": "string",
+                      "description": "A country code for where the people are arriving from. Conforms to the ISO 3166-1 alpha-2 spec.",
+                      "example": "OM",
+                      "deprecated": true
+                    },
+                    "countryAlphaThreeCode": {
+                      "type": "string",
+                      "description": "A country code for where the people are arriving from. Conforms to the ISO 3166-1 alpha-3 spec.",
+                      "example": "OMN",
+                      "deprecated": true
+                    }
+                  }
+                }
               }
             }
           }
@@ -768,7 +809,8 @@
               "seroprevalence",
               "animalSpecies",
               "animalType",
-              "animalDetectionSettings"
+              "animalDetectionSettings",
+              "animalCountriesOfImport"
             ],
             "properties": {
               "seroprevalence": {
@@ -858,6 +900,38 @@
                   ],
                   "example": "Juvenile (6 months-2 years)"
                 }
+              },
+              "animalCountriesOfImport": {
+                "type": "array",
+                "description": "The country/countries where the animals were imported from",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "country",
+                    "countryAlphaTwoCode",
+                    "countryAlphaThreeCode"
+                  ],
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "description": "A string representation of the name of the country where the animals were imported from. Conforms to the WHO's country name list.",
+                      "example": "Oman",
+                      "deprecated": true
+                    },
+                    "countryAlphaTwoCode": {
+                      "type": "string",
+                      "description": "A country code for where the animals were imported from. Conforms to the ISO 3166-1 alpha-2 spec.",
+                      "example": "OM",
+                      "deprecated": true
+                    },
+                    "countryAlphaThreeCode": {
+                      "type": "string",
+                      "description": "A country code for where the animals were imported from. Conforms to the ISO 3166-1 alpha-3 spec.",
+                      "example": "OMN",
+                      "deprecated": true
+                    }
+                  }
+                }
               }
             }
           }
@@ -882,7 +956,8 @@
           {
             "type": "object",
             "required": [
-              "positivePrevalence"
+              "positivePrevalence",
+              "humanCountriesOfTravel"
             ],
             "properties": {
               "positivePrevalence": {
@@ -940,6 +1015,38 @@
                 ],
                 "description": "The population sampled in the study.",
                 "example": "Close contacts of camels"
+              },
+              "humanCountriesOfTravel": {
+                "type": "array",
+                "description": "The country/countries where these travellers have recently arrived from.",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "country",
+                    "countryAlphaTwoCode",
+                    "countryAlphaThreeCode"
+                  ],
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "description": "A string representation of the name of the country where the people are arriving from. Conforms to the WHO's country name list.",
+                      "example": "Oman",
+                      "deprecated": true
+                    },
+                    "countryAlphaTwoCode": {
+                      "type": "string",
+                      "description": "A country code for where the people are arriving from. Conforms to the ISO 3166-1 alpha-2 spec.",
+                      "example": "OM",
+                      "deprecated": true
+                    },
+                    "countryAlphaThreeCode": {
+                      "type": "string",
+                      "description": "A country code for where the people are arriving from. Conforms to the ISO 3166-1 alpha-3 spec.",
+                      "example": "OMN",
+                      "deprecated": true
+                    }
+                  }
+                }
               }
             }
           }
@@ -967,7 +1074,8 @@
               "seroprevalence",
               "animalSpecies",
               "animalType",
-              "animalDetectionSettings"
+              "animalDetectionSettings",
+              "animalCountriesOfImport"
             ],
             "properties": {
               "positivePrevalence": {
@@ -1054,6 +1162,38 @@
                   "Not reported"
                 ],
                 "example": "Juvenile (6 months-2 years)"
+              },
+              "animalCountriesOfImport": {
+                "type": "array",
+                "description": "The country/countries where the animals were imported from",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "country",
+                    "countryAlphaTwoCode",
+                    "countryAlphaThreeCode"
+                  ],
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "description": "A string representation of the name of the country where the animals were imported from. Conforms to the WHO's country name list.",
+                      "example": "Oman",
+                      "deprecated": true
+                    },
+                    "countryAlphaTwoCode": {
+                      "type": "string",
+                      "description": "A country code for where the animals were imported from. Conforms to the ISO 3166-1 alpha-2 spec.",
+                      "example": "OM",
+                      "deprecated": true
+                    },
+                    "countryAlphaThreeCode": {
+                      "type": "string",
+                      "description": "A country code for where the animals were imported from. Conforms to the ISO 3166-1 alpha-3 spec.",
+                      "example": "OMN",
+                      "deprecated": true
+                    }
+                  }
+                }
               }
             }
           }
@@ -1697,6 +1837,50 @@
                 "type": "string",
                 "description": "A brief description for this population's relationship to nomadism.",
                 "example": "Semi-nomadic"
+              }
+            }
+          }
+        ]
+      },
+      "MersHumanCountriesOfTravelSubEstimate": {
+        "allOf": [
+          { "$ref": "#/components/schemas/BasicMersSubEstimate" },
+          {
+            "required": [
+              "humanCountriesOfTravel"
+            ],
+            "properties": {
+              "humanCountriesOfTravel": {
+                "type": "array",
+                "description": "The country/countries where these travellers have recently arrived from.",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "country",
+                    "countryAlphaTwoCode",
+                    "countryAlphaThreeCode"
+                  ],
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "description": "A string representation of the name of the country where the people are arriving from. Conforms to the WHO's country name list.",
+                      "example": "Oman",
+                      "deprecated": true
+                    },
+                    "countryAlphaTwoCode": {
+                      "type": "string",
+                      "description": "A country code for where the people are arriving from. Conforms to the ISO 3166-1 alpha-2 spec.",
+                      "example": "OM",
+                      "deprecated": true
+                    },
+                    "countryAlphaThreeCode": {
+                      "type": "string",
+                      "description": "A country code for where the people are arriving from. Conforms to the ISO 3166-1 alpha-3 spec.",
+                      "example": "OMN",
+                      "deprecated": true
+                    }
+                  }
+                }
               }
             }
           }
