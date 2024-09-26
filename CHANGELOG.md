@@ -98,4 +98,10 @@
 - Added the `humanCountriesOfTravel` field to `PrimaryHumanMersSeroprevalenceEstimateInformation` and `PrimaryHumanMersViralEstimateInformation`.
 - Fixed bug which would prevent several fields from not appearing in the API responses.
 
-## Version 0.8.1 - September 26th 2024
+## Version 0.9.0 - September 26th 2024
+
+- [BREAKING] Added "Not reported" to the enum for `assay`.
+- [BREAKING] Added "Bronchiol (BAL)" to the enum for `specimenType`.
+- [BREAKING] Added "TaqMan" to the enum for `testProducer`.
+- [BREAKING] Added "Not reported" to the enum for `clade`.
+- [BREAKING] Added "Camel herders" to the enum for `sampleFrame`.
