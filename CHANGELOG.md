@@ -97,3 +97,5 @@
 - Added the `animalCountriesOfImport` field to `PrimaryAnimalMersSeroprevalenceEstimateInformation` and `PrimaryAnimalMersViralEstimateInformation`.
 - Added the `humanCountriesOfTravel` field to `PrimaryHumanMersSeroprevalenceEstimateInformation` and `PrimaryHumanMersViralEstimateInformation`.
 - Fixed bug which would prevent several fields from not appearing in the API responses.
+
+## Version 0.8.1 - September 26th 2024

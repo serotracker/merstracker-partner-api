@@ -453,7 +453,8 @@
                 "Protein microarray",
                 "Immunofluorescence",
                 "RT-LAMP",
-                "PRNT"
+                "PRNT",
+                "Not reported"
               ],
               "example": "ELISA"
             }
@@ -478,7 +479,8 @@
                 "Muscle",
                 "Throat swab or OP",
                 "Lymph nodes",
-                "Sputum"
+                "Sputum",
+                "Bronchiol (BAL)"
               ],
               "example": "Serum"
             }
@@ -588,7 +590,8 @@
                 "QIAGEN",
                 "Corman",
                 "QProbe",
-                "Eiken"
+                "Eiken",
+                "TaqMan"
               ],
               "example": "Euroimmun"
             }
@@ -647,7 +650,8 @@
                 "B",
                 "C1",
                 "C2",
-                "C"
+                "C",
+                "Not reported"
               ],
               "example": "C"
             }
@@ -746,7 +750,8 @@
                   "Camel racetrack workers",
                   "Camel traders",
                   "Veterinary staff",
-                  "Veterinary surgeons"
+                  "Veterinary surgeons",
+                  "Camel herders"
                 ],
                 "description": "The population sampled in the study.",
                 "example": "Close contacts of camels"
@@ -1011,7 +1016,8 @@
                   "Camel racetrack workers",
                   "Camel traders",
                   "Veterinary staff",
-                  "Veterinary surgeons"
+                  "Veterinary surgeons",
+                  "Camel herders"
                 ],
                 "description": "The population sampled in the study.",
                 "example": "Close contacts of camels"
@@ -1488,7 +1494,8 @@
                     "Protein microarray",
                     "Immunofluorescence",
                     "RT-LAMP",
-                    "PRNT"
+                    "PRNT",
+                    "Not reported"
                   ],
                   "example": "ELISA"
                 }
@@ -1597,7 +1604,8 @@
                     "Muscle",
                     "Throat swab or OP",
                     "Lymph nodes",
-                    "Sputum"
+                    "Sputum",
+                    "Bronchiol (BAL)"
                   ],
                   "example": "Dried Blood"
                 }
@@ -1641,7 +1649,8 @@
                   "Camel racetrack workers",
                   "Camel traders",
                   "Veterinary staff",
-                  "Veterinary surgeons"
+                  "Veterinary surgeons",
+                  "Camel herders"
                 ],
                 "description": "The population sampled in the study.",
                 "example": "Nomadic communities"
@@ -1804,7 +1813,8 @@
                   "Camel racetrack workers",
                   "Camel traders",
                   "Veterinary staff",
-                  "Veterinary surgeons"
+                  "Veterinary surgeons",
+                  "Camel herders"
                 ],
                 "description": "The population sampled in the study.",
                 "example": "Close contacts of camels"
