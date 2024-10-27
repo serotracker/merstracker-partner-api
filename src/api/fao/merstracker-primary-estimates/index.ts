@@ -112,7 +112,7 @@ export const generateMersPrimaryEstimatesRequestHandler = (
           seroprevalence95CILower: mersPrimaryEstimate.primaryEstimateInfo.seroprevalence95CILower,
           seroprevalence95CIUpper: mersPrimaryEstimate.primaryEstimateInfo.seroprevalence95CIUpper,
           ageGroup: mersPrimaryEstimate.primaryEstimateInfo.ageGroup,
-          sampleFrame: mersPrimaryEstimate.primaryEstimateInfo.sampleFrame,
+          sampleFrames: mersPrimaryEstimate.primaryEstimateInfo.sampleFrames,
           humanCountriesOfTravel: mersPrimaryEstimate.primaryEstimateInfo.humanCountriesOfTravel.map((element) => ({
             country: element.country,
             countryAlphaTwoCode: element.countryAlphaTwoCode,
@@ -140,7 +140,7 @@ export const generateMersPrimaryEstimatesRequestHandler = (
           positivePrevalence95CILower: mersPrimaryEstimate.primaryEstimateInfo.positivePrevalence95CILower,
           positivePrevalence95CIUpper: mersPrimaryEstimate.primaryEstimateInfo.positivePrevalence95CIUpper,
           ageGroup: mersPrimaryEstimate.primaryEstimateInfo.ageGroup,
-          sampleFrame: mersPrimaryEstimate.primaryEstimateInfo.sampleFrame,
+          sampleFrames: mersPrimaryEstimate.primaryEstimateInfo.sampleFrames,
           humanCountriesOfTravel: mersPrimaryEstimate.primaryEstimateInfo.humanCountriesOfTravel.map((element) => ({
             country: element.country,
             countryAlphaTwoCode: element.countryAlphaTwoCode,
@@ -230,7 +230,7 @@ export const generateMersPrimaryEstimatesRequestHandler = (
         estimateId: subestimate.estimateId,
         estimateInfo: mapSubestimateInformationForApi(subestimate.estimateInfo),
         occupation: subestimate.occupation,
-        sampleFrame: subestimate.sampleFrame,
+        sampleFrames: subestimate.sampleFrames,
         exposureToCamels: subestimate.exposureToCamels
       })),
       animalSourceLocationSubestimates: mersPrimaryEstimate.animalSourceLocationSubestimates.map((subestimate) => ({
@@ -254,7 +254,7 @@ export const generateMersPrimaryEstimatesRequestHandler = (
         estimateId: subestimate.estimateId,
         estimateInfo: mapSubestimateInformationForApi(subestimate.estimateInfo),
         details: subestimate.details,
-        sampleFrame: subestimate.sampleFrame,
+        sampleFrames: subestimate.sampleFrames,
         exposureToCamels: subestimate.exposureToCamels
       })),
       nomadismSubestimates: mersPrimaryEstimate.nomadismSubestimates.map((subestimate) => ({
