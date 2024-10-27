@@ -121,7 +121,7 @@ type HumanMersSeroprevalenceEstimateDocument = MersEstimateDocumentBase & {
   seroprevalence95CILower: number | undefined;
   seroprevalence95CIUpper: number | undefined;
   ageGroup: string[];
-  sampleFrame: string | undefined;
+  sampleFrames: string[];
   humanCountriesOfTravel: Array<{
     country: string;
     countryAlphaTwoCode: string;
@@ -135,7 +135,7 @@ type HumanMersViralEstimateDocument = MersEstimateDocumentBase & {
   positivePrevalence95CILower: number | undefined;
   positivePrevalence95CIUpper: number | undefined;
   ageGroup: string[];
-  sampleFrame: string | undefined;
+  sampleFrames: string[];
   humanCountriesOfTravel: Array<{
     country: string;
     countryAlphaTwoCode: string;
@@ -283,7 +283,7 @@ type MersSampleTypeSubEstimate = MersSubEstimateBase & {
 
 type MersOccupationSubEstimate = MersSubEstimateBase & {
   occupation: string;
-  sampleFrame: string | undefined;
+  sampleFrames: string[];
   exposureToCamels: string | undefined;
 }
 
@@ -302,7 +302,7 @@ type MersAnimalSamplingContextSubEstimate = MersSubEstimateBase & {
 
 type MersCamelExposureLevelSubEstimate = MersSubEstimateBase & {
   details: string;
-  sampleFrame: string;
+  sampleFrames: string[];
   exposureToCamels: string;
 }
 
