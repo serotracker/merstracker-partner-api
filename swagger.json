@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "MERSTracker Partner API Documentation",
-    "version": "0.9.0"
+    "version": "0.10.0"
   },
   "schemes": ["https"],
   "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],
@@ -696,7 +696,8 @@
             "type": "object",
             "required": [
               "seroprevalence",
-              "humanCountriesOfTravel"
+              "humanCountriesOfTravel",
+              "sampleFrames"
             ],
             "properties": {
               "seroprevalence": {
@@ -728,33 +729,37 @@
                 },
                 "example": ["Children and youth (0-17 years)", "Seniors (≥60 years)"]
               },
-              "sampleFrame": {
-                "type": "string",
-                "enum": [
-                  "Household and community sample",
-                  "Marketplace vendor",
-                  "Blood donors",
-                  "Residual sera",
-                  "Outpatient population",
-                  "Healthcare workers",
-                  "Close contacts of cases",
-                  "Travellers/tourism",
-                  "Suspected cases",
-                  "Multiple populations",
-                  "Livestock workers",
-                  "Pilgrims",
-                  "Quarantine station workers",
-                  "Slaughterhouse workers",
-                  "Nomadic communities",
-                  "Close contacts of camels",
-                  "Camel racetrack workers",
-                  "Camel traders",
-                  "Veterinary staff",
-                  "Veterinary surgeons",
-                  "Camel herders"
-                ],
-                "description": "The population sampled in the study.",
-                "example": "Close contacts of camels"
+              "sampleFrames": {
+                "type": "array",
+                "description": "The populations sampled in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Household and community sample",
+                    "Marketplace vendor",
+                    "Blood donors",
+                    "Residual sera",
+                    "Outpatient population",
+                    "Healthcare workers",
+                    "Close contacts of cases",
+                    "Travellers/tourism",
+                    "Suspected cases",
+                    "Multiple populations",
+                    "Livestock handlers",
+                    "Pilgrims",
+                    "Quarantine station workers",
+                    "Slaughterhouse workers",
+                    "Nomadic communities",
+                    "Close contacts of camels",
+                    "Camel racetrack workers",
+                    "Camel traders",
+                    "Veterinary staff",
+                    "Veterinary surgeons",
+                    "Camel herders",
+                    "Camel handlers"
+                  ]
+                },
+                "example": ["Close contacts of camels"]
               },
               "humanCountriesOfTravel": {
                 "type": "array",
@@ -962,7 +967,8 @@
             "type": "object",
             "required": [
               "positivePrevalence",
-              "humanCountriesOfTravel"
+              "humanCountriesOfTravel",
+              "sampleFrames"
             ],
             "properties": {
               "positivePrevalence": {
@@ -994,33 +1000,37 @@
                   "example": ["Children and youth (0-17 years)", "Seniors (≥60 years)"]
                 }
               },
-              "sampleFrame": {
-                "type": "string",
-                "enum": [
-                  "Household and community sample",
-                  "Marketplace vendor",
-                  "Blood donors",
-                  "Residual sera",
-                  "Outpatient population",
-                  "Healthcare workers",
-                  "Close contacts of cases",
-                  "Travellers/tourism",
-                  "Suspected cases",
-                  "Multiple populations",
-                  "Livestock workers",
-                  "Pilgrims",
-                  "Quarantine station workers",
-                  "Slaughterhouse workers",
-                  "Nomadic communities",
-                  "Close contacts of camels",
-                  "Camel racetrack workers",
-                  "Camel traders",
-                  "Veterinary staff",
-                  "Veterinary surgeons",
-                  "Camel herders"
-                ],
-                "description": "The population sampled in the study.",
-                "example": "Close contacts of camels"
+              "sampleFrames": {
+                "type": "array",
+                "description": "The populations sampled in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Household and community sample",
+                    "Marketplace vendor",
+                    "Blood donors",
+                    "Residual sera",
+                    "Outpatient population",
+                    "Healthcare workers",
+                    "Close contacts of cases",
+                    "Travellers/tourism",
+                    "Suspected cases",
+                    "Multiple populations",
+                    "Livestock handlers",
+                    "Pilgrims",
+                    "Quarantine station workers",
+                    "Slaughterhouse workers",
+                    "Nomadic communities",
+                    "Close contacts of camels",
+                    "Camel racetrack workers",
+                    "Camel traders",
+                    "Veterinary staff",
+                    "Veterinary surgeons",
+                    "Camel herders",
+                    "Camel handlers"
+                  ]
+                },
+                "example": ["Close contacts of camels"]
               },
               "humanCountriesOfTravel": {
                 "type": "array",
@@ -1619,7 +1629,8 @@
           { "$ref": "#/components/schemas/BasicMersSubEstimate" },
           {
             "required": [
-              "occupation"
+              "occupation",
+              "sampleFrames"
             ],
             "properties": {
               "occupation": {
@@ -1627,33 +1638,37 @@
                 "description": "The occupation of the population sampled",
                 "example": "Camels close contacts"
               },
-              "sampleFrame": {
-                "type": "string",
-                "enum": [
-                  "Household and community sample",
-                  "Marketplace vendor",
-                  "Blood donors",
-                  "Residual sera",
-                  "Outpatient population",
-                  "Healthcare workers",
-                  "Close contacts of cases",
-                  "Travellers/tourism",
-                  "Suspected cases",
-                  "Multiple populations",
-                  "Livestock workers",
-                  "Pilgrims",
-                  "Quarantine station workers",
-                  "Slaughterhouse workers",
-                  "Nomadic communities",
-                  "Close contacts of camels",
-                  "Camel racetrack workers",
-                  "Camel traders",
-                  "Veterinary staff",
-                  "Veterinary surgeons",
-                  "Camel herders"
-                ],
-                "description": "The population sampled in the study.",
-                "example": "Nomadic communities"
+              "sampleFrames": {
+                "type": "array",
+                "description": "The populations sampled in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Household and community sample",
+                    "Marketplace vendor",
+                    "Blood donors",
+                    "Residual sera",
+                    "Outpatient population",
+                    "Healthcare workers",
+                    "Close contacts of cases",
+                    "Travellers/tourism",
+                    "Suspected cases",
+                    "Multiple populations",
+                    "Livestock handlers",
+                    "Pilgrims",
+                    "Quarantine station workers",
+                    "Slaughterhouse workers",
+                    "Nomadic communities",
+                    "Close contacts of camels",
+                    "Camel racetrack workers",
+                    "Camel traders",
+                    "Veterinary staff",
+                    "Veterinary surgeons",
+                    "Camel herders",
+                    "Camel handlers"
+                  ]
+                },
+                "example": ["Close contacts of camels"]
               },
               "exposureToCamels": {
                 "type": "string",
@@ -1782,7 +1797,7 @@
           {
             "required": [
               "details",
-              "sampleFrame",
+              "sampleFrames",
               "exposureToCamels"
             ],
             "properties": {
@@ -1791,33 +1806,37 @@
                 "description": "A brief description for this population's relationship to camels.",
                 "example": "Community members not exposed to camels"
               },
-              "sampleFrame": {
-                "type": "string",
-                "enum": [
-                  "Household and community sample",
-                  "Marketplace vendor",
-                  "Blood donors",
-                  "Residual sera",
-                  "Outpatient population",
-                  "Healthcare workers",
-                  "Close contacts of cases",
-                  "Travellers/tourism",
-                  "Suspected cases",
-                  "Multiple populations",
-                  "Livestock workers",
-                  "Pilgrims",
-                  "Quarantine station workers",
-                  "Slaughterhouse workers",
-                  "Nomadic communities",
-                  "Close contacts of camels",
-                  "Camel racetrack workers",
-                  "Camel traders",
-                  "Veterinary staff",
-                  "Veterinary surgeons",
-                  "Camel herders"
-                ],
-                "description": "The population sampled in the study.",
-                "example": "Close contacts of camels"
+              "sampleFrames": {
+                "type": "array",
+                "description": "The populations sampled in the study.",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "Household and community sample",
+                    "Marketplace vendor",
+                    "Blood donors",
+                    "Residual sera",
+                    "Outpatient population",
+                    "Healthcare workers",
+                    "Close contacts of cases",
+                    "Travellers/tourism",
+                    "Suspected cases",
+                    "Multiple populations",
+                    "Livestock handlers",
+                    "Pilgrims",
+                    "Quarantine station workers",
+                    "Slaughterhouse workers",
+                    "Nomadic communities",
+                    "Close contacts of camels",
+                    "Camel racetrack workers",
+                    "Camel traders",
+                    "Veterinary staff",
+                    "Veterinary surgeons",
+                    "Camel herders",
+                    "Camel handlers"
+                  ]
+                },
+                "example": ["Close contacts of camels"]
               },
               "exposureToCamels": {
                 "type": "string",

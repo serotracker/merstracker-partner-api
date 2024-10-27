@@ -105,3 +105,10 @@
 - [BREAKING] Added "TaqMan" to the enum for `testProducer`.
 - [BREAKING] Added "Not reported" to the enum for `clade`.
 - [BREAKING] Added "Camel herders" to the enum for `sampleFrame`.
+
+## Version 0.10.0 - October 27th 2024
+
+- [BREAKING] Changed the `sampleFrame` field to an array field called `sampleFrames`.
+- typescript `5.6.2` -> `5.6.3`
+- mongodb `6.9.0` -> `6.10.0`
+- express `4.21.0` -> `4.21.1`
