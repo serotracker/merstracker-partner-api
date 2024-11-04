@@ -112,3 +112,7 @@
 - typescript `5.6.2` -> `5.6.3`
 - mongodb `6.9.0` -> `6.10.0`
 - express `4.21.0` -> `4.21.1`
+
+## Version 0.10.1 - November 3rd 2024
+
+- Updated the GeoJSON file to contain the most recent data from Airtable.
