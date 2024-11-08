@@ -12,9 +12,11 @@ export const generateMersPrimaryEstimatePartitionsRequestHandler = (
 ): GenerateMersPrimaryEstimatePartitionsRequestHandlerOutput => {
   const mersPrimaryEstimatePartitionsRequestHandler: RequestHandler = async(request, response) => {
     // TODO: Real paritioning when we need it.
-    return response.status(200).json({
+    response.status(200).json({
       partitionKeys: [ 1 ]
     });
+
+    return;
   }
 
   return {

@@ -116,3 +116,9 @@
 ## Version 0.10.1 - November 3rd 2024
 
 - Updated the GeoJSON file to contain the most recent data from Airtable.
+
+## Version 0.11.0 - November 8th 2024
+
+- Updated the GeoJSON file to contain the most recent data from Airtable.
+- [BREAKING] express `4.21.1` -> `5.0.1`
+- [BREAKING] swagger-ui-express `4.6.0` -> `5.0.1`
