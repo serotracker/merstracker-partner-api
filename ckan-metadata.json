@@ -4,7 +4,7 @@
   "tags": ["MERS", "diseases", "epidemiology"],
   "license": "N/A",
   "organization": "SeroTracker",
-  "source/version": "0.10.1",
+  "source/version": "0.11.0",
   "author/author_email": "Mairéad Whelan - mairead.whelan@ucalgary.ca, Harriet Ware - ware.harriet@gmail.com",
   "maintainer/maintainer_email": "Mairéad Whelan - mairead.whelan@ucalgary.ca, Harriet Ware - ware.harriet@gmail.com",
   "custom_fields": {
