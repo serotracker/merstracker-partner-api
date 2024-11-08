@@ -45,27 +45,21 @@ export const generateMersPrimaryEstimatesRequestHandler = (
       }
     }
     catch (error) {
-      response.status(400).json({ message: "No valid partitionKey specified. The partition key must be a number" });
-
-      return;
+      return response.status(400).json({ message: "No valid partitionKey specified. The partition key must be a number" });
     }
 
     if(Number.isNaN(partitionKey)) {
-      response.status(400).json({ message: "No valid partitionKey specified. The partition key must be a number" });
-
-      return;
+      return response.status(400).json({ message: "No valid partitionKey specified. The partition key must be a number" });
     }
 
     if(partitionKey !== 1) {
-      response.json([]);
-
-      return;
+      return response.json([]);
     }
 
     const mersPrimaryEstimatesCollection = mongoClient.db(databaseName).collection<MersPrimaryEstimateDocument>('mersPrimaryEstimates');
     const mersPrimaryEstimates = await mersPrimaryEstimatesCollection.find({}).toArray();
 
-    response.json(mersPrimaryEstimates.map((mersPrimaryEstimate) => ({
+    return response.json(mersPrimaryEstimates.map((mersPrimaryEstimate) => ({
       id: mersPrimaryEstimate._id.toHexString(),
       estimateId: mersPrimaryEstimate.estimateId,
       primaryEstimateInfo: {
@@ -280,8 +274,6 @@ export const generateMersPrimaryEstimatesRequestHandler = (
         }))
       }))
     })))
-
-    return;
   }
 
   return {
