@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "MERSTracker Partner API Documentation",
-    "version": "0.10.2"
+    "version": "1.0.0"
   },
   "schemes": ["https"],
   "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],
@@ -839,19 +839,26 @@
                 "example": 0.48
               },
               "animalSpecies": {
-                "type": "string",
+                "type": "array",
                 "description": "The species of animal that was primarily sampled for this study.",
-                "enum": [
-                  "CAMEL",
-                  "BAT",
-                  "CATTLE",
-                  "SHEEP",
-                  "GOAT",
-                  "DONKEY",
-                  "WATER_BUFFALO",
-                  "BABOON"
-                ],
-                "example": "CAMEL"
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "SHEEP",
+                    "GOAT",
+                    "CATTLE",
+                    "BAT",
+                    "DONKEY",
+                    "WATER_BUFFALO",
+                    "BABOON",
+                    "DROMEDARY_CAMEL",
+                    "BACTRIAN_CAMEL",
+                    "HORSE",
+                    "MULE",
+                    "BUFFALO"
+                  ]
+                },
+                "example": [ "DROMEDARY_CAMEL" ]
               },
               "animalType": {
                 "type": "array",
@@ -1110,19 +1117,26 @@
                 "example": 0.48
               },
               "animalSpecies": {
-                "type": "string",
+                "type": "array",
                 "description": "The species of animal that was primarily sampled for this study.",
-                "enum": [
-                  "CAMEL",
-                  "BAT",
-                  "CATTLE",
-                  "SHEEP",
-                  "GOAT",
-                  "DONKEY",
-                  "WATER_BUFFALO",
-                  "BABOON"
-                ],
-                "example": "CAMEL"
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "SHEEP",
+                    "GOAT",
+                    "CATTLE",
+                    "BAT",
+                    "DONKEY",
+                    "WATER_BUFFALO",
+                    "BABOON",
+                    "DROMEDARY_CAMEL",
+                    "BACTRIAN_CAMEL",
+                    "HORSE",
+                    "MULE",
+                    "BUFFALO"
+                  ]
+                },
+                "example": [ "DROMEDARY_CAMEL" ]
               },
               "animalType": {
                 "type": "array",
@@ -1523,19 +1537,26 @@
             ],
             "properties": {
               "animalSpecies": {
-                "type": "string",
+                "type": "array",
                 "description": "The species of animal that was primarily sampled for this study.",
-                "enum": [
-                  "CAMEL",
-                  "BAT",
-                  "CATTLE",
-                  "SHEEP",
-                  "GOAT",
-                  "DONKEY",
-                  "WATER_BUFFALO",
-                  "BABOON"
-                ],
-                "example": "CAMEL"
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "SHEEP",
+                    "GOAT",
+                    "CATTLE",
+                    "BAT",
+                    "DONKEY",
+                    "WATER_BUFFALO",
+                    "BABOON",
+                    "DROMEDARY_CAMEL",
+                    "BACTRIAN_CAMEL",
+                    "HORSE",
+                    "MULE",
+                    "BUFFALO"
+                  ]
+                },
+                "example": [ "DROMEDARY_CAMEL" ]
               }
             }
           }

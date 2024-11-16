@@ -3,14 +3,18 @@ import { UNRegion } from "./un-regions.js";
 import { WHORegion } from "./who-regions.js";
 
 enum MersAnimalSpecies {
-  CAMEL = "CAMEL",
   SHEEP = "SHEEP",
   GOAT = "GOAT",
   CATTLE = "CATTLE",
   BAT = "BAT",
   DONKEY = "DONKEY",
   WATER_BUFFALO = "WATER_BUFFALO",
-  BABOON = "BABOON"
+  BABOON = "BABOON",
+  DROMEDARY_CAMEL = "DROMEDARY_CAMEL",
+  BACTRIAN_CAMEL = "BACTRIAN_CAMEL",
+  HORSE = "HORSE",
+  MULE = "MULE",
+  BUFFALO = "BUFFALO",
 }
 
 enum MersAnimalType {
