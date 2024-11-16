@@ -120,3 +120,8 @@
 ## Version 0.10.2 - November 8th 2024
 
 - Updated the GeoJSON file to contain the most recent data from Airtable.
+
+## Version 1.0.0 - November 16th 2024
+
+- [BREAKING] Changed the `animalSpecies` to be an array field and adjusted the animal species available in the enum.
+- Updated the GeoJSON file to contain the most recent data from Airtable.

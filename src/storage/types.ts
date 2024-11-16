@@ -3,14 +3,18 @@ import { UNRegion } from "./un-regions.js";
 import { WHORegion } from "./who-regions.js";
 
 enum MersAnimalSpecies {
-  CAMEL = "CAMEL",
   SHEEP = "SHEEP",
   GOAT = "GOAT",
   CATTLE = "CATTLE",
   BAT = "BAT",
   DONKEY = "DONKEY",
   WATER_BUFFALO = "WATER_BUFFALO",
-  BABOON = "BABOON"
+  BABOON = "BABOON",
+  DROMEDARY_CAMEL = "DROMEDARY_CAMEL",
+  BACTRIAN_CAMEL = "BACTRIAN_CAMEL",
+  HORSE = "HORSE",
+  MULE = "MULE",
+  BUFFALO = "BUFFALO",
 }
 
 enum MersAnimalType {
@@ -148,7 +152,7 @@ type AnimalMersSeroprevalenceEstimateDocument = MersEstimateDocumentBase & {
   seroprevalence: number;
   seroprevalence95CILower: number | undefined;
   seroprevalence95CIUpper: number | undefined;
-  animalSpecies: MersAnimalSpecies;
+  animalSpecies: MersAnimalSpecies[];
   animalType: MersAnimalType[];
   animalDetectionSettings: string[];
   animalPurpose: string | undefined;
@@ -166,7 +170,7 @@ type AnimalMersViralEstimateDocument = MersEstimateDocumentBase & {
   positivePrevalence: number;
   positivePrevalence95CILower: number | undefined;
   positivePrevalence95CIUpper: number | undefined;
-  animalSpecies: MersAnimalSpecies;
+  animalSpecies: MersAnimalSpecies[];
   animalType: MersAnimalType[];
   animalDetectionSettings: string[];
   animalPurpose: string | undefined;
@@ -265,7 +269,7 @@ type MersTestUsedSubEstimate = MersSubEstimateBase & {
 }
 
 type MersAnimalSpeciesSubEstimate = MersSubEstimateBase & {
-  animalSpecies: MersAnimalSpecies;
+  animalSpecies: MersAnimalSpecies[];
 }
 
 type MersSexSubEstimate = MersSubEstimateBase & {
