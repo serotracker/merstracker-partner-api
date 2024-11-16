@@ -152,7 +152,7 @@ type AnimalMersSeroprevalenceEstimateDocument = MersEstimateDocumentBase & {
   seroprevalence: number;
   seroprevalence95CILower: number | undefined;
   seroprevalence95CIUpper: number | undefined;
-  animalSpecies: MersAnimalSpecies;
+  animalSpecies: MersAnimalSpecies[];
   animalType: MersAnimalType[];
   animalDetectionSettings: string[];
   animalPurpose: string | undefined;
@@ -170,7 +170,7 @@ type AnimalMersViralEstimateDocument = MersEstimateDocumentBase & {
   positivePrevalence: number;
   positivePrevalence95CILower: number | undefined;
   positivePrevalence95CIUpper: number | undefined;
-  animalSpecies: MersAnimalSpecies;
+  animalSpecies: MersAnimalSpecies[];
   animalType: MersAnimalType[];
   animalDetectionSettings: string[];
   animalPurpose: string | undefined;
@@ -269,7 +269,7 @@ type MersTestUsedSubEstimate = MersSubEstimateBase & {
 }
 
 type MersAnimalSpeciesSubEstimate = MersSubEstimateBase & {
-  animalSpecies: MersAnimalSpecies;
+  animalSpecies: MersAnimalSpecies[];
 }
 
 type MersSexSubEstimate = MersSubEstimateBase & {
