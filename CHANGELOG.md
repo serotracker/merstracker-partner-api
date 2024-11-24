@@ -129,3 +129,9 @@
 ## Version 1.0.1 - November 16th 2024
 
 - Updated the GeoJSON file to contain the most recent data from Airtable.
+
+## Version 1.0.2 - November 24th 2024
+
+- Updated the GeoJSON file to contain the most recent data from Airtable.
+- typescript `5.6.3` -> `5.7.2`
+- mongodb `6.10.0` -> `6.11.0`
