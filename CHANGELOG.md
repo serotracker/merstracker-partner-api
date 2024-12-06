@@ -135,3 +135,7 @@
 - Updated the GeoJSON file to contain the most recent data from Airtable.
 - typescript `5.6.3` -> `5.7.2`
 - mongodb `6.10.0` -> `6.11.0`
+
+## Version 1.0.3 - December 5th 2024
+
+- Fixed a bug which was preventing `primaryEstimateInfo.antigen`, `primaryEstimateInfo.exposureToCamels`, and `primaryEstimateInfo.samplingMethod` from appearing on the API.

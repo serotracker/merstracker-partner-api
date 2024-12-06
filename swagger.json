@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "MERSTracker Partner API Documentation",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "schemes": ["https"],
   "servers": [{ "url": "https://merstracker-partner-api.vercel.app" }],
@@ -231,6 +231,7 @@
         "required": [
           "id",
           "type",
+          "antigen",
           "estimateId",
           "country",
           "countryAlphaTwoCode",
@@ -499,6 +500,18 @@
             "type": "string",
             "description": "The socioeconomic status of the population sampled.",
             "example": "Wealthy individuals"
+          },
+          "samplingMethod": {
+            "type": "string",
+            "description": "The sampling method used for the study.",
+            "example": "Convenience",
+            "enum": [
+              "Convenience",
+              "Sequential",
+              "Simplified probability",
+              "Stratified probability",
+              "Unclear"
+            ]
           },
           "exposureToCamels": {
             "type": "string",
