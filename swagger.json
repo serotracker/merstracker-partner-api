@@ -231,7 +231,6 @@
         "required": [
           "id",
           "type",
-          "antigen",
           "estimateId",
           "country",
           "countryAlphaTwoCode",
