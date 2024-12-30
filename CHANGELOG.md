@@ -139,3 +139,11 @@
 ## Version 1.0.3 - December 5th 2024
 
 - Fixed a bug which was preventing `primaryEstimateInfo.antigen`, `primaryEstimateInfo.exposureToCamels`, and `primaryEstimateInfo.samplingMethod` from appearing on the API.
+
+## Version 1.0.4 - December 30th 2024
+
+- Node version bumped from 20 to 22
+- path-to-regexp `0.1.10` -> `0.1.12`
+- prettier `3.3.3` -> `3.4.2`
+- mongodb `6.11.0` -> `6.12.0`
+- @types/node `20.14.10` -> `22.10.2`
